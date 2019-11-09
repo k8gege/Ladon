@@ -27,9 +27,9 @@ Ladon是希腊神话中的神兽，看守金苹果的百头巨龙。它从不睡
 @程序简介
 ===============================================================================================
 Ladon一款用于大型网络渗透的多线程插件化综合扫描神器，含端口扫描、服务识别、网络资产、密码爆破、漏洞检测以及一键GetShell
-支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描。5.5版本内置38个功能,通过多种协议以及方法快速获取目标网络
+支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描。5.5版本内置39个功能,通过多种协议以及方法快速获取目标网络
 存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、C段网站、子域名、中间件、开放服务、路由器、数据库等信息
-漏洞检测包含MS17010、Weblogic、ActiveMQ、Tomcat等，密码爆破11种含数据库(Mysql、Oracle、MSSQL)、FTP、SSH(Linux主机)、VNC
+漏洞检测包含MS17010、Weblogic、ActiveMQ、Tomcat等，密码爆破11种含数据库(Mysql、Oracle、MSSQL)、FTP、SSH(Linux)、VNC
 Windows密码爆破(IPC、WMI、SMB)、Weblogic后台、Rar压缩包密码等，Web指纹识别模块可识别75种（Web应用、中间件、脚本类型）等
 可高度自定义POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令
 EXP生成器一键生成Web漏洞POC,可快速扩展扫描或利用能力。支持Cobalt Strike插件化直接内存加载Ladon扫描快速拓展内网横向移动
@@ -86,23 +86,23 @@ Ladon采用C#研发，程序体积非常小500K左右，即便马不行也能传
 ===============================================================================================
 
 
-@内置功能模块
-[9+7+11+7+4=38]
+@内置功能模块[39]
+
 
 0x001 资产扫描
 ===============================================================================================
 例子: Ladon OnlinePC(扫当前机器所处C段，其它模块同理)
 例子: Ladon 192.168.1.8/24 OnlinePC
 
-1  OnlinePC 		存活主机扫描
-2  OnlineIP 		仅存活主机IP
-3  UrlScan 			URL域名扫描
-4  SameWeb 			同服域名扫描
-5  WebScan 			Web信息扫描
-6  WebDir 			后台目录扫描
-7  SubDomain 		子域名爆破
-8  DomainIP 		域名解析IP	
-9  HostIP 			主机名转IP
+1  OnlinePC         存活主机扫描
+2  OnlineIP         仅存活主机IP
+3  UrlScan          URL域名扫描
+4  SameWeb          同服域名扫描
+5  WebScan          Web信息扫描
+6  WebDir           后台目录扫描
+7  SubDomain        子域名爆破
+8  DomainIP         域名解析IP
+9  HostIP           主机名转IP
 
 
 0x002 指纹识别/服务识别
@@ -110,13 +110,13 @@ Ladon采用C#研发，程序体积非常小500K左右，即便马不行也能传
 例子: Ladon OsScan
 例子: Ladon 192.168.1.8/24 OsScan
 
-1  OsScan 			操作系统版本探测
-2  PortScan 		端口扫描含Banner
-3  WebBanner 		内网Web信息扫描
-4  WhatCMS 			75种Web指纹识别
-5  CiscoScan 		思科设备扫描
-6  EnumMssql 		枚举Mssql数据库主机
-7  EnumShare 		枚举网络共享资源
+1  OsScan           操作系统版本探测
+2  PortScan         端口扫描含Banner
+3  WebBanner        内网Web信息扫描
+4  WhatCMS          75种Web指纹识别
+5  CiscoScan        思科设备扫描
+6  EnumMssql        枚举Mssql数据库主机
+7  EnumShare        枚举网络共享资源
 
 0x003 口令检测/密码爆破
 [自定义端口(IP:端口)、帐密检测(用户 密码)、主机帐密检测(IP 端口 数据库 用户 密码)]
@@ -126,18 +126,17 @@ Ladon采用C#研发，程序体积非常小500K左右，即便马不行也能传
 例子: Ladon 192.168.1.8:22 SshScan (指定端口)
 例子: Ladon test.rar RarScan
 
-1  WmiScan 			Wmi密码爆破(Windowns)
-2  IpcScan 			Ipc密码爆破(Windows)
-3  SmbScan 			SMB密码爆破(Windows)
-4  SshScan 			SSH密码爆破(Linux)
-5  MssqlScan 		Mssql数据库密码爆破
-6  OracleScan 		Oracle数据库密码爆破
-7  MysqlScan 		Mysql数据库密码爆破
-8  WeblogicScan 	Weblogic后台密码爆破
-9  VncScan 			VNC远程桌面密码爆破
-10 FtpScan 			Ftp服务器密码爆破
-11 RarScan 			Rar压缩包密码爆破	
-
+1  WmiScan          Wmi密码爆破(Windowns)
+2  IpcScan          Ipc密码爆破(Windows)
+3  SmbScan          SMB密码爆破(Windows)
+4  SshScan          SSH密码爆破(Linux)
+5  MssqlScan        Mssql数据库密码爆破
+6  OracleScan       Oracle数据库密码爆破
+7  MysqlScan        Mysql数据库密码爆破
+8  WeblogicScan     Weblogic后台密码爆破
+9  VncScan          VNC远程桌面密码爆破
+10 FtpScan          Ftp服务器密码爆破
+11 RarScan          Rar压缩包密码爆破
 
 0x004 漏洞检测/漏洞利用
 ===============================================================================================
@@ -145,32 +144,32 @@ Ladon采用C#研发，程序体积非常小500K左右，即便马不行也能传
 例子: Ladon 192.168.1.8/24 MS17010
 例子: Ladon http://192.168.1.8 WeblogicExp
 
-1  MS17010 			SMB漏洞检测(CVE-2017-0143/CVE-2017-0144/CVE-2017-0145/CVE-2017-0146/CVE-2017-0148)
-2  WeblogicPoc		Weblogic漏洞检测(CVE-2019-2725)
-3  PhpStudyPoc 		PhpStudy后门检测(phpstudy 2016/phpstudy 2018)
-4  ActivemqPoc 		ActiveMQ漏洞检测(CVE-2016-3088)	
-5  TomcatPoc 		Tomcat漏洞检测(CVE-2017-12615)
-6  WeblogicExp		Weblogic漏洞利用(CVE-2019-2725)
-7  TomcatExp 		Tomcat漏洞利用(CVE-2017-12615)
-8  Struts2Poc		Struts2漏洞检测(S2-005/S2-009/S2-013/S2-016/S2-019/S2-032/DevMode)
+1  MS17010          SMB漏洞检测(CVE-2017-0143/CVE-2017-0144/CVE-2017-0145/CVE-2017-0146/CVE-2017-0148)
+2  WeblogicPoc      Weblogic漏洞检测(CVE-2019-2725)
+3  PhpStudyPoc      PhpStudy后门检测(phpstudy 2016/phpstudy 2018)
+4  ActivemqPoc      ActiveMQ漏洞检测(CVE-2016-3088) 
+5  TomcatPoc        Tomcat漏洞检测(CVE-2017-12615)
+6  WeblogicExp      Weblogic漏洞利用(CVE-2019-2725)
+7  TomcatExp        Tomcat漏洞利用(CVE-2017-12615)
+8  Struts2Poc       Struts2漏洞检测(S2-005/S2-009/S2-013/S2-016/S2-019/S2-032/DevMode)
 
 0x006 加密解密
 ===============================================================================================
 例子: Ladon 字符串 EnHex
 例子: Ladon EnHex (批量str.txt)
 
-1  EnHex			批量Hex密码加密
-2  DeHex 			批量Hex密码解密
-3  EnBase64			批量Base64密码加密
-4  DeBase64 		批量Base64密码解密
+1  EnHex            批量Hex密码加密
+2  DeHex            批量Hex密码解密
+3  EnBase64         批量Base64密码加密
+4  DeBase64         批量Base64密码解密
 
 
 注：以上仅是该工具内置模块的初级用法，外置插件或更高级用法请查看使用文档
-	中级用法INI文件配置调用任意程序、系统命令、各种语言现成EXP的批量利用
-	高级用法Exp生成器一键生成Poc，使用各种语言编写插件扩展Ladon扫描能力。
+    中级用法INI文件配置调用任意程序、系统命令、各种语言现成EXP的批量利用
+    高级用法Exp生成器一键生成Poc，使用各种语言编写插件扩展Ladon扫描能力。
 
 
-@外置插件模块
+@外置插件模块[9]
 ===============================================================================================
 1  漏洞扫描 CVE 2019-0708 Windows Rdp 3389远程代码执行
 2  漏洞利用 ThinkPHP 5.0.22 5.1.29 RCE GetShell Exploit
