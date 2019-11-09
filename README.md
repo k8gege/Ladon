@@ -8,7 +8,15 @@ Update 20191109 <br>
 
 ### 使用说明
 https://github.com/k8gege/Ladon/wiki<br>
-Bin: https://github.com/k8gege/Ladon/releases
+
+### 源码编译
+git clone https://github.com/k8gege/Ladon.gif<br>
+使用VS2012或以上版本分别编译.net 3.5、4.0版本EXE<br>
+
+### 成品下载
+https://github.com/k8gege/Ladon/releases<br>
+Win7/2008或安装.net 2.x 3.x系统可以使用3.5的exe<br>
+Win8-win10或安装.net 4.x系统可以使用4.0的exe<br>
 
 ### 关于
 
