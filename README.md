@@ -8,7 +8,7 @@ Update 20191109 <br>
 
 ### 使用说明
 https://github.com/k8gege/Ladon/wiki<br>
-Releases: https://github.com/k8gege/Ladon/releases
+Bin: https://github.com/k8gege/Ladon/releases
 
 ### 关于
 
