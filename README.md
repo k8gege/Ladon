@@ -14,7 +14,7 @@
 https://github.com/k8gege/Ladon/wiki<br>
 
 ### 源码编译
-git clone https://github.com/k8gege/Ladon.gif<br>
+git clone https://github.com/k8gege/Ladon.git<br>
 使用VS2012或以上版本分别编译.net 3.5、4.0版本EXE<br>
 
 ### 成品下载
