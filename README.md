@@ -15,7 +15,7 @@
 ### PowerLadon
 <img src=https://k8gege.github.io/k8img/Ladon/PowerLadon.gif></img>
 ### PythonLadon
-<img src=https://k8gege.github.io/k8img/Ladon//py/PyLadon.PNG></img>
+<img src=https://k8gege.github.io/k8img/Ladon//py/PyLadon2.PNG></img>
 ### LinuxLadon
 <img src=https://k8gege.github.io/k8img/Ladon/lnx/Linux_OnlinePC.PNG></img>
 
