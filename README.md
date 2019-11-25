@@ -177,7 +177,7 @@ ID | 模块名称 |  功能说明  | 返回结果
 ID | 模块名称 |  功能说明  
 -|-|-
 1 | MS17010   | SMB漏洞检测(CVE-2017-0143/CVE-2017-0144/CVE-2017-0145/CVE-2017-0146/CVE-2017-0148)<br>
-2 | WeblogicPoc | Weblogic漏洞检测(CVE-2019-2725)<br>
+2 | WeblogicPoc | Weblogic漏洞检测(CVE-2019-2725/CVE-2018-2894)<br>
 3 | PhpStudyPoc |  PhpStudy后门检测(phpstudy 2016/phpstudy 2018)<br>
 4 | ActivemqPoc |  ActiveMQ漏洞检测(CVE-2016-3088) <br>
 5 | TomcatPoc  | Tomcat漏洞检测(CVE-2017-12615)<br>
