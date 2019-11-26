@@ -208,7 +208,7 @@ ID | 模块类型 |  功能说明
 2 | 漏洞利用 | [ThinkPHP 5.0.22 5.1.29 RCE GetShell Exploit](https://github.com/k8gege/K8CScan/wiki/%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8-ThinkPHP-5.0.22-5.1.29-RCE-GetShell-Exploit)
 3 | 漏洞利用 | [CVE-2019-9621 Zimbra GetShell Exploit](https://github.com/k8gege/ZimbraExploit)
 4 | 漏洞利用 | [CVE-2019-0604 SharePoint GetShell Exploit](https://github.com/k8gege/CVE-2019-0604)
-5 | 漏洞利用 | CVE 2016-3088 ActiveMQ GetShell Exploit<br>
+5 | 漏洞利用 | [CVE 2016-3088 ActiveMQ GetShell Exploit](https://github.com/k8gege/K8CScan/wiki/%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8-CVE-2016-3088-ActiveMQ-GetShell-Exploit)
 6 | 漏洞利用 | [Apache Solr 8.2.0 Velocity RCE 0day Exploit](https://github.com/k8gege/SolrExp)
 7 | 漏洞利用 | [PhpStudy后门 GetShell Exploit](https://github.com/k8gege/K8CScan/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-PhpStudy%E5%90%8E%E9%97%A8)
 8 | 命令执行 | [INI调用外部程序命令批量Linux上控](https://github.com/k8gege/K8CScan/wiki/%E8%B0%83%E7%94%A8%E5%91%BD%E4%BB%A4-%E6%89%B9%E9%87%8FSSH%E4%B8%8A%E6%8E%A7)
