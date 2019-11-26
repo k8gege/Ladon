@@ -1,7 +1,9 @@
+#https://github.com/k8gege/Ladon
 #Cobalt Strike 3.x
-#Ladon 5.5 
+#Tested 3.12-3.14
+#Ladon 5.7 
 #author: k8gege
-#update: 20191109
+#update: 20191126
 #Not Support [SmbScan MysqlScan OracleScan SSHscan]
 
 alias Ladon {
@@ -19,7 +21,7 @@ alias Ladon {
 	blog2($1, "scantype: [OnlineIP OnlinePC OSscan CiscoScan]");
 	blog2($1, "scantype: [WebScan WebScan2 SameWeb UrlScan WhatCMS WebDir SubDomain HostIP DomainIP]");
 	blog2($1, "scantype: [MS17010 WeblogicPoc WeblogicExp PhpStudyPoc ActiveMQPoc TomcatPoc TomcatExp Struts2Poc]");
-	blog2($1, "scantype: [FtpScan WmiScan IpLadon MssqlScan VncScan RarScan]");
+	blog2($1, "scantype: [FtpScan WmiScan IpLadon MssqlScan VncScan RarScan TomcatScan HttpBasicScan]");
 	blog2($1, "scantype: [EnumMSSQL EnumShare]");
 	blog2($1, "scantype: [EnHex DeHex EnBase64 DeBase64]");
 	blog2($1, "Example: Ladon 192.168.1.8/24 OnlinePC");	
