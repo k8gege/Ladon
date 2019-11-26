@@ -200,7 +200,7 @@ ID | 模块名称 |  功能说明
  中级用法INI文件配置调用任意程序、系统命令、各种语言现成EXP的批量利用<br>
  高级用法Exp生成器一键生成Poc，使用各种语言编写插件扩展Ladon扫描能力。<br>
 
-### 外部插件模块(9)
+### 外部插件模块(10)
 
 ID | 模块类型 |  功能说明  
 -|-|-
@@ -213,6 +213,7 @@ ID | 模块类型 |  功能说明
 7 | 漏洞利用 | PhpStudy后门 GetShell Exploit<br>
 8 | 命令执行 | INI调用外部程序命令批量Linux上控<br>
 9 | 命令执行 | INI调用外部程序命令批量Windowns上控<br>
+10 | 漏洞扫描 | [PHP-FPM 远程代码执行漏洞(CVE-2019-11043)](https://github.com/k8gege/CVE-2019-11043)
 
 文档参考Cscan: https://github.com/k8gege/K8CScan/wiki
 
