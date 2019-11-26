@@ -1,3 +1,4 @@
+### Ladon 5.7 20191126  Readme 20191126
 ![](https://k8gege.github.io/k8img/Ladon/Dragon.jpg)
 
 [![Author](https://img.shields.io/badge/Author-k8gege-blueviolet)](https://github.com/k8gege) 
@@ -167,6 +168,8 @@ ID | 模块名称 |  功能说明  | 返回结果
 9 | VncScan  |  VNC远程桌面密码爆破 | 检测状态以及正确密码日志
 10 | FtpScan  |  Ftp服务器密码爆破 | 检测状态以及正确密码日志
 11 | RarScan  |  Rar压缩包密码爆破 | 检测状态以及正确密码日志
+12 | TomcatScan  |  Tomcat后台密码爆破 | 检测状态以及正确密码日志
+13 | HttpBasicScan  | HttpBasic401认证密码爆破 | 检测状态以及正确密码日志
 
 #### 0x004 漏洞检测/漏洞利用
 
