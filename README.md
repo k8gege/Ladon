@@ -1,4 +1,4 @@
-### Ladon 5.7 20191126  Readme 20191126
+## Ladon 5.7 20191127
 ![](https://k8gege.github.io/k8img/Ladon/Dragon.jpg)
 
 [![Author](https://img.shields.io/badge/Author-k8gege-blueviolet)](https://github.com/k8gege) 
@@ -222,6 +222,14 @@ ID | 模块类型 |  功能说明
 
 ## 中级用法
 
+### 批量扫描
+0x001 参数 ip/24 ip/16 ip/8<br>
+```bash
+Ladon 192.168.1.8/24 OnlinePC 或 Ladon 192.168.1.8/16 OnlinePC
+```
+0x002 文件 ip.txt ip24.txt ip16.txt url.txt host.txt domain.txt str.txt<br>
+程序根目录下创建对应文件即可,如批量扫描多个ip使用ip.txt,批量扫多个C段使用ip24.txt<br>
+
 ### 禁ping扫描
 默认扫描会先通过icmp扫描主机是否存活，当使用工具转发内网<br>
 或者目标机器禁ping时,使用noping参数进行扫描,速度稍慢一点<br>
@@ -310,7 +318,7 @@ PowerShell版,也可CMD命令行下远程加载内存实现无文件扫描，模
 
 #### 0x001 PowerShell本地加载<br>
 适用于支持PowerShell交互远控或Shell，如Cobalt Strike
-```bash
+```PowerShell
 > powershell 
 > Import-Module .\Ladon.ps1
 > Ladon OnlinePC
