@@ -347,7 +347,7 @@ PowerShell版,也可CMD命令行下远程加载内存实现无文件扫描，模
 <img src=https://k8gege.github.io/k8img/Ladon/ps/CmdPSRemoteLadon.gif></img>
 
 ### 高级用法
-Ladon最初的设计就是一款扫描框架，后来为了方便才内置一些功能<br>
+Ladon最初的设计就是一款扫描框架，为了方便才内置功能<br>
 毕竟需要使用一个功能就得在目标多上传一个文件是顶麻烦的<br>
 不像MSF框架和模块多大都无所谓，因为你只是在本地使用<br>
 为了让大家都可以自定义模块，Ladon插件支持多种编程语言<br>
