@@ -155,19 +155,19 @@ ID | 模块名称 |  功能说明  | 返回结果
 例子: Ladon 192.168.1.8:22 SshScan (指定端口)<br>
 例子: Ladon test.rar RarScan<br>
 
-ID | 模块名称 |  功能说明  | 返回结果
--|-|-|-
-1 | WmiScan  |  Wmi密码爆破(Windowns) | 检测状态以及正确密码日志
-2 | IpcScan  |  Ipc密码爆破(Windows) | 检测状态以及正确密码日志
-3 | SmbScan  |  SMB密码爆破(Windows) | 检测状态以及正确密码日志
-4 | SshScan  |  SSH密码爆破(Linux) | 检测状态以及正确密码日志
-5 | MssqlScan  | Mssql数据库密码爆破 | 检测状态以及正确密码日志
-6 | OracleScan  | Oracle数据库密码爆破 | 检测状态以及正确密码日志
-7 | MysqlScan  | Mysql数据库密码爆破 | 检测状态以及正确密码日志
-8 | WeblogicScan | Weblogic后台密码爆破 | 检测状态以及正确密码日志
-9 | VncScan  |  VNC远程桌面密码爆破 | 检测状态以及正确密码日志
-10 | FtpScan  |  Ftp服务器密码爆破 | 检测状态以及正确密码日志
-11 | RarScan  |  Rar压缩包密码爆破 | 检测状态以及正确密码日志
+ID | 模块名称 |  功能说明  | 返回结果 | 依赖库
+-|-|-|-|-
+1 | WmiScan  |  Wmi密码爆破(Windowns) | 检测状态以及正确密码日志 | 不需要
+2 | IpcScan  |  Ipc密码爆破(Windows) | 检测状态以及正确密码日志 | 不需要
+3 | SmbScan  |  SMB密码爆破(Windows) | 检测状态以及正确密码日志 | 需SharpCifs.dll
+4 | SshScan  |  SSH密码爆破(Linux) | 检测状态以及正确密码日志 | 需Renci.SshNet.dll
+5 | MssqlScan  | Mssql数据库密码爆破 | 检测状态以及正确密码日志 | 不需要
+6 | OracleScan  | Oracle数据库密码爆破 | 检测状态以及正确密码日志 | 需DDTek.Oracle.dll
+7 | MysqlScan  | Mysql数据库密码爆破 | 检测状态以及正确密码日志  | 需MySql.Data.dll
+8 | WeblogicScan | Weblogic后台密码爆破 | 检测状态以及正确密码日志 | 不需要
+9 | VncScan  |  VNC远程桌面密码爆破 | 检测状态以及正确密码日志  | 需VncSharp.dll
+10 | FtpScan  |  Ftp服务器密码爆破 | 检测状态以及正确密码日志 | 不需要
+11 | RarScan  |  Rar压缩包密码爆破 | 检测状态以及正确密码日志  | 需Rar.exe
 12 | [TomcatScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-TomcatScan%E6%A8%A1%E5%9D%97Tomcat%E5%90%8E%E5%8F%B0%E7%99%BB%E9%99%86%E5%BC%B1%E5%8F%A3%E4%BB%A4%E6%A3%80%E6%B5%8B)  |  Tomcat后台登陆密码爆破 | 检测状态以及正确密码日志
 13 | [HttpBasicScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-HttpBasicScan%E6%A8%A1%E5%9D%97phpMyAdmin%E5%BC%B1%E5%8F%A3%E4%BB%A4%E6%A3%80%E6%B5%8B)  | HttpBasic401认证密码爆破 | 检测状态以及正确密码日志
 
