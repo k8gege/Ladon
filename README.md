@@ -122,8 +122,8 @@ Ladon采用C#研发，程序体积很小500K左右，即便马不行也能上传
 
 ID | 模块名称 |  功能说明  | 返回结果
 -|-|-|-
-1 | OnlinePC | 存活主机扫描 | 存活IP、Mac地址、机器名
-2 | OnlineIP | 仅存活主机IP | 存活IP
+1 | [OnlinePC](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E5%AD%98%E6%B4%BB%E4%B8%BB%E6%9C%BA%E6%89%AB%E6%8F%8F) | 存活主机扫描 | 存活IP、Mac地址、机器名
+2 | [OnlineIP](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E5%AD%98%E6%B4%BB%E4%B8%BB%E6%9C%BA%E6%89%AB%E6%8F%8F) | 仅存活主机IP | 存活IP
 3 | UrlScan  | URL域名扫描 | 同服URL（不验证IP、域名、Web标题）
 4 | SameWeb  | 同服域名扫描 | 同服URL（验证IP、域名、Web标题）
 5 | WebScan  | Web信息扫描 | 存活IP、主机名、Banner、Web标题
@@ -140,7 +140,7 @@ ID | 模块名称 |  功能说明  | 返回结果
 
 ID | 模块名称 |  功能说明  | 返回结果
 -|-|-|-
-1 | OsScan  |  操作系统版本探测 | 存活IP、机器名、操作系统
+1 | [OsScan](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A2%E6%B5%8B)  |  操作系统版本探测 | 存活IP、机器名、操作系统
 2 | PortScan  | 端口扫描含Banner | 主机名、开放端口、服务识别、Banner、Web标题
 3 | WhatCMS  |  75种Web指纹识别 | URL、CMS版本、登陆页面、中间件等
 4 | CiscoScan  | 思科设备扫描 | 存活IP、设备型号、主机名、Boot、硬件版本
@@ -179,7 +179,7 @@ ID | 模块名称 |  功能说明  | 返回结果
 
 ID | 模块名称 |  功能说明  
 -|-|-
-1 | MS17010   | SMB漏洞检测(CVE-2017-0143/CVE-2017-0144/CVE-2017-0145/CVE-2017-0146/CVE-2017-0148)<br>
+1 | [MS17010](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-MS17010%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B)   | SMB漏洞检测(CVE-2017-0143/CVE-2017-0144/CVE-2017-0145/CVE-2017-0146/CVE-2017-0148)<br>
 2 | WeblogicPoc | Weblogic漏洞检测(CVE-2019-2725/CVE-2018-2894)<br>
 3 | PhpStudyPoc |  PhpStudy后门检测(phpstudy 2016/phpstudy 2018)<br>
 4 | ActivemqPoc |  ActiveMQ漏洞检测(CVE-2016-3088) <br>
