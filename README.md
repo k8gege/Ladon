@@ -361,5 +361,6 @@ EXP生成器教程: https://github.com/k8gege/Ladon/wiki/LadonExp-Usage<br>
 自定义模块教程: https://github.com/k8gege/Ladon/wiki/Ladon-Diy-Moudle<br>
 
 
+### 注本页面的教程并不是很全，详情请看WIKI,我会慢慢完善
 
 #### [Top](#readme)
