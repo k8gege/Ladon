@@ -180,7 +180,7 @@ ID | 模块名称 |  功能说明  | 返回结果 | 依赖
 ID | 模块名称 |  功能说明  
 -|-|-
 1 | [MS17010](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-MS17010%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B)   | SMB漏洞检测(CVE-2017-0143/CVE-2017-0144/CVE-2017-0145/CVE-2017-0146/CVE-2017-0148)<br>
-2 | WeblogicPoc | Weblogic漏洞检测(CVE-2019-2725/[CVE-2018-2894](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-CVE-2018-2894/_edit))<br>
+2 | WeblogicPoc | Weblogic漏洞检测(CVE-2019-2725/[CVE-2018-2894](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-CVE-2018-2894))<br>
 3 | PhpStudyPoc |  PhpStudy后门检测(phpstudy 2016/phpstudy 2018)<br>
 4 | ActivemqPoc |  ActiveMQ漏洞检测(CVE-2016-3088) <br>
 5 | TomcatPoc  | Tomcat漏洞检测(CVE-2017-12615)<br>
@@ -360,6 +360,8 @@ EXP生成器教程: https://github.com/k8gege/Ladon/wiki/LadonExp-Usage<br>
 #### 0x002 自己编写插件
 自定义模块教程: https://github.com/k8gege/Ladon/wiki/Ladon-Diy-Moudle<br>
 
+#### 0x003 插件例子源码
+https://github.com/k8gege/Ladon/raw/master/Moudle_Demo.rar
 
 ### 注本页面的教程并不是很全，详情请看WIKI,我会慢慢完善
 
