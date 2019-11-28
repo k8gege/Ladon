@@ -143,11 +143,11 @@ ID | 模块名称 |  功能说明  | 返回结果
 ID | 模块名称 |  功能说明  | 返回结果
 -|-|-|-
 1 | [OsScan](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A2%E6%B5%8B)  |  操作系统版本探测 | 存活IP、机器名、操作系统
-2 | [PortScan](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E6%9C%8D%E5%8A%A1-WEB%E8%AF%86%E5%88%AB)  | 端口扫描含Banner | 主机名、开放端口、服务识别、Banner、Web标题
-3 | WhatCMS  |  75种Web指纹识别 | URL、CMS版本、登陆页面、中间件等
-4 | CiscoScan  | 思科设备扫描 | 存活IP、设备型号、主机名、Boot、硬件版本
-5 | EnumMssql  | 枚举Mssql数据库主机 | 数据库IP、机器名、SQL版本
-6 | EnumShare  | 枚举网络共享资源 | 域、存活IP、共享路径
+2 | [PortScan](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F(%E6%9C%8D%E5%8A%A1%E8%AF%86%E5%88%AB))  | 端口扫描含Banner | 主机名、开放端口、服务识别、Banner、Web标题
+3 | [WhatCMS](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-Web%E6%8C%87%E7%BA%B9%E8%AF%86%E5%88%AB)  |  75种Web指纹识别 | URL、CMS版本、登陆页面、中间件等
+4 | [CiscoScan](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E6%80%9D%E7%A7%91%E8%AE%BE%E5%A4%87%E6%89%AB%E6%8F%8F)  | 思科设备扫描 | 存活IP、设备型号、主机名、Boot、硬件版本
+5 | [EnumMssql](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E6%9E%9A%E4%B8%BE%E5%86%85%E7%BD%91MSSQL%E4%B8%BB%E6%9C%BA)  | 枚举Mssql数据库主机 | 数据库IP、机器名、SQL版本
+6 | [EnumShare](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E6%9E%9A%E4%B8%BE%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB%E8%B5%84%E6%BA%90)  | 枚举网络共享资源 | 域、存活IP、共享路径
 
 #### 0x003 口令检测/密码爆破<br>
 [自定义端口(IP:端口)、帐密检测(用户 密码)、主机帐密检测(IP 端口 数据库 用户 密码)]<br>
@@ -159,16 +159,16 @@ ID | 模块名称 |  功能说明  | 返回结果
 
 ID | 模块名称 |  功能说明  | 返回结果 | 依赖
 -|-|-|-|-
-1 | WmiScan  |  Wmi密码爆破(Windowns) | 检测状态以及正确密码日志 | 
-2 | IpcScan  |  Ipc密码爆破(Windows) | 检测状态以及正确密码日志 | 
-3 | SmbScan  |  SMB密码爆破(Windows) | 检测状态以及正确密码日志 | SharpCifs.dll
-4 | SshScan  |  SSH密码爆破(Linux) | 检测状态以及正确密码日志 | Renci.SshNet.dll
-5 | MssqlScan  | Mssql数据库密码爆破 | 检测状态以及正确密码日志 | 
-6 | OracleScan  | Oracle数据库密码爆破 | 检测状态以及正确密码日志 | DDTek.Oracle.dll
-7 | MysqlScan  | Mysql数据库密码爆破 | 检测状态以及正确密码日志  | MySql.Data.dll
+1 | [WmiScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-WmiScan(Windows))  |  Wmi密码爆破(Windowns) | 检测状态以及正确密码日志 | 
+2 | [IpcScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%B4%E7%88%86%E7%A0%B4-IpcScan(Windows))  |  Ipc密码爆破(Windows) | 检测状态以及正确密码日志 | 
+3 | [SmbScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-SmbScan(Windows))  |  SMB密码爆破(Windows) | 检测状态以及正确密码日志 | SharpCifs.dll
+4 | [SshScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-SSHscan(Linux))  |  SSH密码爆破(Linux) | 检测状态以及正确密码日志 | Renci.SshNet.dll
+5 | [MssqlScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-MSSQL%E6%95%B0%E6%8D%AE%E5%BA%93)  | Mssql数据库密码爆破 | 检测状态以及正确密码日志 | 
+6 | [OracleScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-Oracle%E6%95%B0%E6%8D%AE%E5%BA%93)  | Oracle数据库密码爆破 | 检测状态以及正确密码日志 | DDTek.Oracle.dll
+7 | [MysqlScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-MySQL%E6%95%B0%E6%8D%AE%E5%BA%93)  | Mysql数据库密码爆破 | 检测状态以及正确密码日志  | MySql.Data.dll
 8 | WeblogicScan | Weblogic后台密码爆破 | 检测状态以及正确密码日志 | 
 9 | VncScan  |  VNC远程桌面密码爆破 | 检测状态以及正确密码日志  | VncSharp.dll
-10 | FtpScan  |  Ftp服务器密码爆破 | 检测状态以及正确密码日志 | 
+10 | [FtpScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-FTP%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8)  |  Ftp服务器密码爆破 | 检测状态以及正确密码日志 | 
 11 | RarScan  |  Rar压缩包密码爆破 | 检测状态以及正确密码日志  | Rar.exe
 12 | [TomcatScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-TomcatScan%E6%A8%A1%E5%9D%97Tomcat%E5%90%8E%E5%8F%B0%E7%99%BB%E9%99%86%E5%BC%B1%E5%8F%A3%E4%BB%A4%E6%A3%80%E6%B5%8B)  |  Tomcat后台登陆密码爆破 | 检测状态以及正确密码日志
 13 | [HttpBasicScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-HttpBasicScan%E6%A8%A1%E5%9D%97phpMyAdmin%E5%BC%B1%E5%8F%A3%E4%BB%A4%E6%A3%80%E6%B5%8B)  | HttpBasic401认证密码爆破 | 检测状态以及正确密码日志
