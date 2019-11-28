@@ -358,8 +358,9 @@ Ladon最初的设计就是一款扫描框架，为了方便才内置功能<br>
 
 #### 0x001 Exp生成器
 EXP生成器教程: https://github.com/k8gege/Ladon/wiki/LadonExp-Usage<br>
+实战例子: https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-CVE-2018-2894
 
-#### 0x002 自己编写插件
+#### 0x002 自定义模块教程
 自定义模块教程: https://github.com/k8gege/Ladon/wiki/Ladon-Diy-Moudle<br>
 
 #### 0x003 插件例子源码
