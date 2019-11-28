@@ -166,10 +166,10 @@ ID | 模块名称 |  功能说明  | 返回结果 | 依赖
 5 | [MssqlScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-MSSQL%E6%95%B0%E6%8D%AE%E5%BA%93)  | Mssql数据库密码爆破 | 检测状态以及正确密码日志 | 
 6 | [OracleScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-Oracle%E6%95%B0%E6%8D%AE%E5%BA%93)  | Oracle数据库密码爆破 | 检测状态以及正确密码日志 | DDTek.Oracle.dll
 7 | [MysqlScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-MySQL%E6%95%B0%E6%8D%AE%E5%BA%93)  | Mysql数据库密码爆破 | 检测状态以及正确密码日志  | MySql.Data.dll
-8 | WeblogicScan | Weblogic后台密码爆破 | 检测状态以及正确密码日志 | 
-9 | VncScan  |  VNC远程桌面密码爆破 | 检测状态以及正确密码日志  | VncSharp.dll
+8 | [WeblogicScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-Weblogic%E5%AF%86%E7%A0%81%E6%A3%80%E6%B5%8B) | Weblogic后台密码爆破 | 检测状态以及正确密码日志 | 
+9 | [VncScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-VNC%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2)  |  VNC远程桌面密码爆破 | 检测状态以及正确密码日志  | VncSharp.dll
 10 | [FtpScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-FTP%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8)  |  Ftp服务器密码爆破 | 检测状态以及正确密码日志 | 
-11 | RarScan  |  Rar压缩包密码爆破 | 检测状态以及正确密码日志  | Rar.exe
+11 | [RarScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-Rar%E6%96%87%E4%BB%B6%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3)  |  Rar压缩包密码爆破 | 检测状态以及正确密码日志  | Rar.exe
 12 | [TomcatScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-TomcatScan%E6%A8%A1%E5%9D%97Tomcat%E5%90%8E%E5%8F%B0%E7%99%BB%E9%99%86%E5%BC%B1%E5%8F%A3%E4%BB%A4%E6%A3%80%E6%B5%8B)  |  Tomcat后台登陆密码爆破 | 检测状态以及正确密码日志
 13 | [HttpBasicScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-HttpBasicScan%E6%A8%A1%E5%9D%97phpMyAdmin%E5%BC%B1%E5%8F%A3%E4%BB%A4%E6%A3%80%E6%B5%8B)  | HttpBasic401认证密码爆破 | 检测状态以及正确密码日志
 
@@ -183,12 +183,12 @@ ID | 模块名称 |  功能说明
 -|-|-
 1 | [MS17010](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-MS17010%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B)   | SMB漏洞检测(CVE-2017-0143/CVE-2017-0144/CVE-2017-0145/CVE-2017-0146/CVE-2017-0148)<br>
 2 | WeblogicPoc | Weblogic漏洞检测(CVE-2019-2725/[CVE-2018-2894](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-CVE-2018-2894))<br>
-3 | PhpStudyPoc |  PhpStudy后门检测(phpstudy 2016/phpstudy 2018)<br>
-4 | ActivemqPoc |  ActiveMQ漏洞检测(CVE-2016-3088) <br>
-5 | TomcatPoc  | Tomcat漏洞检测(CVE-2017-12615)<br>
-6 | WeblogicExp | Weblogic漏洞利用(CVE-2019-2725)<br>
-7 | TomcatExp  | Tomcat漏洞利用(CVE-2017-12615)<br>
-8 | Struts2Poc | Struts2漏洞检测(S2-005/S2-009/S2-013/S2-016/S2-019/S2-032/DevMode)<br>
+3 | [PhpStudyPoc](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-PhpStudy%E5%90%8E%E9%97%A8%E6%A3%80%E6%B5%8B) |  PhpStudy后门检测(phpstudy 2016/phpstudy 2018)<br>
+4 | [ActivemqPoc](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8-CVE-2016-3088-ActiveMQ-GetShell-Exploit) |  ActiveMQ漏洞检测(CVE-2016-3088) <br>
+5 | [TomcatPoc](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-CVE-2017-12615)  | Tomcat漏洞检测(CVE-2017-12615)<br>
+6 | [WeblogicExp](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-CVE-2019-2725-Weblogic-GetShell-Exploit) | Weblogic漏洞利用(CVE-2019-2725)<br>
+7 | [TomcatExp](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8-CVE-2017-12615)  | Tomcat漏洞利用(CVE-2017-12615)<br>
+8 | [Struts2Poc](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-Struts2%E7%B3%BB%E5%88%97%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B) | Struts2漏洞检测(S2-005/S2-009/S2-013/S2-016/S2-019/S2-032/DevMode)<br>
 
 #### 0x005 加密解密
 例子: Ladon 字符串 EnHex<br>
