@@ -219,8 +219,8 @@ ID | 功能 | 实现语言 | 功能说明
 8 | 命令执行 | INI配置 | [INI调用外部程序命令批量Linux上控](https://github.com/k8gege/K8CScan/wiki/%E8%B0%83%E7%94%A8%E5%91%BD%E4%BB%A4-%E6%89%B9%E9%87%8FSSH%E4%B8%8A%E6%8E%A7)
 9 | 命令执行 | INI配置 | [INI调用外部程序命令批量Windowns上控](https://github.com/k8gege/K8CScan/wiki/%E8%B0%83%E7%94%A8%E5%91%BD%E4%BB%A4-%E6%89%B9%E9%87%8FWin%E4%B8%8A%E6%8E%A7)
 10 | 漏洞扫描 | Python | [PHP-FPM 远程代码执行漏洞(CVE-2019-11043)](https://github.com/k8gege/CVE-2019-11043)
-11 | 漏洞扫描 | Exp生成器 |[Weblogic CVE-2018-2894漏洞检测](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-CVE-2018-2894))
-12 | 漏洞利用 | PowerShell | [MS17010EXP](https://github.com/k8gege/MS17010EXP)
+11 | 漏洞扫描 | Exp生成器 |[Weblogic CVE-2018-2894漏洞检测](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-CVE-2018-2894)
+12 | 漏洞利用 | PowerShell | [MS17010EXP 永恒之蓝漏洞利用](https://github.com/k8gege/MS17010EXP)
 
 
 文档参考Cscan: https://github.com/k8gege/K8CScan/wiki
