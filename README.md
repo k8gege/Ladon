@@ -128,7 +128,7 @@ ID | 模块名称 |  功能说明  | 返回结果
 4 | SameWeb  | 同服域名扫描 | 同服URL（验证IP、域名、Web标题）
 5 | WebScan  | Web信息扫描 | 存活IP、主机名、Banner、Web标题
 6 | WebDir  | 后台目录扫描 | 地址、HTTP状态
-7 | SubDomain  | 子域名爆破 | 子域名 (可用DomainIP/HostIP解析)
+7 | [SubDomain](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E5%AD%90%E5%9F%9F%E5%90%8D%E7%88%86%E7%A0%B4)  | 子域名爆破 | 子域名 (可用DomainIP/HostIP解析)
 8 | DomainIP  | 域名解析IP | 域名、IP
 9 | HostIP  | 主机名转IP | IP、域名
 
