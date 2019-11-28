@@ -126,13 +126,13 @@ ID | 模块名称 |  功能说明  | 返回结果
 -|-|-|-
 1 | [OnlinePC](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E5%AD%98%E6%B4%BB%E4%B8%BB%E6%9C%BA%E6%89%AB%E6%8F%8F) | 存活主机扫描 | 存活IP、Mac地址、机器名
 2 | [OnlineIP](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E5%AD%98%E6%B4%BB%E4%B8%BB%E6%9C%BA%E6%89%AB%E6%8F%8F) | 仅存活主机IP | 存活IP
-3 | UrlScan  | URL域名扫描 | 同服URL（不验证IP、域名、Web标题）
-4 | SameWeb  | 同服域名扫描 | 同服URL（验证IP、域名、Web标题）
-5 | WebScan  | Web信息扫描 | 存活IP、主机名、Banner、Web标题
-6 | WebDir  | 后台目录扫描 | 地址、HTTP状态
+3 | [UrlScan](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-C%E6%AE%B5%E5%9F%9F%E5%90%8DURL%E6%89%AB%E6%8F%8F)  | URL域名扫描 | 同服URL（不验证IP、域名、Web标题）
+4 | [SameWeb](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-C%E6%AE%B5%E6%97%81%E7%AB%99%E5%9F%9F%E5%90%8D%E6%89%AB%E6%8F%8F)  | 同服域名扫描 | 同服URL（验证IP、域名、Web标题）
+5 | [WebScan](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-Web%E8%B5%84%E4%BA%A7%E6%89%AB%E6%8F%8F)  | Web信息扫描 | 存活IP、主机名、Banner、Web标题
+6 | [WebDir](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-Web%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F)  | 后台目录扫描 | 地址、HTTP状态
 7 | [SubDomain](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E5%AD%90%E5%9F%9F%E5%90%8D%E7%88%86%E7%A0%B4)  | 子域名爆破 | 子域名 (可用DomainIP/HostIP解析)
-8 | DomainIP  | 域名解析IP | 域名、IP
-9 | HostIP  | 主机名转IP | IP、域名
+8 | [DomainIP](https://github.com/k8gege/Ladon/wiki/%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD-%E6%89%B9%E9%87%8F%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90)  | 域名解析IP | 域名、IP
+9 | [HostIP](https://github.com/k8gege/Ladon/wiki/%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD-%E6%89%B9%E9%87%8F%E4%B8%BB%E6%9C%BA%E5%90%8D%E8%A7%A3%E6%9E%90)  | 主机名转IP | IP、域名
 
 
 #### 0x002 指纹识别/服务识别<br>
@@ -143,7 +143,7 @@ ID | 模块名称 |  功能说明  | 返回结果
 ID | 模块名称 |  功能说明  | 返回结果
 -|-|-|-
 1 | [OsScan](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A2%E6%B5%8B)  |  操作系统版本探测 | 存活IP、机器名、操作系统
-2 | PortScan  | 端口扫描含Banner | 主机名、开放端口、服务识别、Banner、Web标题
+2 | [PortScan](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E6%9C%8D%E5%8A%A1-WEB%E8%AF%86%E5%88%AB)  | 端口扫描含Banner | 主机名、开放端口、服务识别、Banner、Web标题
 3 | WhatCMS  |  75种Web指纹识别 | URL、CMS版本、登陆页面、中间件等
 4 | CiscoScan  | 思科设备扫描 | 存活IP、设备型号、主机名、Boot、硬件版本
 5 | EnumMssql  | 枚举Mssql数据库主机 | 数据库IP、机器名、SQL版本
