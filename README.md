@@ -12,6 +12,8 @@
 
 ### Ladon
 <img src=https://k8gege.github.io/k8img/Ladon/Ladon.gif></img>
+### LadonGUI
+<img src=https://k8gege.github.io/k8img/Ladon/LadonGUI.gif></img>
 ### Cobalt Strike
 <img src=https://k8gege.github.io/k8img/Ladon/CS_Ladon.gif></img>
 ### PowerLadon
