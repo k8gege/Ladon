@@ -182,9 +182,9 @@ ID | 模块名称 |  功能说明  | 返回结果 | 依赖
 ID | 模块名称 |  功能说明  
 -|-|-
 1 | [MS17010](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-MS17010%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B)   | SMB漏洞检测(CVE-2017-0143/CVE-2017-0144/CVE-2017-0145/CVE-2017-0146/CVE-2017-0148)<br>
-2 | WeblogicPoc | Weblogic漏洞检测(CVE-2019-2725/[CVE-2018-2894](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-CVE-2018-2894))<br>
+2 | [WeblogicPoc](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-CVE-2019-2725-Weblogic-GetShell-Exploit) | Weblogic漏洞检测(CVE-2019-2725/[CVE-2018-2894](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-CVE-2018-2894))<br>
 3 | [PhpStudyPoc](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-PhpStudy%E5%90%8E%E9%97%A8%E6%A3%80%E6%B5%8B) |  PhpStudy后门检测(phpstudy 2016/phpstudy 2018)<br>
-4 | [ActivemqPoc](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8-CVE-2016-3088-ActiveMQ-GetShell-Exploit) |  ActiveMQ漏洞检测(CVE-2016-3088) <br>
+4 | [ActivemqPoc](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F--CVE-2016-3088) |  ActiveMQ漏洞检测(CVE-2016-3088) <br>
 5 | [TomcatPoc](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-CVE-2017-12615)  | Tomcat漏洞检测(CVE-2017-12615)<br>
 6 | [WeblogicExp](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-CVE-2019-2725-Weblogic-GetShell-Exploit) | Weblogic漏洞利用(CVE-2019-2725)<br>
 7 | [TomcatExp](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8-CVE-2017-12615)  | Tomcat漏洞利用(CVE-2017-12615)<br>
@@ -196,10 +196,10 @@ ID | 模块名称 |  功能说明
 
 ID | 模块名称 |  功能说明  
 -|-|-
-1 | EnHex |  批量Hex密码加密<br>
-2 | DeHex  |  批量Hex密码解密<br>
-3 | EnBase64 |  批量Base64密码加密<br>
-4 | DeBase64  | 批量Base64密码解密<br>
+1 | [EnHex](https://github.com/k8gege/Ladon/wiki/%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86-%E6%89%B9%E9%87%8FHex%E5%AF%86%E7%A0%81) |  批量Hex密码加密<br>
+2 | [DeHex](https://github.com/k8gege/Ladon/wiki/%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86-%E6%89%B9%E9%87%8FHex%E5%AF%86%E7%A0%81)  |  批量Hex密码解密<br>
+3 | [EnBase64](https://github.com/k8gege/Ladon/wiki/%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86-%E6%89%B9%E9%87%8FBase64%E5%AF%86%E7%A0%81) |  批量Base64密码加密<br>
+4 | [DeBase64](https://github.com/k8gege/Ladon/wiki/%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86-%E6%89%B9%E9%87%8FBase64%E5%AF%86%E7%A0%81)  | 批量Base64密码解密<br>
 
 注：以上仅是该工具内置模块的初级用法，外置插件或更高级用法请查看使用文档<br>
  中级用法INI文件配置调用任意程序、系统命令、各种语言现成EXP的批量利用<br>
