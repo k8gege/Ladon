@@ -10,7 +10,7 @@
 [![GitHub license](https://img.shields.io/github/license/k8gege/Ladon)](https://github.com/k8gege/Ladon)
 
 
-### Ladon 5.5
+### Ladon
 <img src=https://k8gege.github.io/k8img/Ladon/Ladon.gif></img>
 ### Cobalt Strike
 <img src=https://k8gege.github.io/k8img/Ladon/CS_Ladon.gif></img>
