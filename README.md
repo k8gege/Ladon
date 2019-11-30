@@ -10,13 +10,13 @@
 [![GitHub license](https://img.shields.io/github/license/k8gege/Ladon)](https://github.com/k8gege/Ladon)
 
 
-### Ladon
+### Ladon (存活主机/端口扫描/MS17010漏洞演示)
 <img src=https://k8gege.github.io/k8img/Ladon/Ladon.gif></img>
-### LadonGUI
+### LadonGUI  将简便进行
 <img src=https://k8gege.github.io/k8img/Ladon/LadonGUI.gif></img>
-### Cobalt Strike
+### Cobalt Strike (Ladon插件化扫描演示)
 <img src=https://k8gege.github.io/k8img/Ladon/CS_Ladon.gif></img>
-### PowerLadon
+### PowerLadon (PowerShell扫描演示)
 <img src=https://k8gege.github.io/k8img/Ladon/PowerLadon.gif></img>
 ### PythonLadon
 <img src=https://k8gege.github.io/k8img/Ladon//py/PyLadon.PNG></img>
