@@ -221,6 +221,7 @@ ID | 功能 | 实现语言 | 功能说明
 10 | 漏洞扫描 | Python | [PHP-FPM 远程代码执行漏洞(CVE-2019-11043)](https://github.com/k8gege/CVE-2019-11043)
 11 | 漏洞扫描 | Exp生成器 |[Weblogic CVE-2018-2894漏洞检测](https://github.com/k8gege/Ladon/wiki/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F-CVE-2018-2894)
 12 | 漏洞利用 | PowerShell | [MS17010EXP 永恒之蓝漏洞利用](https://github.com/k8gege/MS17010EXP)
+13 | 脚本调用 | PowerShell | [Kali 2019无PowerShell执行脚本](https://k8gege.org/p/32e1a912.html)
 
 
 文档参考Cscan: https://github.com/k8gege/K8CScan/wiki
