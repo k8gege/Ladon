@@ -14,11 +14,11 @@
 <img src=https://k8gege.org/k8img/Ladon/Ladon.gif></img>
 ### Ladon GUI
 <img src=https://k8gege.org/k8img/Ladon/LadonGUI.gif></img>
-### Ladon for CobaltStrike
+### Ladon for Cobalt Strike
 <img src=https://k8gege.org/k8img/Ladon/CS_Ladon.gif></img>
 ### Ladon for PowerShell
 <img src=https://k8gege.org/k8img/Ladon/PowerLadon.gif></img>
-### PythonLadon
+### Python Ladon
 <img src=https://k8gege.org/k8img/Ladon//py/PyLadon.PNG></img>
 ### Ladon for Linux
 <img src=https://k8gege.org/k8img/Ladon/kali/Kali_MS17010.gif></img>
@@ -44,15 +44,8 @@ git clone https://github.com/k8gege/Ladon.git<br>
 
 ### 成品下载
 https://github.com/k8gege/Ladon/releases<br>
-Win7/2008或安装.net 2.x 3.x系统可以使用3.5的exe<br>
-Win8-win10或安装.net 4.x系统可以使用4.0的exe<br>
-
-### 关于
-
-Ladon是希腊神话中的神兽，看守金苹果的百头巨龙。它从不睡觉，被赫拉克勒斯借扛天巨人之手诱巨龙睡着<br>
-杀死巨龙并偷得了金苹果。巨龙死前将自己的魂魄封印在金苹果中，偷盗者将金苹果送给了白雪公主，公主<br>
-为了报恩将金苹果分给了七个小矮人，吃下以后他们变成了龙珠散落到世界各地，龙珠分为七颗，它蕴含着<br>
-可以令奇迹发生的力量。当集齐7颗龙珠念出咒语，就能召唤神龙，而神龙则会实现召唤者提出的一个愿望。<br>
+Win7/2008或安装.net 2.x 3.x系统可使用Ladon.exe<br>
+Win8-win10或安装.net 4.x系统可使用Ladon40.exe<br>
 
 ### 前言
 
@@ -61,6 +54,14 @@ Ladon是希腊神话中的神兽，看守金苹果的百头巨龙。它从不睡
 漏洞时效性1-2天，扫描内网或外网需1周时间，是否会因此错过很多或许可成功的漏洞？<br>
 对于那些拥有几百上千域名的大站来说，你发现越快成功率就越高，慢管理员就打补丁了。<br>
 因此我们需要一个支持批量C段/B段甚至A段的扫描器，添加自定义模块快速检测新出漏洞。<br>
+
+### 关于Ladon(拉冬)
+Ladon音译: 拉登或拉冬。因集成了很多模块，每个模块均可当成一个独立工具，和百头巨龙有很多头类似。
+Ladon是希腊神话中的神兽，看守金苹果的百头巨龙。它从不睡觉，被赫拉克勒斯借扛天巨人之手诱巨龙睡着<br>
+杀死巨龙并偷得了金苹果。巨龙死前将自己的魂魄封印在金苹果中，偷盗者将金苹果送给了白雪公主，公主<br>
+为了报恩将金苹果分给了七个小矮人，吃下以后他们变成了龙珠散落到世界各地，龙珠分为七颗，它蕴含着<br>
+可以令奇迹发生的力量。当集齐7颗龙珠念出咒语，就能召唤神龙，而神龙则会实现召唤者提出的一个愿望。<br>
+
 
 ### 程序简介
 
@@ -73,9 +74,24 @@ Ladon一款用于大型网络渗透的多线程插件化综合扫描神器，含
 
 ### 运行环境
 
+#### Windows
+
 Ladon.exe可在安装有.net 2.0及以上版本Win系统中使用(Win7后系统自带.net)<br>
 如Cmd、PowerShell、远控Cmd、WebShell等，以及Cobalt Strike内存加载使用<br>
 Ladon.ps1完美兼容win7-win10 PowerShell，不看版本可远程加载实现无文件渗透<br>
+
+#### Linux
+
+安装Mono运行库,将KaliLodan改名为Ladon,通过mono执行Ladon即可。
+```Bash
+apt install mono-runtime
+mono Ladon 192.168.1.8/24 OnlinePC
+```
+
+由于mono的兼容性问题，不保证Linux下所有功能均可用<br>
+就对于Ladon功能的测试来看Kali的兼容性要比Ubuntu好<br>
+测试发现有些功能的稳定性以及速度没有Windows系统快<br>
+未列功能系未测试或暂不可用功能，使用前请先看说明<br>
 
 ### 奇葩条件
 
