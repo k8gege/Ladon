@@ -35,7 +35,7 @@ ID | 主题 |  URL
 6 | 外部模块参考 | https://github.com/k8gege/K8CScan/wiki
 7 | PowerLadon | https://github.com/k8gege/powerladon
 8 | PythonLadon | https://github.com/k8gege/PyLadon
-9 | LinuxLadon | https://github.com/k8gege/LinuxLadon
+9 | LinuxLadon | https://github.com/k8gege/KaliLadon
 10 | 漏洞演示视频 | https://github.com/k8gege/K8CScan/tree/master/Video
 
 ### 源码编译
