@@ -10,18 +10,18 @@
 [![GitHub license](https://img.shields.io/github/license/k8gege/Ladon)](https://github.com/k8gege/Ladon)
 
 
-### Ladon
+### Ladon for Windows
 <img src=https://k8gege.org/k8img/Ladon/Ladon.gif></img>
-### LadonGUI
+### Ladon GUI
 <img src=https://k8gege.org/k8img/Ladon/LadonGUI.gif></img>
-### Cobalt Strike
+### Ladon for CobaltStrike
 <img src=https://k8gege.org/k8img/Ladon/CS_Ladon.gif></img>
-### PowerLadon
+### Ladon for PowerShell
 <img src=https://k8gege.org/k8img/Ladon/PowerLadon.gif></img>
 ### PythonLadon
 <img src=https://k8gege.org/k8img/Ladon//py/PyLadon.PNG></img>
-### Kali
-<img src=https://k8gege.org/k8img/Ladon/kaliKali_MS17010.gif></img>
+### Ladon for Linux
+<img src=https://k8gege.org/k8img/Ladon/kali/Kali_MS17010.gif></img>
 
 ### 使用说明
 
