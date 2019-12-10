@@ -1,0 +1,63 @@
+﻿### Ladon For Linux
+Author K8gege
+Build 20191210
+https://github.com/k8gege/Ladon
+
+### Teston 
+Kali 2019.4 x64
+Ubuntu 18.04 x64
+
+### install
+apt install mono-runtime
+
+### run
+mono Ladon OnlinePC
+
+### Kali 2019.4 可用功能
+由于mono的兼容性问题，不保证Linux下所有功能均可用
+就对于Ladon功能的测试来看Kali的兼容性要比Ubuntu好
+测试发现有些功能的稳定性以及速度没有Windows系统快
+未列功能系未测试或暂不可用功能，使用前请先看说明
+在Kali 2019.4下测试，Ladon支持以下所列的27种功能
+=============================================
+WebDir
+UrlScan
+PhpStudyPoc
+WebScan
+MysqlScan
+OracleScan
+VncScan
+HttpDownLoad
+FtpDownLoad
+WhatCMS
+FtpScan
+PortScan
+SmbScan
+SameWeb
+MS17010
+OnlinePC
+OnlineIP
+HostIP
+DomainIP
+EnBase64
+DeBase64
+EnHex
+DeHex
+OsScan
+SubDomain
+SshScan
+
+支持加载*.ps1(无需目标安装powershell,kali & ubuntu测试通过)
+=============================================
+
+
+### 暂不支持功能
+=============================================
+Struts2Poc  X不支持
+TomcatScan X不支持
+HttpBasicScan X不支持，只能检测是否401认证URL，无法爆破
+WeblogicPoc X 竟然不支持(Win下mono也不支持，显然mono问题)
+MssqlScan X不支持只能扫到开放端口
+IpcScan X不支持(因为调用cmd命令)
+
+

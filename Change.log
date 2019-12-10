@@ -1,0 +1,103 @@
+
+Ladon 5.8 20191210
+[+]Golang插件 goscan.dll
+[+]Bug修复
+[+]非IP提示(以免测试ping不通导致插件接收不到参数)
+[+]HttpDownLoad
+[+]FtpDownLoad
+[u]优化加载c# dll插件
+[u]优化加载c# exe插件
+[+]判断自定义模块是否存在
+
+Ladon 5.7 20191127
+EnumMSSQL 改成 EnumMssql
+目标内网测试HttpBasicScan模块
+使用10个弱口令成功登陆以下设备或WEB站点
+
+DlinkDPR-1061打印机
+Cisco路由或交换机
+Cisco Catalyst 3750 Series
+Cisco WS-C2950-24 "SW-INOC2"
+Nortel Alteon OS应用交换机
+HP交换机（GbE2c L2/L3 Ethernet Blade Switch for HP c-Class BladeSystem）
+phpMyAdmint
+Tomcat
+
+[+]HttpBasicScan Tomcat\phpMyAdmint等基本认证密码爆破
+[+]HttpBasicScan 401认证密码爆破(支持用户密码、仅密码)
+[+]TomcatScan Tomcat密码爆破/弱口令破解
+[u]WahtCMS + Apache Axis2 & Apache Flink
+
+
+5.6 1121
+OnlineIP MAC和DNS存活主机
+1119
+[+]noping参数利用MAC和DNS发现存活主机(默认也加了,这样noping参数可能获取结果会少一些)
+1115
+[+]WeblogicPoc CVE-2018-2894
+
+Ladon 5.5 1109
+[+]Struts2Poc(S2-005/S2-009/S2-013/S2-016/S2-019/S2-032/DevMode)
+[u]WeblogicScan支持userpass.txt & check.txt
+1108
+[u]修复RarScan未判断文件是否存在的BUG
+[u]MssqlScan支持userpass.txt
+[u]WmiScan支持userpass.txt
+[u]SmbScan支持userpass.txt
+[u]IpcScan支持userpass.txt
+[u]FtpScan支持userpass.txt
+[u]MysqlScan支持userpass.txt
+
+1107
+[u]SSHScan支持自定义端口 & userpass.txt
+[u]OracleScan支持自定义端口& userpass.txt
+[u]MssqlScan支持自定义端口
+[u]MysqlScan支持自定义端口
+[u]FtpScan支持自定义端口
+[u]OSscan修改为OsScan,SSHscan修改为SshScan
+[+]VncScan密码破解支持自定义端口(仅需密码)
+
+1106 
+[u]OSscan添加MAC地址，用于判断目标是否重装
+[u]SmbScan添加登陆失败错误提示
+[u]修改Program为Scan,反射调用[Ladon.Scan]
+[u]易输错的nocheck参数改为noping,也易理解
+
+Ladon 5.5 Update 20191105
+[u]15:45方法公开支持PowerShell反射加载
+[u]16:42修复PortScan默认扫两个1521端口的BUG
+[u]修复PortScan模块不支持CS且rundll32崩溃的BUG
+
+
+Ladon 5.5 Update 20191104
+[+]RAR文件密码爆破
+[u]主程序及插件命名空间Ladon 
+[u]WebDir -1状态不打印(Web不存在)
+
+Ladon 5.5 Update 20191101 
+修复无参时无法加载插件BUG（会导致无法加载url.txt\ip.txt）
+
+Ladon 5.5 Update 20191031 
+============================================================
+[+]参数加载PS1脚本
+[+]参数加载INI脚本
+OracleScan  高亮 & (check.txt) 不兼容CS
+MysqlScan  	高亮 & (check.txt) 不兼容CS
+TomcatPoc  	高亮
+TomcatExp  	高亮
+WeblogicPoc 高亮
+WeblogicExp 高亮
+============================================================
+
+Ladon 5.5 Update 20191030 
+============================================================
+PortScan	不兼容CS 端口扫描时rundll32崩溃弹框BUG未修复
+SSHscan  	高亮 & (check.txt) 不兼容CS (未支持KEYIN认证)
+SmbScan  	高亮 & (check.txt) 不兼容CS
+PhpStudyPoc 高亮
+FtpScan  	高亮 & (check.txt)
+WmiScan  	高亮 & (check.txt)
+IpcScan  	高亮 & (check.txt)
+MS17010		高亮
+MssqlScan	高亮 & (check.txt)
+============================================================
