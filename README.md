@@ -109,7 +109,7 @@ Ladon采用C#研发，程序体积很小500K左右，即便马不行也能上传
 体积小，功能强大<br>
 插件支持多种语言<br>
 跨平台(Win/Kali/Ubuntu)等<br>
-支持Cobalt Strike<br>
+支持Cobalt Strike插件化<br>
 Exp生成器一键定制Poc<br>
 多版本适用各种环境<br>
 
