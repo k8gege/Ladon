@@ -1,10 +1,10 @@
 Ladon 5.8 20191214
-[u]OsScan支持RDP探测Windows系统版本
-[u]OsScan支持netbios协议获取机器名
-[u]OnlinePC支持Vmware虚拟机识别
+[u]OsScan新增RDP探测Windows系统版本
+[u]OsScan新增netbios协议获取机器名
+[u]OnlinePC新增Vmware虚拟机识别
 [+]扫描时间 & 结束时间
-[u]OsScan支持MAC/DNS探测存活主机
-[u]OsScan支持Vmware\TP-LINK等识别
+[u]OsScan新增MAC/DNS探测存活主机
+[u]OsScan新增Vmware\TP-LINK等识别
 
 Ladon 5.8 20191210
 [+]Golang插件 goscan.dll
