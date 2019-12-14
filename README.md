@@ -1,4 +1,4 @@
-## Ladon 5.8 20191210
+## Ladon 5.8 20191214
 ![](https://k8gege.github.io/k8img/Ladon/Dragon.jpg)
 
 [![Author](https://img.shields.io/badge/Author-k8gege-blueviolet)](https://github.com/k8gege) 
@@ -152,7 +152,7 @@ Exp生成器可一键定制Poc<br>
 
 ID | 模块名称 |  功能说明  | 返回结果
 -|-|-|-
-1 | [OnlinePC](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E5%AD%98%E6%B4%BB%E4%B8%BB%E6%9C%BA%E6%89%AB%E6%8F%8F) | 存活主机扫描 | 存活IP、Mac地址、机器名
+1 | [OnlinePC](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E5%AD%98%E6%B4%BB%E4%B8%BB%E6%9C%BA%E6%89%AB%E6%8F%8F) | 存活主机扫描 | 存活IP、Mac地址、机器名、商家
 2 | [OnlineIP](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E5%AD%98%E6%B4%BB%E4%B8%BB%E6%9C%BA%E6%89%AB%E6%8F%8F) | 仅存活主机IP | 存活IP
 3 | [UrlScan](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-C%E6%AE%B5%E5%9F%9F%E5%90%8DURL%E6%89%AB%E6%8F%8F)  | URL域名扫描 | 同服URL（不验证IP、域名、Web标题）
 4 | [SameWeb](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-C%E6%AE%B5%E6%97%81%E7%AB%99%E5%9F%9F%E5%90%8D%E6%89%AB%E6%8F%8F)  | 同服域名扫描 | 同服URL（验证IP、域名、Web标题）
@@ -170,7 +170,7 @@ ID | 模块名称 |  功能说明  | 返回结果
 
 ID | 模块名称 |  功能说明  | 返回结果
 -|-|-|-
-1 | [OsScan](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A2%E6%B5%8B)  |  操作系统版本探测 | 存活IP、机器名、操作系统
+1 | [OsScan](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A2%E6%B5%8B)  |  操作系统版本探测 | 存活IP、工作组\机器名、操作系统、
 2 | [PortScan](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F(%E6%9C%8D%E5%8A%A1%E8%AF%86%E5%88%AB))  | 端口扫描含Banner | 主机名、开放端口、服务识别、Banner、Web标题
 3 | [WhatCMS](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-Web%E6%8C%87%E7%BA%B9%E8%AF%86%E5%88%AB)  |  75种Web指纹识别 | URL、CMS版本、登陆页面、中间件等
 4 | [CiscoScan](https://github.com/k8gege/Ladon/wiki/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E6%80%9D%E7%A7%91%E8%AE%BE%E5%A4%87%E6%89%AB%E6%8F%8F)  | 思科设备扫描 | 存活IP、设备型号、主机名、Boot、硬件版本
@@ -228,6 +228,13 @@ ID | 模块名称 |  功能说明
 2 | [DeHex](https://github.com/k8gege/Ladon/wiki/%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86-%E6%89%B9%E9%87%8FHex%E5%AF%86%E7%A0%81)  |  批量Hex密码解密<br>
 3 | [EnBase64](https://github.com/k8gege/Ladon/wiki/%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86-%E6%89%B9%E9%87%8FBase64%E5%AF%86%E7%A0%81) |  批量Base64密码加密<br>
 4 | [DeBase64](https://github.com/k8gege/Ladon/wiki/%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86-%E6%89%B9%E9%87%8FBase64%E5%AF%86%E7%A0%81)  | 批量Base64密码解密<br>
+
+#### 0x006 其它功能
+下载功能主要用于内网文件传输或者将VPS文件下载至目标机器<br>
+ID | 模块名称 |  功能说明 | 用法
+-|-|-
+1 | HttpDownLoad | HTTP下载 | Ladon HttpDownLoad https://k8gege.org/test.exe
+2 | FtpDownLoad | Ftp下载 | Ladon FtpDownLoad 127.0.0.1:21 admin admin test.exe
 
 注：以上仅是该工具内置模块的初级用法，外置插件或更高级用法请查看使用文档<br>
  中级用法INI文件配置调用任意程序、系统命令、各种语言现成EXP的批量利用<br>
