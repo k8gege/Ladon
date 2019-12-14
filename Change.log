@@ -1,3 +1,10 @@
+Ladon 5.8 20191214
+[u]OsScan支持RDP探测Windows系统版本
+[u]OsScan支持nbtsta识别工作组/机器名
+[u]OnlinePC支持Vmware虚拟机识别
+[+]扫描时间 & 结束时间
+[u]OsScan支持MAC/DNS探测存活主机
+[u]OsScan支持Vmware\TP-LINK等识别
 
 Ladon 5.8 20191210
 [+]Golang插件 goscan.dll
@@ -64,8 +71,8 @@ Ladon 5.5 1109
 [u]易输错的nocheck参数改为noping,也易理解
 
 Ladon 5.5 Update 20191105
-[u]15:45方法公开支持PowerShell反射加载
-[u]16:42修复PortScan默认扫两个1521端口的BUG
+[u]方法公开支持PowerShell反射加载
+[u]修复PortScan默认扫两个1521端口的BUG
 [u]修复PortScan模块不支持CS且rundll32崩溃的BUG
 
 
