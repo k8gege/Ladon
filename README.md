@@ -86,6 +86,7 @@ Ladon.ps1完美兼容win7-win10 PowerShell，不看版本可远程加载实现�
 安装Mono运行库,将KaliLodan改名为Ladon,通过mono执行Ladon即可。
 ```Bash
 apt install mono-runtime
+wget https://github.com/k8gege/Ladon/raw/master/KaliLadon -O Ladon
 mono Ladon 192.168.1.8/24 OnlinePC
 ```
 
@@ -107,6 +108,7 @@ Ladon采用C#研发，程序体积很小500K左右，即便马不行也能上传
 
 ### 特色
 
+扫描流量小<br>
 程序体积小<br>
 功能丰富强大<br>
 程序简单易用<br>
