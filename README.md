@@ -146,7 +146,7 @@ Exp生成器可一键定制Poc<br>
 23 插件(支持多种语言C#/Delphi/Golang/Python/VC/PowerShell)<br>
 24 支持Cobalt Strike(beacon命令行下扫描目标内网或跳板扫描外网目标)<br>
 
-### 内置功能模块(40)
+### 内置功能模块(48)
 
 #### 0x001 资产扫描<br>
 
@@ -232,12 +232,34 @@ ID | 模块名称 |  功能说明
 3 | [EnBase64](https://github.com/k8gege/Ladon/wiki/%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86-%E6%89%B9%E9%87%8FBase64%E5%AF%86%E7%A0%81) |  批量Base64密码加密<br>
 4 | [DeBase64](https://github.com/k8gege/Ladon/wiki/%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86-%E6%89%B9%E9%87%8FBase64%E5%AF%86%E7%A0%81)  | 批量Base64密码解密<br>
 
-#### 0x006 其它功能
+#### 0x006 下载功能
 下载功能主要用于内网文件传输或者将VPS文件下载至目标机器<br>
 ID | 模块名称 |  功能说明 | 用法
 -|-|-
 1 | HttpDownLoad | HTTP下载 | Ladon HttpDownLoad https://k8gege.org/test.exe
 2 | FtpDownLoad | Ftp下载 | Ladon FtpDownLoad 127.0.0.1:21 admin admin test.exe
+
+#### 0x007 网络嗅探
+基于Socket RAW嗅探，无需安装Winpcap，但需管理员权限<br>
+主要用于发现内网存活机器或嗅探管理员登陆FTP或WEB站点密码<br>
+后续可能会添加其它功能可能另外写个专门用于嗅探的工具<br>
+PS: 目前网上大部嗅探工具都是基于Winpcap抓包，某些机器针对其做限制，会提示找不到网卡无法嗅探。
+重点是不少程序不是GUI就是只能在Linux下用，如果你用py的SCAPY(需winpcap)来实现发现程序高达48M
+
+ID | 模块名称 |  功能说明 | 用法
+-|-|-
+1 | FtpSniffer/SnifferFtp | Ftp密码嗅探 | Ladon FtpSniffer 192.168.1.5
+2 | HttpSniffer/SnifferHTTP  | HTTP密码嗅探 | Ladon HTTPSniffer 192.168.1.5
+3 | Sniffer  | 网络嗅探(源地址、目标地址) | Ladon Sniffer
+
+#### 0x008 本机信息
+
+ID | 模块名称 |  功能说明 | 用法
+-|-|-
+1 | EnumIIS/IisWeb  | IIS站点密码读取 | Ladon EnumIIS 或 Ladon IisWeb
+2 | EnumProcess/ProcessList/tasklist | 进程详细信息 | Ladon EnumProcess 或 Ladon Tasklist
+3 | GetCmdLine/CmdLine | 获取命令行参数 | Ladon cmdline 或 Ladon cmdline cmd.exe
+4 | GetInfo/GetInfo2 | 获取渗透基础信息 | Ladon GetInfo 或Ladon GetInfo2
 
 注：以上仅是该工具内置模块的初级用法，外置插件或更高级用法请查看使用文档<br>
  中级用法INI文件配置调用任意程序、系统命令、各种语言现成EXP的批量利用<br>
