@@ -38,7 +38,7 @@ ID | 主题 |  URL
 8 | PythonLadon | https://github.com/k8gege/PyLadon
 9 | LinuxLadon | https://github.com/k8gege/KaliLadon
 10 | 漏洞演示视频 | https://github.com/k8gege/K8CScan/tree/master/Video
-
+11 | Ladon6.0文档 | https://k8gege.org/p/56393.html
 ### 源码编译
 git clone https://github.com/k8gege/Ladon.git<br>
 使用VS2012或以上版本分别编译.net 3.5、4.0版本EXE<br>
