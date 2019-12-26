@@ -253,7 +253,7 @@ ID | 模块名称 |  功能说明 | 用法
 2 | HttpSniffer/SnifferHTTP  | HTTP密码嗅探 | Ladon HTTPSniffer 192.168.1.5
 3 | Sniffer  | 网络嗅探(源地址、目标地址) | Ladon Sniffer
 
-#### 0x008 本机信息
+#### 0x008 密码读取
 
 ID | 模块名称 |  功能说明 | 用法
 -|-|-
