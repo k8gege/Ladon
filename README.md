@@ -414,6 +414,19 @@ PowerShell版,也可CMD命令行下远程加载内存实现无文件扫描，模
 ```
 <img src=https://k8gege.org/k8img/Ladon/ps/CmdPSRemoteLadon.gif></img>
 
+#### 0x004 远控交互式CMD
+<img src=https://k8gege.org/k8img/Ladon/ps/psladon_rat.PNG></img>
+
+#### 0x005 菜刀非交互CMD
+<img src=https://k8gege.org/k8img/Ladon/ps/psladon_cd.PNG></img>
+
+#### 0x006 Empire非交互CMD
+Empire的shell有点问题，分号被截断，可以加个cmd /c
+<img src=https://k8gege.org/k8img/Ladon/ps/psladon_empire.PNG></img>
+
+#### 0x007 MSF交互式CMD
+
+
 ### 高级用法
 Ladon最初的设计就是一款扫描框架，为了方便才内置功能<br>
 毕竟需要使用一个功能就得在目标多上传一个文件是顶麻烦的<br>
