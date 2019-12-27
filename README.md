@@ -203,6 +203,8 @@ ID | 模块名称 |  功能说明  | 返回结果 | 依赖
 11 | [RarScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-Rar%E6%96%87%E4%BB%B6%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3)  |  Rar压缩包密码爆破 | 检测状态以及正确密码日志  | Rar.exe
 12 | [TomcatScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-TomcatScan%E6%A8%A1%E5%9D%97Tomcat%E5%90%8E%E5%8F%B0%E7%99%BB%E9%99%86%E5%BC%B1%E5%8F%A3%E4%BB%A4%E6%A3%80%E6%B5%8B)  |  Tomcat后台登陆密码爆破 | 检测状态以及正确密码日志
 13 | [HttpBasicScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-HttpBasicScan%E6%A8%A1%E5%9D%97phpMyAdmin%E5%BC%B1%E5%8F%A3%E4%BB%A4%E6%A3%80%E6%B5%8B)  | HttpBasic401认证密码爆破 | 检测状态以及正确密码日志
+14 | [LdapScan](https://k8gege.org/p/56393.html)  | LdapScan域服务器密码爆破 | 检测状态以及正确密码日志
+
 
 #### 0x004 漏洞检测/漏洞利用
 
@@ -250,18 +252,18 @@ PS: 目前网上大部嗅探工具都是基于Winpcap抓包，某些机器针对
 
 ID | 模块名称 |  功能说明 | 用法
 -|-|-|-
-1 | FtpSniffer/SnifferFtp | Ftp密码嗅探 | Ladon FtpSniffer 192.168.1.5
-2 | HttpSniffer/SnifferHTTP  | HTTP密码嗅探 | Ladon HTTPSniffer 192.168.1.5
-3 | Sniffer  | 网络嗅探(源地址、目标地址) | Ladon Sniffer
+1 | [FtpSniffer/SnifferFtp](https://k8gege.org/p/56393.html)  | Ftp密码嗅探 | Ladon FtpSniffer 192.168.1.5
+2 | [HttpSniffer/SnifferHTTP](https://k8gege.org/p/56393.html)   | HTTP密码嗅探 | Ladon HTTPSniffer 192.168.1.5
+3 | [Sniffer](https://k8gege.org/p/56393.html)   | 网络嗅探(源地址、目标地址) | Ladon Sniffer
 
 #### 0x008 密码读取
 
 ID | 模块名称 |  功能说明 | 用法
 -|-|-|-
-1 | EnumIIS/IisWeb  | IIS站点密码读取 | Ladon EnumIIS 或 Ladon IisWeb
-2 | EnumProcess/ProcessList/tasklist | 进程详细信息 | Ladon EnumProcess 或 Ladon Tasklist
-3 | GetCmdLine/CmdLine | 获取命令行参数 | Ladon cmdline 或 Ladon cmdline cmd.exe
-4 | GetInfo/GetInfo2 | 获取渗透基础信息 | Ladon GetInfo 或Ladon GetInfo2
+1 | [EnumIIS/IisWeb](https://k8gege.org/p/56393.html)   | IIS站点密码读取 | Ladon EnumIIS 或 Ladon IisWeb
+2 | [EnumProcess/ProcessList/tasklist](https://k8gege.org/p/56393.html)  | 进程详细信息 | Ladon EnumProcess 或 Ladon Tasklist
+3 | [GetCmdLine/CmdLine](https://k8gege.org/p/56393.html)  | 获取命令行参数 | Ladon cmdline 或 Ladon cmdline cmd.exe
+4 | [GetInfo/GetInfo2](https://k8gege.org/p/56393.html)  | 获取渗透基础信息 | Ladon GetInfo 或Ladon GetInfo2
 
 注：以上仅是该工具内置模块的初级用法，外置插件或更高级用法请查看使用文档<br>
  中级用法INI文件配置调用任意程序、系统命令、各种语言现成EXP的批量利用<br>
