@@ -1,8 +1,8 @@
-## Ladon 6.1 20200321
+## Ladon 6.2 20200327
 ![](https://k8gege.github.io/k8img/Ladon/Dragon.jpg)
 
 [![Author](https://img.shields.io/badge/Author-k8gege-blueviolet)](https://github.com/k8gege) 
-[![Ladon](https://img.shields.io/badge/Ladon-6.1-yellowgreen)](https://github.com/k8gege/Ladon) 
+[![Ladon](https://img.shields.io/badge/Ladon-6.2-yellowgreen)](https://github.com/k8gege/Ladon) 
 [![Bin](https://img.shields.io/badge/Ladon-Bin-ff69b4)](https://github.com/k8gege/Ladon/releases) 
 [![GitHub issues](https://img.shields.io/github/issues/k8gege/Ladon)](https://github.com/k8gege/Ladon/issues) 
 [![Github Stars](https://img.shields.io/github/stars/k8gege/Ladon)](https://github.com/k8gege/Ladon) 
@@ -193,7 +193,7 @@ ID | 模块名称 |  功能说明  | 返回结果 | 依赖
 -|-|-|-|-
 1 | [WmiScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-WmiScan(Windows))  |  Wmi密码爆破(Windowns) | 检测状态以及正确密码日志 | 
 2 | [IpcScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%B4%E7%88%86%E7%A0%B4-IpcScan(Windows))  |  Ipc密码爆破(Windows) | 检测状态以及正确密码日志 | 
-3 | [SmbScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-SmbScan(Windows))  |  SMB密码爆破(Windows) | 检测状态以及正确密码日志 | SharpCifs.dll
+3 | [SmbScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-SmbScan(Windows))  |  SMB密码爆破(Windows) | 检测状态以及正确密码日志 
 4 | [SshScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-SSHscan(Linux))  |  SSH密码爆破(Linux) | 检测状态以及正确密码日志 | Renci.SshNet.dll
 5 | [MssqlScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-MSSQL%E6%95%B0%E6%8D%AE%E5%BA%93)  | Mssql数据库密码爆破 | 检测状态以及正确密码日志 | 
 6 | [OracleScan](https://github.com/k8gege/Ladon/wiki/%E5%AF%86%E7%A0%81%E7%88%86%E7%A0%B4-Oracle%E6%95%B0%E6%8D%AE%E5%BA%93)  | Oracle数据库密码爆破 | 检测状态以及正确密码日志 | DDTek.Oracle.dll
