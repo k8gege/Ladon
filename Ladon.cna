@@ -1,12 +1,12 @@
-#Ladon 6.1 for Cobalt Strike
+#Ladon 6.2 for Cobalt Strike
 #author:	k8gege
 #blog:		k8gege.org
 #github:	https://github.com/k8gege
 #teston:	CS 3.x & 4.0
-#update: 	20200320
+#update: 	20200327
 
 #Some functions are not compatible with CS, please use exe version
-#Not Support [SmbScan MysqlScan OracleScan SSHscan]
+#Brute-Force Not Support [VncScan MysqlScan OracleScan SSHscan] PassWord 
 
 alias Ladon {
 	if (-exists script_resource("Ladon.exe")) {
@@ -23,7 +23,7 @@ alias Ladon {
 	blog2($1, "scantype: [OnlineIP OnlinePC OSscan CiscoScan]");
 	blog2($1, "scantype: [WebScan WebScan2 SameWeb UrlScan WhatCMS WebDir SubDomain HostIP DomainIP]");
 	blog2($1, "scantype: [MS17010 WeblogicPoc WeblogicExp PhpStudyPoc ActiveMQPoc TomcatPoc TomcatExp Struts2Poc]");
-	blog2($1, "scantype: [LdapScan FtpScan WmiScan SmbScan LdapScan VncScan SmbHashScan]");
+	blog2($1, "scantype: [LdapScan FtpScan WmiScan SmbScan LdapScan VncScan SmbHashScan WmiHashScan]");
 	blog2($1, "scantype: [EnumMssql EnumShare EnumIIS EnumProcess GetCmdLine GetInfo GetInfo2 GetHtml AdiDnsDump]");
 	blog2($1, "scantype: [EnHex DeHex EnBase64 DeBase64]");
 	blog2($1, "scantype: [[Sniffer FtpSniffer HttpSniffer HttpDownload FtpDownload]]");
@@ -185,7 +185,7 @@ item "Brute-Force" {
 		$dialog = dialog("Ladon Brute-Force", %(tar => "",moudle => "LdapScan",clrver => "35",bid => $bid), &LadonScan);
 		dialog_description($dialog, "Target: IP or CIDR or URL or Host<br>Brute-Force: Upload PassWord File to WorkDir");
 		drow_text($dialog, "tar",  "Target:");
-		drow_combobox($dialog, "moudle", "Moudle:", @("LdapScan","SmbScan","SmbHashScan","FtpScan","WmiScan","VncScan","WeblogicScan","TomcatScan","RarScan","HttpBasicScan","WebDir","SubDomain"));
+		drow_combobox($dialog, "moudle", "Moudle:", @("LdapScan","SmbScan","SmbHashScan","WmiHashScan","WmiScan","FtpScan","VncScan","MysqlScan","OracleScan","SSHscan","WeblogicScan","TomcatScan","HttpBasicScan","WebDir","SubDomain"));
 		#drow_combobox($dialog, "clrver", "Version", @("35", "40"));
 		drow_checkbox($dialog, 'type', 'noping');
 		dbutton_action($dialog, "Start");
