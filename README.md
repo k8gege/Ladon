@@ -27,8 +27,9 @@ ID | 主题 |  URL
 8 | Python Ladon | https://github.com/k8gege/PyLadon
 9 | Kali Ladon | https://github.com/k8gege/KaliLadon
 10 | 漏洞演示视频 | https://github.com/k8gege/K8CScan/tree/master/Video
-11 | Ladon6.0文档 | https://k8gege.org/p/56393.html
-12 | Ladon6.2文档 | http://k8gege.org/p/39070.html
+11 | 6.0更新功能 | https://k8gege.org/p/56393.html
+12 | 6.2更新功能 | http://k8gege.org/p/39070.html
+13 | 6.4更新功能 | k8gege.org/p/55476.html
 
 ### DownLoad
 New Version：https://k8gege.org/Download/Ladon.rar <br>
