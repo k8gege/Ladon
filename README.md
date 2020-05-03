@@ -30,3 +30,6 @@ ID | 主题 |  URL
 11 | Ladon6.0文档 | https://k8gege.org/p/56393.html
 12 | Ladon6.2文档 | http://k8gege.org/p/39070.html
 
+### DownLoad
+New Version：https://k8gege.org/Download/Ladon.rar
+All Version: https://github.com/k8gege/Ladon/releases/
