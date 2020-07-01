@@ -1,0 +1,54 @@
+Wiki: http://k8gege.org/Ladon
+
+6.6.6 20200701
+[+] OracleScan不指定帐密时探测Oracle服务
+[+] OracleScan支持自定义SID扫描(sid.txt)
+[u] WebSer 重新支持a_1.rar b-2.rar文件名
+
+6.6.6 20200628
+[+] ReverseHttps/MsfHttps 反弹MSF Met Https Shell
+[+] ReverseHttp/MsfHttp 反弹MSF Met Http Shell
+
+6.6.5 20200622
+[+] WmiScan 记录RCP不可用正确密码
+[+] PowerCat TCP、UDP反弹SHELL
+[+] ReverseTcp MSF、NC反弹SHELL
+[+] recent  查看用户最近访问文件
+[+] sshexec 增加上传下载文件功能
+
+6.6.3 20200618
+[+] webser 钩鱼攻击密码捕获(如Win登陆认证)
+[+] webser 访问ip.txt、ip.jgp返回浏览者IP
+[+] RegAuto 添加注册表RUN启动项
+[+] sc 服务加启动项(system权限)
+[+] sc 服务执行程序(system权限)
+[+] at 计划执行程序(无需时间)(system权限)
+[u] webser 支持列目录(Ladon web 80 dirlist)
+
+6.6.2 20200608
+[u] CS插件版 EXE完整版
+
+6.6.2 20200606
+[+] SshScan & SshExec 无需额外DLL
+6.6.1 20200604
+[u] psexec 加密传输命令/结果
+[+] AllVer/AllVersion 获取已安装程序列表
+
+Ladon 6.6 SmbGhost 20200603
+===========================================
+[+] Ver/Version .NET运行时或编译环境版本
+[+] SMBGhost CVE-2020-0796 RCE Vulnerable Scan
+
+Ladon 6.5 远程执行命令 20200530
+===========================================
+[+] PSver/NetVer/NetVersion/PSversion  查看.NET & PowerShell版本
+[+] WebShellCmd支持7种脚本(php asp jsp aspx cfm py cfm) 3种类型(cd/ua/k8)
+[u] INI爆破密码 成功日志 新增BANNER（如操作系统、SSH等）
+[+] webser 迷你HTTP服务器(内网传输文件、浏览器漏洞测试、HTA、SCT远程加载等)
+[+] RunPS 无PowerShell.exe执行PowerShell脚本
+[+] Runas 模拟用户执行命令(用户权限会话切换)
+[+] sshexec非交互回显 (https://github.com/k8gege/K8tools)
+[+] psexec 交互式回显  (https://github.com/malcomvetter/CSExec)
+[+] WmiExec非交互回显  (https://github.com/nccgroup/WMIcmd)
+[+] AtExec 非交互回显  (https://github.com/0x7556/smbexec)
+[+] GetIP 获取本机内网IP与外网IP
