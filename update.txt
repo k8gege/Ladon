@@ -1,5 +1,14 @@
 Wiki: http://k8gege.org/Ladon
 
+
+6.6.6 2020.7.3
+[u] PowerCat支持PowerShell版反弹
+[+] WmiHash记录RCP不可用正确密码
+
+6.6.6 2020.7.2
+[+] PortScan Banner新增原HEX数据(明文乱码时可查看原数据包)
+[+] PortScan 修复扫到非默认端口时，结果不显示开放端口的BU
+
 6.6.6 20200701
 [+] OracleScan不指定帐密时探测Oracle服务
 [+] OracleScan支持自定义SID扫描(sid.txt)
