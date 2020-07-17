@@ -18,22 +18,6 @@ Ladon一款用于大型网络渗透的多线程插件化综合扫描神器，含
 ID | 主题 |  URL 
 -|-|-
 0 | Ladon文档主页 | https://k8gege.org/Ladon/
-1 | Ladon基础文档 | http://k8gege.org/p/648af4b3.html
-2 | Ladon用法例子 | http://k8gege.org/Ladon/example.html
-3 | 基础用法详解 | https://github.com/k8gege/Ladon/wiki/Ladon-Usage
-4 | Cobalt Strike | https://github.com/k8gege/Aggressor
-5 | Exp生成器使用 | https://github.com/k8gege/Ladon/wiki/LadonExp-Usage
-6 | 高度自定义插件 | https://github.com/k8gege/Ladon/wiki/Ladon-Diy-Moudle
-7 | 外部模块参考 | https://github.com/k8gege/K8CScan/wiki
-8 | PowerLadon | https://github.com/k8gege/powerladon
-9 | PythonLadon | https://github.com/k8gege/PyLadon
-10 | LinuxLadon | https://github.com/k8gege/KaliLadon
-12 | 漏洞演示视频 | https://github.com/k8gege/K8CScan/tree/master/Video
-13 | Ladon6.0文档 | http://k8gege.org/p/56393.html
-14 | Ladon6.2文档 | http://k8gege.org/p/39070.html
-13 | Ladon6.4文档 | http://k8gege.org/p/55476.html
-16 | Ladon6.5文档 | http://k8gege.org/Ladon/WinShell.html
-
 
 ### DownLoad
 New Version：https://k8gege.org/Download <br>
