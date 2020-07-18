@@ -17,7 +17,7 @@ Ladon一款用于大型网络渗透的多线程插件化综合扫描神器，含
 
 ID | 主题 |  URL 
 -|-|-
-0 | Ladon操作文档 | https://k8gege.org/Ladon
+0 | Ladon完整文档 | https://k8gege.org/Ladon
 
 ### DownLoad
 New Version：https://k8gege.org/Download <br>
