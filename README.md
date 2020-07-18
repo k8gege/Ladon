@@ -30,8 +30,9 @@ All Version: https://github.com/k8gege/Ladon/releases/
 
 ### Socks5代理扫描
 
-例子：扫描目标10.1.2段是否存在MS17010漏洞（必须加noping）
-Ladon noping 10.1.2.8/24 MS17010
+例子：扫描目标10.1.2段是否存在MS17010漏洞（必须加noping）<br>
+Ladon noping 10.1.2.8/24 MS17010<br>
+详见：http://k8gege.org/Ladon/proxy.html
 
 ### 资产扫描、指纹识别、服务识别、存活主机、端口扫描
 
