@@ -1,4 +1,4 @@
-## Ladon 7.0 20200717
+## Ladon 7.0 20200725
 ![](https://k8gege.github.io/k8img/Ladon/Dragon.jpg)
 
 [![Author](https://img.shields.io/badge/Author-k8gege-blueviolet)](https://github.com/k8gege) 
@@ -357,3 +357,7 @@ Ladon at c:\123.exe gui
 Ladon sc c:\123.exe
 Ladon sc c:\123.exe gui
 Ladon sc c:\123.exe auto ServerName
+
+<div style="text-align: center; width: 710px; border: green solid 0px;">
+<img alt="" src="http://k8gege.org/img/k8team.jpg" style="display: inline-block;width: 250px;height: 300px;" />
+</div>
