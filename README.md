@@ -1,8 +1,8 @@
-## Ladon 7.0 20200725
+## Ladon 7.2 20200815
 ![](https://k8gege.github.io/k8img/Ladon/Dragon.jpg)
 
 [![Author](https://img.shields.io/badge/Author-k8gege-blueviolet)](https://github.com/k8gege) 
-[![Ladon](https://img.shields.io/badge/Ladon-7.0-yellowgreen)](https://github.com/k8gege/Ladon) 
+[![Ladon](https://img.shields.io/badge/Ladon-7.2-yellowgreen)](https://github.com/k8gege/Ladon) 
 [![Bin](https://img.shields.io/badge/Ladon-Bin-ff69b4)](https://github.com/k8gege/Ladon/releases) 
 [![GitHub issues](https://img.shields.io/github/issues/k8gege/Ladon)](https://github.com/k8gege/Ladon/issues) 
 [![Github Stars](https://img.shields.io/github/stars/k8gege/Ladon)](https://github.com/k8gege/Ladon) 
@@ -11,7 +11,7 @@
 
 ### 程序简介
 
-Ladon一款用于大型网络渗透的多线程插件化综合扫描神器，含端口扫描、服务识别、网络资产、密码爆破、高危漏洞检测以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描。7.0版本内置83个功能模块,外部模块18个,通过多种协议以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、数据库等信息，漏洞检测包含MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列等，密码爆破12种含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(wmiexe/psexec/atexec/sshexec/jspshell),Web指纹识别模块可识别75种（Web应用、中间件、脚本类型、页面类型）等，可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
+Ladon一款用于大型网络渗透的多线程插件化综合扫描神器，含端口扫描、服务识别、网络资产、密码爆破、高危漏洞检测以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描。7.2版本内置94个功能模块,外部模块18个,通过多种协议以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、数据库等信息，漏洞检测包含MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列等，密码爆破12种含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(wmiexe/psexec/atexec/sshexec/jspshell),Web指纹识别模块可识别75种（Web应用、中间件、脚本类型、页面类型）等，可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
 
 ### 使用文档
 
@@ -28,10 +28,13 @@ All Version: https://github.com/k8gege/Ladon/releases/
 
 本文仅是Ladon简单使用例子，Cobalt Strike、PowerShell、KaliLadon跨平台版等用法一致。
 
+完整文档：http://k8gege.org/Ladon
+
 ### Socks5代理扫描
 
-例子：扫描目标10.1.2段是否存在MS17010漏洞（必须加noping）<br>
-Ladon noping 10.1.2.8/24 MS17010<br>
+例子：扫描目标10.1.2段是否存在MS17010漏洞（必须加noping）
+Ladon noping 10.1.2.8/24 MS17010
+
 详见：http://k8gege.org/Ladon/proxy.html
 
 ### 资产扫描、指纹识别、服务识别、存活主机、端口扫描
@@ -183,7 +186,6 @@ Ladon 192.168.1.8/24 TomcatExp
 Ladon 192.168.1.8/24 Struts2Poc
 
 
-
 ### FTP下载、HTTP下载
 
 ##### 045 HTTP下载
@@ -293,7 +295,7 @@ Ladon Runas user pass cmd
 
 ### 其它功能
 
-##### 066 一键启用.net 3.5	
+##### 066 Win2008一键启用.net 3.5	
 Ladon EnableDotNet
 
 ##### 067 获取内网站点HTML源码 	
@@ -357,6 +359,39 @@ Ladon at c:\123.exe gui
 Ladon sc c:\123.exe
 Ladon sc c:\123.exe gui
 Ladon sc c:\123.exe auto ServerName
+
+#### 084 MS16135提权至SYSTEM
+Ladon ms16135 whoami
+
+##### 085 BadPotato服务用户提权至SYSTEM	
+Ladon BadPotato cmdline
+
+##### 086 SweetPotato服务用户提权至SYSTEM	 	
+Ladon SweetPotato cmdline
+
+##### 087 whoami查看当前用户权限以及特权	
+Ladon whoami
+
+##### 088 Open3389一键开启3389	
+Ladon Open3389
+
+##### 089 RdpLog查看3389连接记录	
+Ladon RdpLog
+
+##### 090 QueryAdmin查看管理员用户	
+Ladon QueryAdmin
+
+##### 091 激活内置管理员Administrator	
+Ladon ActiveAdmin
+
+##### 092 激活内置用户Guest
+Ladon ActiveGuest
+
+##### 093 查看本机命名管道
+Ladon GetPipe
+
+##### 094 139端口Netbios协议Windows密码爆破
+Ladon 192.168.1.8/24 NbtScan
 
 ### 最新版
 最新版在小密圈，已更新至7.2，更新内容：http://k8gege.org/Ladon/update.txt
