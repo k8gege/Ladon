@@ -1,32 +1,38 @@
-#Ladon 6.4 for Cobalt Strike
+#Ladon 7.3 for Cobalt Strike
 #author:	k8gege
-#blog:		k8gege.org
+#blog:		http://k8gege.org/Ladon
 #github:	https://github.com/k8gege
 #teston:	CS 3.x & 4.0
-#update: 	20200426
+#update: 	20200911
 
 #Some functions are not compatible with CS, please use exe version
-#Brute-Force Not Support [VncScan MysqlScan OracleScan SSHscan] PassWord 
+#Not Support: [NbtScan VncScan MysqlScan OracleScan SSHscan WinrmScan WinrmExec]  
+#Not Support: [SubDomain PsExec DumpLsass] 
 
 alias Ladon {
 	if (-exists script_resource("Ladon.exe")) {
 	if ($2 eq "help"){
+	blog2($1, "Ladon 7.3");
 	blog2($1, "Usage:");
 	#blog2($1, "Ladon 1");
 	blog2($1, "Ladon ip");
 	blog2($1, "Ladon ip scantype");
-	#blog2($1, "Ladon nocheck");
-	blog2($1, "Ladon nocheck ip");
-	blog2($1, "Ladon nocheck ip scantype");	
+	#blog2($1, "Ladon noping");
+	blog2($1, "Ladon noping ip");
+	blog2($1, "Ladon noping ip scantype");	
 	blog2($1, "ScanType:(Discover/Brute/Encode/Exploit)");
 	blog2($1, "ip: [ip ip/24 ip/26 ip/8]");
-	blog2($1, "scantype: [OnlineIP OnlinePC OSscan CiscoScan]");
-	blog2($1, "scantype: [WebScan WebScan2 SameWeb UrlScan WhatCMS WebDir SubDomain HostIP DomainIP]");
-	blog2($1, "scantype: [MS17010 WeblogicPoc WeblogicExp PhpStudyPoc ActiveMQPoc TomcatPoc TomcatExp Struts2Poc]");
-	blog2($1, "scantype: [LdapScan FtpScan WmiScan SmbScan LdapScan VncScan SmbHashScan WmiHashScan]");
-	blog2($1, "scantype: [EnumMssql EnumShare EnumIIS EnumProcess GetCmdLine GetInfo GetInfo2 GetHtml AdiDnsDump]");
-	blog2($1, "scantype: [EnHex DeHex EnBase64 DeBase64]");
-	blog2($1, "scantype: [[Sniffer FtpSniffer HttpSniffer HttpDownload FtpDownload]]");
+	blog2($1, "Discover: [OnlineIP OnlinePC OSscan CiscoScan]");
+	blog2($1, "Discover: [WebScan WebScan2 SameWeb UrlScan WhatCMS WebDir SubDomain HostIP DomainIP]");
+	blog2($1, "Vulnerable: [MS17010 SmbGhost WeblogicPoc PhpStudyPoc ActiveMQPoc TomcatPoc Struts2Poc]");
+	blog2($1, "Vulnerable: [WeblogicExp TomcatExp]");
+	blog2($1, "Brute-Force: [LdapScan FtpScan WmiScan SmbScan NbtScan LdapScan SmbHashScan WmiHashScan]");
+	blog2($1, "Discover: [EnumMssql EnumShare EnumIIS EnumProcess GetCmdLine GetInfo GetInfo2 GetPipe GetHtml AdiDnsDump]");
+	blog2($1, "Encode: [EnHex DeHex EnBase64 DeBase64]");
+	blog2($1, "Sinffer: [[Sniffer FtpSniffer HttpSniffer HttpDownload FtpDownload]]");
+	blog2($1, "RemoteExec: [AtExec WmiExec SshExec JspShell WebShell]");
+	blog2($1, "GetInfo: [CheckDoor EnableDotNet GetIP GetHtml WebSer]");
+	blog2($1, "Elevate: [MS16135 BypassUAC GetSystem Runas RunPS SweetPotato BadPotato]");
 	blog2($1, "Example: Ladon 192.168.1.8/24 OnlinePC");	
 	blog2($1, "Example: Ladon 192.168.1.8/24 *.ini");	
 	blog2($1, "Example: Ladon 192.168.1.8/24 *.ps1");
@@ -131,7 +137,7 @@ alias CVE-2019-2725-EXP {
 
 popup beacon_bottom {
 menu "K8Ladon" {
-item("&Update", { url_open("https://k8gege.org/tags/Ladon/"); });
+item("&Update", { url_open("https://k8gege.org/Ladon?cs"); });
 separator();
 item "Discover" {
 		$bid = $1;
