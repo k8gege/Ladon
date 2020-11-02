@@ -1,5 +1,106 @@
 Wiki: http://k8gege.org/Ladon
 
+GUI 2020.11.2
+[+] SubDomain 高效率子域名扫描（3万字典）
+[+] OnlinePC  本地存活主机、操作系统探测
+
+GUI 2020.10.18
+[+] PowerShell转EXE，EXE转PowerShell
+    EXE->Powershell
+	PowerShell->EXE	
+[+] 九种PowerShell命令混淆（随机加密）
+
+	HexCommand
+	AsciiCommand
+	BinaryCommand
+	CompressedCommand
+	BXORCommand
+	OctalCommand
+	SpecialCharOnlyCommand
+	SecureStringCommand
+	Base64Command
+	DecodeBase64
+
+
+7.5 2020.10.10
+[+] Ladon 7.5 for CS
+[+] OsScan   Exchange Detection Win 465\143\587\25\110
+[+] PortScan Exchange 465\993\143\995 DC/DNS  88\6011
+
+7.4 2020.9.28
+[+] CVE-2020-0688 Exchange序列化漏洞(.net 4.0)
+
+GUI 2020.9.24
+[+] OutPowerShell Ladon免杀
+
+7.3.4 2020.9.21
+
+[+] webser getstr(无回显命令执行明文结果)
+[+] webser getb64/getb64(命令结果Base64加密)
+[+] webser deb64/debase64(命令Base64结果解密)
+
+7.3.3 2020.9.20
+[+]ZeroLogon CVE-2020-1472域控提权(密码置空)
+[+]PortScan  5985端口(有时防火墙开启也能识别)
+
+7.3.2 2020.9.9
+[u] WhatCMS更新86+
+
+7.3.1 2020.9.7
+[+] 当前进程PID和名称(主要是多个或CS加载时区分)
+
+7.3.0 2020.9.1
+[+] WinrmScan 5985端口密码爆破（支持System权限）
+[+] WinrmExec 远程执行命令无回显（支持System权限）
+
+7.2.2 2020.8.15
+[u] whoami增加特权信息(如果你了解提权工具原理可查看特权)
+[+] 检测SeImpersonatePrivilege特权(很多提权工具需要用到)
+
+7.2.1 2020.8.13
+[+] SweetPotato Win7-2019提权(服务用户权限提到system)
+
+7.2.0 2020.8.10
+[+] BadPotato  PrintSpoofer/PipePotato提权(Win8-Win10/Win2012-2019)
+[+] Open3389 一键开启3389
+[+] RdpLog   查看3389连接记录
+[+] QueryAdmin 查看管理员组用户
+[+] ActiveAdmin 激活内置用户Administrator
+[+] ActiveGuest 激活内置用户Guest
+
+7.1.1 2020.8.5
+[+] whoami 当前用户与权限(紫色=高权限)
+[u] 修复sshexec远程查看"wget"命令的BUG
+
+7.1 2020.8.3
+[+] 修复CS无法加载的Bug
+
+7.1.0 2020.8.1
+[+] NbtScan 139端口Netbios协议Windows密码爆破
+[+] GetPipe 查看本机命名管道
+
+=========================================
+2020.7.25
+[+] MS16135提权(CVE-2016-7255|Vulnerable: Vista/Win7/2008/Win8.1/2012/Win10/2016)
+2020.7.23
+[+] 判断是否64位系统，自身是否64位进程
+
+2020.7.22
+[+] OSSCAN新增5985 http识别win7+系统(2012后默认开启) 
+[+] OSSCAN新增49152-65535等服务识别win7+系统(默认开启)
+
+2020.7.21
+[+] OSSCAN新增5357 http识别Win7
+[u] PortScan 优化&Banner 139/5357
+
+2020.7.20
+[+] OSSCAN新增135 oxid识别win系统
+[+] OSSCAN新增139 Banner识别win系统
+[u] Banner  为空或SSH-或HTTP 无需返回HEX
+
+7.0.0 2020.7.17
+[+] EthScan OXID枚举远程主机网卡
+[+] RDPhijack 远程桌面会话劫持(.net 4.0)
 
 6.6.6 2020.7.3
 [u] PowerCat支持PowerShell版反弹
