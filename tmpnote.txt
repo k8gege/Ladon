@@ -1,0 +1,18 @@
+备忘录/笔记  每20秒自动保存 tmpnote.txt
+临时记录实战项目常用的渗透命令 方便
+
+##### 001 多协议探测存活主机 
+Ladon 192.168.1.8/24 MS17010
+
+##### 058 135端口 WmiExec远程执行命令 （非交互式）
+Ladon wmiexec 192.168.1.8 k8gege k8gege520 whoami
+
+##### 059 445端口 AtExec远程执行命令（非交互式）
+Ladon wmiexec 192.168.1.8 k8gege k8gege520 whoami
+
+##### 060 22端口 SshExec远程执行命令（非交互式）
+Ladon SshExec 192.168.1.8 k8gege k8gege520 whoami
+Ladon SshExec 192.168.1.8 22 k8gege k8gege520 whoami
+
+
+
