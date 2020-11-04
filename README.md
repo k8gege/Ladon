@@ -394,7 +394,7 @@ Ladon GetPipe
 Ladon 192.168.1.8/24 NbtScan
 
 ### 最新版
-最新版在小密圈，已更新至7.2，更新内容：http://k8gege.org/Ladon/update.txt
+最新版在小密圈：http://k8gege.org/Ladon/update.txt
 <div style="text-align: center; width: 710px; border: green solid 0px;">
 <img alt="" src="http://k8gege.org/img/k8team.jpg" style="display: inline-block;width: 250px;height: 300px;" />
 </div>
