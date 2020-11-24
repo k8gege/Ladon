@@ -1,5 +1,23 @@
 Wiki: http://k8gege.org/Ladon
 
+Ladon 7.7 2020.11.23
+============================
+[+] SnmpScan  Snmp协议探测操作系统、设备等信息
+[+] DvrScan	  网络摄像头密码爆破(内置默认密码)
+
+Ladon 7.6 2020.11.21
+============================
+[+] IsShiro	  Shiro插件探测
+
+[u] WebSer 	     弹计算器Payload测试专用
+/calc.sct        regsvr32 mshta rundll32
+/calc2.sct       pubprn.vbs
+/calc.hta        mshta
+/calc.xsl        wmic msxsl
+
+GUI 2020.11.20
+[+] SubDomain Banner & Title
+
 GUI 2020.11.2
 [+] SubDomain 高效率子域名扫描（3万字典）
 [+] OnlinePC  本地存活主机、操作系统探测
@@ -23,6 +41,7 @@ GUI 2020.10.18
 
 
 7.5 2020.10.10
+============================
 [+] Ladon 7.5 for CS
 [+] OsScan   Exchange Detection Win 465\143\587\25\110
 [+] PortScan Exchange 465\993\143\995 DC/DNS  88\6011
