@@ -1,5 +1,14 @@
 Wiki: http://k8gege.org/Ladon
 
+
+GUI 2020.12.25
+[+] Netcat PowerShell命令加密执行
+[+] Netcat 内存加载PowerLadon执行
+
+GUI 2020.12.16
+[u] Netcat 修复不兼容Linux反弹shell的Bug
+[+] Netcat 执行命令历史记录
+
 Ladon 7.7 2020.11.23
 ============================
 [+] SnmpScan  Snmp协议探测操作系统、设备等信息
