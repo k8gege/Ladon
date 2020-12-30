@@ -1,5 +1,11 @@
 Wiki: http://k8gege.org/Ladon
 
+Ladon 7.8 2020.12.30
+[+] netsh     系统netsh端口转发简短命令
+[+] Runas     新增反弹交互命令功能,如NC
+[u] Runas     修复域控用户模拟特权问题
+[u] SshScan   修复SSH爆破自定义端口的BUG
+[u] PortScan 3000 Ruby on Rails
 
 GUI 2020.12.25
 [+] Netcat PowerShell命令加密执行
