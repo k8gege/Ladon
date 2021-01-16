@@ -27,7 +27,7 @@ All Version: https://github.com/k8gege/Ladon/releases/
 
 ### 前言
 
-本文仅是Ladon简单使用例子，Cobalt Strike、PowerShell、KaliLadon跨平台版等用法一致。
+本文仅是Ladon简单使用例子，Cobalt Strike、PowerShell、KaliLadon、L跨平台版等用法一致。
 
 完整文档：http://k8gege.org/Ladon
 
