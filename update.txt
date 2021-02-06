@@ -1,5 +1,35 @@
 Wiki: http://k8gege.org/Ladon
 
+Ladon 8.0 2021.2.6
+[+] BypassUac 五种方法UAC提权（非交互式执行Base64加密CMD命令）
+用法Ladon BypassUac
+
+eventvwr
+fodhelper
+computerdefaults
+sdclt
+slui
+
+[+] BypassUac2 eventvwr方法执行明文cmd命令
+
+===========================================
+Ladon 7.9 2021.2.2
+[u] 修复无参时报错“调用目标异常”的BUG
+2021.01.30
+[+] DirList 全盘列目录(默认全盘，可指定盘符或目录如Ladon DirList c:\)
+2021.01.24
+[u] WebSer Banner修改为IIS 10
+[+] WebSer 可设置web目录(以免内存加载后非当前路径)
+[u] ActiveAdmin 修复激活内置管理员
+[u] ActiveGuest 修复激活内置用户
+
+Ladon 7.8 2021.1.10
+[+] 修复CS版X64上线无法加载Ladon的Bug
+[+] QueryProxy 查看IE代理服务器信息
+
+Ladon 7.8 2021.1.3
+[+] PortTran  端口转发(https://github.com/k8gege/PortTran)
+
 Ladon 7.8 2020.12.30
 [+] netsh     系统netsh端口转发简短命令
 [+] Runas     新增反弹交互命令功能,如NC
