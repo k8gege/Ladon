@@ -1,5 +1,11 @@
 Wiki: http://k8gege.org/Ladon
 
+LadonGUI 2021.2.18
+[+]Base64加密解密
+[+]Base32加密解密
+[+]Hex加密解密
+[+]Ascii加密解密
+
 Ladon 8.0 2021.2.6
 [+] BypassUac 五种方法UAC提权（非交互式执行Base64加密CMD命令）
 用法Ladon BypassUac
