@@ -1,6 +1,24 @@
 Wiki: http://k8gege.org/Ladon
 
+Ladon 8.5 2021.6.6
+[+]自定义扫描线程，例子: Ladon 192.168.1.8/24 SmbInfo t=80
+[+]ForExec 循环执行"EXP"：指定次数、成功高亮（如SmbGhost CVE-2020-0796）
+[+]RdpInfo 批量请使用For单线程 Ladon 192.168.1.8/24 RdpInfo f=1或for1
 
+==================================================================
+Ladon 8.4 2021.5.30
+以下模块可自定义端口探测 Ladon 192.168.1.8:888 SmbInfo
+[u] WmiInfo
+[u] SmbInfo
+[u] WinrmInfo
+[u] MssqlInfo
+
+[+] OnlinePC 探测Win存活主机(ICMP/NBT/DNS/MAC)
+[u] smbghost检测结果更准确
+[+] NbtInfo 探测Win存活主机
+[+] txt参数 Ladon ip.txt ms17010 (ip.txt/ip24.txt/ip16.txt/host.txt/domain.txt/str.txt)
+
+==================================================================
 Ladon 8.3 2021.5.21
 [+]单线程	例子: Ladon noping 192.168.0.1/24 smbinfo t=1
 [u]Ping		系统自带ping只回显一条结果
