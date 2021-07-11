@@ -1,5 +1,8 @@
 Wiki: http://k8gege.org/Ladon
 
+Ladon 8.6 2021.7.5
+[+]PrintNightmare (CVE-2021-1675 | CVE-2021-34527)打印机漏洞提权EXP 
+
 Ladon 8.5 2021.6.6
 [+]自定义扫描线程，例子: Ladon 192.168.1.8/24 SmbInfo t=80
 [+]ForExec 循环执行"EXP"：指定次数、成功高亮（如SmbGhost CVE-2020-0796）
