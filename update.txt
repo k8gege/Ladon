@@ -1,5 +1,18 @@
 Wiki: http://k8gege.org/Ladon
 
+Ladon 8.8 2021.9.11
+[+]SmbExec NTLM-HASH非交互执行无回显(https://github.com/checkymander/Sharp-SMBExec)
+[u]GetInfo  新增Vmware虚拟机信息
+[u]OsScan   新增识别Vigor Router路由器识别
+[u]新增Xen\VBOX\Hybrid\Parallels虚拟机识别
+[+]GetInfo  新增cmdkey、RrpLog、安装驱动、软件列表、最近访问文件等
+[+]GetInfo  新增GUID、CPUID、硬盘ID、自启动后门检测(DLL却持、注册表等)
+[+]GetInfo2 新增WMI补丁信息获取
+[+]默认信息 新增C盘剩余空间信息小于2G高亮提示
+
+Ladon 8.7 Debug 2021.8.14
+[+]UsbLog USB使用记录查看(USB名称、USB标记、路径信息)
+
 Ladon 8.6 2021.7.5
 [+]PrintNightmare (CVE-2021-1675 | CVE-2021-34527)打印机漏洞提权EXP 
 
