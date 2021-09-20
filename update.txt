@@ -1,5 +1,19 @@
 Wiki: http://k8gege.org/Ladon
 
+LadonGUI 8.9 20210920
+[+]CmdDll Windows 0day漏洞通用DLL注入生成器
+
+
+Ladon 8.9 2021.9.15
+[u]webscan CS保留
+[u]CmdDll 去除黑框
+
+Ladon 8.9 2021.9.14
+[+]CVE-2021-40444 Microsoft MSHTML远程代码执行漏洞，Office文档利用模块
+影响版本: 包括Windows 7/8/8.1/10，Windows Server 2008/2008R2/2012/2012R2/2016/2019/2022
+[+]CmdDll cmd转DLL(Win系统0day漏洞DLL执行命令payload，可直接powershell上线CobaltStrike)
+   溢出漏洞如MS17010、本地提权CVE-2021-1675等，非溢出如最新的Office漏洞CVE-2021-40444等
+
 Ladon 8.8 2021.9.11
 [+]SmbExec NTLM-HASH非交互执行无回显(https://github.com/checkymander/Sharp-SMBExec)
 [u]GetInfo  新增Vmware虚拟机信息
@@ -10,6 +24,7 @@ Ladon 8.8 2021.9.11
 [+]GetInfo2 新增WMI补丁信息获取
 [+]默认信息 新增C盘剩余空间信息小于2G高亮提示
 
+==================================================================
 Ladon 8.7 Debug 2021.8.14
 [+]UsbLog USB使用记录查看(USB名称、USB标记、路径信息)
 
