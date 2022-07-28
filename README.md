@@ -405,3 +405,9 @@ Ladon 192.168.1.8/24 NbtScan
 <div style="text-align: center; width: 710px; border: green solid 0px;">
 <img alt="" src="http://k8gege.org/img/k8team.jpg" style="display: inline-block;width: 250px;height: 300px;" />
 </div>
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/k8gege/Ladon.svg)](https://starchart.cc/k8gege/Ladon)
+
+<img align='right' src="https://profile-counter.glitch.me/Ladon/count.svg" width="200">
