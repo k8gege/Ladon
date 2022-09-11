@@ -1211,3 +1211,15 @@ Ladon url. Txt Cisco dump bulk detect Cisco vulnerabilities and export user pass
 ### Example
 
 http://k8gege.org/Ladon/example-en.html
+
+### Latest version
+Latest version in small seal ring: http://k8gege.org/Ladon/update.txt
+<div style="text-align: center; width: 710px; border: green solid 0px;">
+<img alt="" src="http://k8gege.org/img/k8team.jpg" style="display: inline-block;width: 250px;height: 300px;" />
+</div>
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/k8gege/Ladon.svg)](https://starchart.cc/k8gege/Ladon)
+
+<img align='right' src="https://profile-counter.glitch.me/Ladon/count.svg" width="200">
