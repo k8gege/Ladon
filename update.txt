@@ -1,11 +1,145 @@
 Wiki: http://k8gege.org/Ladon
-https://mp.weixin.qq.com/s/GQBXCX1fiSLi6gKY3M-JcA
+[+]新增
+[-]移除
+[u]更新
 
-Ladon模块化网络渗透工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。10.0版本内置180个功能模块,外部模块18个,网络资产探测模块28个通过多种协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16个包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计23个含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
+Ladon模块化网络渗透工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。10.6版本内置194个功能模块,外部模块18个,网络资产探测模块28个通过多种协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16个包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计23个含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
 
+Ladon 10.7 2023.2.8
+[u]WhatCMS
+ZyXEL USG FLEX 50W
+ZyXEL USG20W-VPN
+ZyXEL USG
+ZyXEL
+Citrix Gateway
+Citrix ADC
+Citrix Login
+Citrix Workspace
+Citrix
+
+20230202
+[u]WhatCMS
+Juniper
+403 Page
+RICOH
+XAMPP
+Zabbix
+VMware Horizon
+SugarCRM
+SharePoint
+
+Ladon 10.6.1 2023.1.31
+[u]web			无回显漏洞 提交包含ISVUL或POCTEST字符串，自动保存IP到isvul.txt
+[u]PortScan 	新增2086 2087 2031端口
+[u]PrinterPoc
+[u]WhatCMS
+pfSense pfBlockerNG
+Pulse Secure
+MobileIron
+CWP Control WebPanel
+WHM cPanel
+Cisco ADSM系列
+Cisco ASDM 7.16
+Cisco ASDM 7.8
+Cisco ASDM 7.12
+Cisco Firepower
+Cisco UCS Manager
+Cisco Firepower
+MSNswitch (401)Unauthorized
+
+
+Ladon 10.6 2023.1.18
+[u]CiscoPwd	    路由器CiscoDump更名为CiscoPwd   
+[+]NetGearPwd	路由器DGND3700v2登陆密码读取
+[+]MSNSwitchPwd	路由器MSNSwitch登陆密码读取 CVE-2022-32429
+[u]WhatCMS 		智能识别未知网络设备(路由器、打印机、摄像头等)
+[u]RunAs		以另一用户身份执行命令 模拟用户登陆执行命令
+
+
+Ladon 10.5 2023.1.11
+[+]GetID 获取电脑唯一标识UUID、GUID、Bios、硬盘、CPU、MAC地址(所有网卡，之前版本只获取在用网卡MAC)
+[u]WhatCMS 支持以下品牌路由器识别
+Broadband
+Sagemcom系列
+Sagemcom TR-069
+NETGEAR系列
+NETGEAR R6400
+NETGEAR R8000P
+NETGEAR R6700v3
+NETGEAR WGR614v9
+MI系列
+Router MI-3
+D-link系列
+D-LINK DIR-650IN
+D-Link Wireless N DIR-524
+COMMSCOPE
+ASUS系列
+ASUS WL-500gP
+TP-LINK系列
+TP-Link C2
+ZyXEL系列
+ZyXEL Keenetic II
+Cisco
+Cisco Linksys系列
+Linksys WRT54GL
+Linksys E2500
+Cisco Broadband Access Center
+Huawei系列
+HUAWEI-3COM BR104
+H3C系列
+VisualSVN Server
+
+
+Ladon 10.5 CS版
+[+]CVE-2022-40684 ForiGate防火墙未授权写SSH-KEY
+[+]ZteScan	Zte中兴路由器 Web默认口令检测  .net >= 4.5 暂不支持
+[+]TelnetScan	Zte中兴路由器 Telnet默认口令检测
+[+]CVE-2018-14847  Mikrotik RouterOS 6.29-6.42密码读取
+[u]WhatCMS 识别VMware系列
+[+]CVE-2022-40684 ForiGate防火墙未授权写SSH-KEY
+[+]MssqlCmd  SQL Server远程执行命令提权
+
+Ladon 10.5
+[+]ZteScan	Zte路由器 Web默认口令检测  .net >= 4.5
+[u]WhatCMS 识别VMware系列
+VMware vSphere
+VMware ESX
+VMware Engineering
+VMware vCenter
+VMware
+
+
+Ladon 10.4 2023.1.8
+[+]CVE-2018-14847  Mikrotik RouterOS 6.29-6.42密码读取
+WhatCMS更新
+Oxygen Router  
+Broadband Router
+Mikrotik Router
+Huawei Router
+
+LadonExp 20230108
+[+]错误返回头信息如401
+
+Ladon 10.3 2023.1.3
+[+]MssqlCmd  SQL Server远程执行命令提权 测试：SQL Server 2005 2012 2017 
+可远程、可本地提权 支持自定义端口 (不是所有的目标都是1433，默认可不填)
+功能: info、open_shell、close_shell、xp_cmdshell、ws_shell、r_shell、py_shell
+程序集: install_clr、uninstall_clr、clr_exec、clr_efspotato、clr_badpotato
+
+
+Ladon 10.2 2022.12.24
+[+]CVE-2022-40684 ForiGate防火墙未授权写SSH-KEY
+[+]XshellPwd Xshell密码读取
+[u]PortScan 增加4443\10443\8000\2095\2096\264端口
+[u]WhatCMS 更新150+CMS识别
+FortiGate Firewall
+pfSense Firewall
+Cisco Meraki
+WatchGuard Firewall
+Zscaler Firewall
 
 Ladon 10.1 2022.12.20
-[u]WhatCMS 更新145+CMS识别
+
 CentOS-WebPanel
 VMware Workspace ONE Access
 VMware
