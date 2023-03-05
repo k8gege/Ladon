@@ -5,8 +5,8 @@ Windows版本: .Net、Cobalt Strike、PowerShell
 PS: Study方便本地测试使用，完整功能请使用CMD
 
 ### 版本
-Ladon 10.6 20230202
-简明用法例子 194例
+Ladon 10.9 20230304
+简明用法例子 200例
 
 ### 001 自定义线程扫描
 例子：扫描目标10.1.2段是否存在MS17010漏洞
@@ -102,8 +102,9 @@ Ladon 192.168.1.8/24 MS17010
 ##### 020 SMBGhost漏洞检测 CVE-2020-0796 （IP、机器名、漏洞编号、操作系统版本）
 Ladon 192.168.1.8/24 SMBGhost
 
-##### 021 扫描Web信息/Http服务
+##### 021 扫描Web HTTP、HTTPS信息
 Ladon 192.168.1.8/24 WebScan
+Ladon http://192.168.1.8 WebScan
 
 ##### 022 扫描C段站点URL域名
 Ladon 192.168.1.8/24 UrlScan
@@ -821,5 +822,35 @@ Ladon url.txt MSNSwitchPwd 批量探测MSNSwitch漏洞并导出用户密码
 ##### 194 NetGearPwd NetGear DGND3700v2路由器密码读取
 Ladon https://192.168.1.8 NetGearPwd
 Ladon url.txt NetGearPwd 批量NetGear漏洞导出用户密码
+
+##### 195 T3协议探测WebLogic版本
+Ladon 192.168.1.8/24 T3Info
+Ladon 192.168.1.8:7001 T3Info
+Ladon http://192.168.1.8:7001 T3Info
+
+##### 196 InfoScan多个模块探测系统信息
+Ladon 192.168.1.8/24 InfoScan
+Ladon 192.168.1.8 InfoScan
+
+##### 197 VulScan PocScan多个远程漏洞检测
+Ladon 192.168.1.8/24 VulScan
+Ladon 192.168.1.8 PocScan
+Ladon http://192.168.1.8 PocScan
+
+##### 198 ExpScan多个漏洞利用GetShell
+Ladon 192.168.1.8/24 ExpScan
+Ladon 192.168.1.8 ExpScan
+Ladon http://192.168.1.8 ExpScan
+
+##### 199 JoomlaPwd CVE-2023-23752 未授权网站数据库密码读取
+Ladon 192.168.1.8/24 JoomlaPwd
+Ladon 192.168.1.8 JoomlaPwd
+Ladon http://192.168.1.8 JoomlaPwd
+Ladon url.txt JoomlaPwd
+
+##### 200 AllScan 所有模块
+Ladon 192.168.1.8/24 AllScan
+Ladon 192.168.1.8 AllScan
+Ladon http://192.168.1.8 AllScan
 
 =======================================================

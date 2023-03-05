@@ -3,8 +3,83 @@ Wiki: http://k8gege.org/Ladon
 [-]移除
 [u]更新
 
-Ladon模块化网络渗透工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。10.6版本内置194个功能模块,外部模块18个,网络资产探测模块28个通过多种协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16个包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计23个含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
+版本说明: 
+Ladon911		完整功能版，体积大，易被杀，可本地测试、研究学习复现旧漏洞
+Ladon			10.8版本起Ladon.exe默认在Win11或装有.NET 4.8下使用效果最佳
+Ladon40			Win10或装有.NET 4.0或以上系统下使用 安装有4.8建议优先Ladon
+Ladon35			Win7/2008或装有.NET 3.x系统下使用 安装有4.8的建议优先Ladon
+Ladon.ps1		Win7-Win2022或装有PowerShell系统，可远程内存加载无文件渗透
+NimLadon		Nim免杀Ladon，可过部分杀软，可用net2nim工具 自行转换
 
+script目录		CS插件，一键使用，内存加载，无需将EXE上传目标，无文件渗透
+	
+LadonGUI		辅助工具，含免杀、文本处理、加密解密、反弹Shell、子域名等
+LadonEXP		EXP生成器，一键生成Poc、EXP，快速扩展Ladon批量GetShell能力
+LadonStudy		学习模式，一键渗透，对Ladon不熟的人，也可快速实战GetShell
+ChatLadon		渗透机器人，也可当成学习模式，只要会聊天，就能让Ladon干活
+
+============================================================================
+简介:
+Ladon模块化网络渗透工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。10.9版本内置200个功能模块,外部模块18个,网络资产探测模块28个通过多种协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16个包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计23个含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
+
+
+Ladon 10.9 20230305
+[-]SmbGhost			仅911版保留	SMB漏洞 永恒之黑
+[-]VsFtpDoor		仅911版保留 漏洞太老 概率低
+[u]Ladon Study		新增小图标 界面直观 便于区分 一眼找到常用功能
+[u]LadonGUI			修复RevShell生成Ladon PowerShell反弹命令错误的Bug
+[u]JoomlaPwd		域名解析IP TAB分隔 IP 用户 密码 方便MysqlScan检测
+[u]WhatCMS
+WebLogic 14.1.1.0.0
+WebLogic 12.2.1.4.0
+WebLogic 12.2.1.3.0
+WebLogic 12.2
+WebLogic 10.3.6.0
+WebLogic 10.3
+WebLogic
+WebLogic[maybe]
+
+Ladon 10.9 20230302
+[u]LadonExp 		编译EXE支持执行CMD  Payload变量$cmd$ 变量$b64cmd$
+[u]web 				CS版不含该模块  识别JAVA  JNDI_LDAP  JNDI_RMI请求
+[u]WebLogicPoc		CVE-2020-14883高危漏洞检测可识别出Windows或Linux
+[-]PortTran			CS版移除 端口转发工具
+[u]Ladon911			本地测试用的全功能版(即保留旧漏洞和一些过时功能)
+[-]Help				仅911版保留		功能很多 建议看Wiki或Ladon Study
+[-]SMBGhost			仅CS和911版保留 Win10默认自动更新，实战遇到概率低
+[-]vsFTPdPoc		仅CS和911版保留 2011漏洞过旧，实战遇到概率低
+[-]CVE-2021-36934	仅CS和911版保留 Win10默认自动更新，实战可用概率低
+[-]PhpStudyPoc		仅CS和911版保留
+
+ 
+Ladon 10.9 20230224 
+[+]JoomlaPwd	JoomlaExp CVE-2023-23752 未授权读取网站数据库密码（主机 邮箱 数据库 用户 密码）
+[u]LadonExp		修复PocTag PocName处理双引号的bug
+[u]WeblogicPoc	不再探测Banner 影响速度
+[u]WhatCMS		
+[u]NetGearPwd	IP自动转url
+[u]MSNSwitchPwd	IP自动转url
+[u]T3Info
+[u]whatcms	增加一些端口
+[u]portscan	增加一些端口 更新WebBanner WebTitle
+
+=====================
+Ladon 10.8  20230218
+[+]AllScan	所有模块一键渗透
+[+]ExpScan	多EXP自动GetShell
+[+]VulScan	多POC漏洞检测
+[+]InfoScan	多协议探测信息
+
+[+]T3Info	T3协议探测WebLogic版本	7001 7002端口 支持URL或IP:port参数
+[u]whatcms  重新添加7001 weblogic探测
+[u]webscan  传入IP时探测443 80端口  回显HTTPS HTTP
+[u]ms17010	只显示SMB信息 以免VulScan或AllScan太多重复信息
+
+[-]bypassUAC bypassUAC2  Win10、11最新版失败 CS和911版保留
+[-]bypassUAC11  移除 因.net 4.0 只保留911
+[u]Ladon.exe默认为48 Win11默认.net 4.8
+
+=====================
 Ladon 10.7 2023.2.8
 [u]WhatCMS
 ZyXEL USG FLEX 50W
@@ -230,7 +305,7 @@ Ladon 9.2.9 20221119
 [u]NbtScan			
 [u]ExchangeScan	
 	
-[-]EXE移除webshell\jspshell  CS保留
+[-]EXE移除WebShellCmd\JspShell CS和911版保留
 [u]WPscan 解决WP误报问题 当WP禁止爆破时 同样出现log_in特征
 
 =============================================
