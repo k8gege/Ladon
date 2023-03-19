@@ -3,6 +3,11 @@ Wiki: http://k8gege.org/Ladon
 [-]移除
 [u]更新
 
+
+Ladon简介:
+Ladon模块化网络渗透工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。10.10版本内置202个功能模块,外部模块18个,网络资产探测模块30个通过多种协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16个包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计23个含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
+
+
 版本说明: 
 Ladon911		完整功能版，体积大，易被杀，可本地测试、研究学习复现旧漏洞
 Ladon			10.8版本起Ladon.exe默认在Win11或装有.NET 4.8下使用效果最佳
@@ -18,11 +23,32 @@ LadonEXP		EXP生成器，一键生成Poc、EXP，快速扩展Ladon批量GetShell
 LadonStudy		学习模式，一键渗透，对Ladon不熟的人，也可快速实战GetShell
 ChatLadon		渗透机器人，也可当成学习模式，只要会聊天，就能让Ladon干活
 
+Ladon 10.10 20230318
 ============================================================================
-简介:
-Ladon模块化网络渗透工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。10.9版本内置200个功能模块,外部模块18个,网络资产探测模块28个通过多种协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16个包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计23个含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
+[+]CitrixVer	Citrix Gateway版本探测 发布日期、版本号、HASH
+[+]VmwareVer	Vmware Vcenter版本识别
+[+]VerScan		Vmware Vcenter、Cisco、Exchange版本识别
+[u]WhatCMS		Citrix Gateway版本探测 发布日期、版本号、HASH
+
+[u]MS17010		精确识别Windows系统版本Win 11 2022 win 10各版本等 
+[u]SmbGhost		不再显示PING存活机器
+[u]NbtInfo		精确识别Windows系统版本Win 11 2022 win 10各版本等  增加虚拟机识别
+[u]WmiInfo		精确识别Windows系统版本Win 11 2022 win 10各版本等
+[u]RdpInfo		精确识别Windows系统版本Win 11 2022 win 10各版本等
+[u]MssqlInfo	精确识别Windows系统版本Win 11 2022 win 10各版本等
+[u]WinrmInfo	精确识别Windows系统版本Win 11 2022 win 10各版本等
+[u]ExchangeInfo	精确识别Windows系统版本Win 11 2022 win 10各版本等
+[u]SmbInfo  	精确识别Windows系统版本Win 11 2022 win 10各版本等
+SMB: 192.168.198.1     WIN11-KK        (Win 11, 21H2 10.0.22000) Domain:WIN11-KK Dns:Win11-KK SMBSigning:False
+
+ChatLadon		透明度95% 字体清晰
+LadonStudy		透明度95%
+LadonGUI		透明度90%
+[+]SubDomain	仅911版保留
+[-]ActivemqPoc	仅CS和911版保留
 
 
+============================================================================
 Ladon 10.9 20230305
 [-]SmbGhost			仅911版保留	SMB漏洞 永恒之黑
 [-]VsFtpDoor		仅911版保留 漏洞太老 概率低
@@ -166,12 +192,12 @@ VisualSVN Server
 
 
 Ladon 10.5 CS版
-[+]CVE-2022-40684 ForiGate防火墙未授权写SSH-KEY
+[+]CVE-2022-40684 FortiGate防火墙未授权写SSH-KEY
 [+]ZteScan	Zte中兴路由器 Web默认口令检测  .net >= 4.5 暂不支持
 [+]TelnetScan	Zte中兴路由器 Telnet默认口令检测
 [+]CVE-2018-14847  Mikrotik RouterOS 6.29-6.42密码读取
 [u]WhatCMS 识别VMware系列
-[+]CVE-2022-40684 ForiGate防火墙未授权写SSH-KEY
+[+]CVE-2022-40684 FortiGate防火墙未授权写SSH-KEY
 [+]MssqlCmd  SQL Server远程执行命令提权
 
 Ladon 10.5
@@ -203,7 +229,7 @@ Ladon 10.3 2023.1.3
 
 
 Ladon 10.2 2022.12.24
-[+]CVE-2022-40684 ForiGate防火墙未授权写SSH-KEY
+[+]CVE-2022-40684 FortiGate防火墙未授权写SSH-KEY
 [+]XshellPwd Xshell密码读取
 [u]PortScan 增加4443\10443\8000\2095\2096\264端口
 [u]WhatCMS 更新150+CMS识别
