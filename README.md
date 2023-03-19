@@ -1,4 +1,4 @@
-## Ladon 911 20230305
+## Ladon 911 20230318
 ![](https://k8gege.github.io/k8img/Ladon/Dragon.jpg)
 
 [![Author](https://img.shields.io/badge/Author-k8gege-blueviolet)](https://github.com/k8gege) 
@@ -13,20 +13,82 @@
 ![image](https://img-blog.csdnimg.cn/20210116233533868.gif)
 
 
-### Program introduction
+### 程序简介
 
-Ladon is a multi-threaded plug-in comprehensive scanning artifact for large-scale network penetration, including port scanning, service identification, network assets, password blasting, high-risk vulnerability detection and one click getshell. It supports batch a segment / b segment / C segment and cross network segment scanning, as well as URL, host and domain name list scanning. Version 10.9 has 200 built-in functional modules and 18 external modules. It can quickly obtain the target network survival host IP, computer name, workgroup, shared resources, network card address, operating system version, website, subdomain name, middleware, open services, routers, databases and other information through a variety of protocols and methods. Vulnerability detection includes ms17010, smbghost, Weblogic, ActiveMQ, Tomcat, struts 2 series and so on, There are 13 kinds of password blasting including databases (mysql, Oracle, MSSQL), FTP, SSH, vnc, windows (LDAP, SMB / IPC, NBT, WMI, smbhash, wmihash, winrm), basicauth, Tomcat, Weblogic, rar, etc. the remote execution commands include (smbexec / wmiex / psexec / atexec / sshexec / jspshell), and the web fingerprint identification module can identify 75 kinds (web application, middleware, script type, page type), etc. it can be highly customized with plug-in POC support Net assembly, DLL (C # / Delphi / VC), PowerShell and other language plugins, support the batch call of any external program or command by configuring ini, and the exp generator can generate vulnerability POC at one click to quickly expand the scanning ability. Ladon supports the plug-in scanning of cobalt strike to quickly expand the intranet for horizontal movement.
+Ladon大型内网渗透工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。10.10版本内置202个功能模块,外部模块18个,网络资产探测模块28个通过多种协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16个包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计23个含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
 
-### DownLoad
-New Version：https://k8gege.org/Download <br>
-All Version: https://github.com/k8gege/Ladon/releases/
+### 使用简单
 
+虽然Ladon功能丰富多样,但使用却非常简单,任何人都能轻易上手
+只需一或两个参数就可用90%的功能,一个模块相当于一个新工具
 
-Ladon concise use tutorial complete document: http://k8gege.org/Ladon
-Support CMD, shell, cobalt strike and PowerShell
-Windows version:. Net, cobalt strike, PowerShell
-Full system version: go (full platform), python (theoretically full platform)
-PS: the GUI version is mainly convenient for local testing, and CMD is used for complete functions
+### 运行环境
+
+#### Windows
+
+Ladon.exe可在安装有.net 2.0及以上版本Win系统中使用(Win7后系统自带.net)
+如Cmd、PowerShell、远控Cmd、WebShell等，以及Cobalt Strike内存加载使用
+Ladon.ps1完美兼容win7-win10 PowerShell，不看版本可远程加载实现无文件渗透
+
+#### 全平台LadonGo支持Linux、Mac、Arm、MIPS
+全平台：Linux、MacOS、Windows等OS
+https://github.com/k8gege/LadonGo
+
+### 奇葩条件
+
+实战并不那么顺利，有些内网转发后很卡或无法转发，只能将工具上传至目标
+有些马可能上传两三M的程序都要半天甚至根本传不了，PY的几十M就更别想了
+Ladon采用C#研发，程序体积很小500K左右，即便马不行也能上传500K程序吧
+还不行也可PowerShell远程内存加载,这点是PY或GO编译的大程序无法比拟的
+
+### 宗旨
+
+一条龙服务，为用户提供一个简单易用、功能丰富、高度灵活的扫描工具
+
+### 特色
+
+扫描流量小
+程序体积小
+功能丰富强大
+程序简单易用
+插件支持多种语言
+跨平台(Win/Kali/Ubuntu)等
+支持Cobalt Strike插件化
+支持PowerShell无文件渗透
+Exp生成器可一键生成Poc
+多版本适用各种环境
+
+### 程序参数功能
+
+1  支持指定IP扫描
+2  支持指定域名扫描
+3  支持指定机器名扫描
+4  支持指定C段扫描(ip/24)
+5  支持指定B段扫描(ip/16)
+6  支持指定A段扫描(ip/8)
+7  支持指定URL扫描
+8  支持批量IP扫描(ip.txt)
+9  支持批量C段扫描(ip24.txt)
+10 支持批量B段扫描(ip16.txt)
+11 支持批量URL扫描(url.txt)
+12 支持批量域名扫描(domain.txt)
+13 支持批量机器名扫描(host.txt)
+14 支持批量国家段扫描(cidr.txt)
+15 支持批量字符串列表(str.txt)
+16 支持主机帐密列表(check.txt)
+17 支持用户密码列表(userpass.txt)
+18 支持指定范围C段扫描
+19 支持参数加载自定义DLL（仅限C#）
+20 支持参数加载自定义EXE（仅限C#）
+21 支持参数加载自定义INI配置文件
+22 支持参数加载自定义PowerShell
+23 支持自定义程序(系统命令或第三方程序即任意语言开发的程序或脚本)
+24 插件(支持多种语言C#/Delphi/Golang/Python/VC/PowerShell)
+25 支持Cobalt Strike(beacon命令行下扫描目标内网或跳板扫描外网目标)
+26 支持CIDR格式IP扫描,如100.64.0.0/10，192.168.1.1/20等
+27 INI配置支持自定义程序密码爆破
+
+### 简明使用教程
 
 Ladon 简明使用教程 完整文档: http://k8gege.org/Ladon 
 支持Cmd、Cobalt Strike、PowerShell等内存加载
