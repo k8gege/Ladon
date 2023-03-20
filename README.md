@@ -13,6 +13,7 @@
 ![image](https://img-blog.csdnimg.cn/20210116233533868.gif)
 
 
+
 ### 程序简介
 
 Ladon大型内网渗透工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。10.10版本内置202个功能模块,外部模块18个,网络资产探测模块28个通过多种协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16个包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计23个含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
@@ -192,6 +193,7 @@ Ladon str.txt DeBase64
 ```
 
 ### 资产扫描、指纹识别、服务识别、存活主机、端口扫描
+![image](http://k8gege.org/k8img/Ladon/Study/Rinfo.PNG)
 
 ##### 012 ICMP扫描存活主机(最快)
 ```Bash
@@ -324,7 +326,7 @@ Ladon 192.168.1.8/24 FtpScan
 ```
 
 ### 暴力破解/网络认证/弱口令/密码爆破/数据库/网站后台/登陆口/系统登陆
-
+![image](http://k8gege.org/k8img/Ladon/Study/brute.PNG)
 密码爆破详解参考SSH：http://k8gege.org/Ladon/sshscan.html
 
 ##### 035 445端口 SMB密码爆破(Windows)
@@ -429,6 +431,8 @@ Ladon 192.168.1.8/24 DvrScan
 
 ### 漏洞检测/Poc
 
+![image](http://k8gege.org/k8img/Ladon/Study/poc.PNG)
+
 ##### 055 SMB漏洞检测(CVE-2017-0143/CVE-2017-0144)
 ```Bash
 Ladon 192.168.1.8/24 MS17010
@@ -471,6 +475,8 @@ Ladon 192.168.1.8/24 DraytekPoc
 ```
 
 ### 漏洞利用/Exploit
+![image](http://k8gege.org/k8img/Ladon/Study/exp.PNG)
+
 ##### 063 Weblogic漏洞利用(CVE-2019-2725)
 ```Bash
 Ladon 192.168.1.8/24 WeblogicExp
@@ -589,6 +595,8 @@ Ladon DumpLsass
 
 ### 信息收集
 
+![image](http://k8gege.org/k8img/Ladon/Study/Linfo.PNG)
+
 ##### 083 获取本机内网IP与外网IP 	
 ```Bash
 Ladon GetIP
@@ -685,6 +693,8 @@ Ladon RdpLog
 
 ### 远程执行(psexec/wmiexec/atexec/sshexec/smbexec)
 
+![image](http://k8gege.org/k8img/Ladon/Study/Rexec.PNG)
+
 ##### 099 445端口 加密PSEXEC远程执行命令（交互式）
 ```Bash
 net use \\192.168.1.8 k8gege520 /user:k8gege
@@ -751,6 +761,8 @@ Ladon WinrmExec 192.168.1.8 5985 k8gege.org Administrator K8gege520 calc.exe
 ```
 
 ### 提权降权
+
+![image](http://k8gege.org/k8img/Ladon/Study/Lpe.PNG)
 
 ##### 108 whoami查看当前用户权限以及特权	
 Ladon whoami
@@ -1228,6 +1240,8 @@ Ladon ip.txt TrueIP "K8哥哥"
 Ladon 192.168.1.8/24 TrueIP "K8哥哥"
 ```
 
+![image](http://k8gege.org/k8img/Ladon/Study/pwd.PNG)
+
 ##### 183 Firefox密码\Cookie\历史记录读取
 ```Bash
 Ladon FirefoxPwd
@@ -1319,6 +1333,10 @@ Ladon 192.168.1.8/24 T3Info
 Ladon 192.168.1.8:7001 T3Info
 Ladon http://192.168.1.8:7001 T3Info
 ```
+
+### 一键渗透 InfoScan AllScan PocScan ExpScan VerScan
+
+![image](http://k8gege.org/k8img/Ladon/Study/OneScan.PNG)
 
 ##### 196 InfoScan多个模块探测系统信息
 ```Bash
