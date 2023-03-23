@@ -1,7 +1,6 @@
 ## Ladon911 20230323
 ![](https://k8gege.github.io/k8img/Ladon/Dragon.jpg)
 
-![](https://k8gege.github.io/k8img/Ladon/ico/Ico.png)
 
 [![Author](https://img.shields.io/badge/Author-k8gege-blueviolet)](https://github.com/k8gege) 
 [![Ladon](https://img.shields.io/badge/Ladon-10.10-yellowgreen)](https://github.com/k8gege/Ladon) 
@@ -47,6 +46,7 @@ Ladon采用C#研发，程序体积很小500K左右，即便马不行也能上传
 ### 宗旨
 
 一条龙服务，为用户提供一个简单易用、功能丰富、高度灵活的扫描工具
+![](https://k8gege.github.io/k8img/Ladon/ico/Ico.png)
 
 ### 特色
 
