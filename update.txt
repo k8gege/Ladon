@@ -16,12 +16,20 @@ Ladon35			Win7/2008或装有.NET 3.x系统下使用 安装有4.8的建议优先L
 Ladon.ps1		Win7-Win2022或装有PowerShell系统，可远程内存加载无文件渗透
 NimLadon		Nim免杀Ladon，可过部分杀软，可用net2nim工具 自行转换
 
-script目录		CS插件，一键使用，内存加载，无需将EXE上传目标，无文件渗透
+LadonCS			CS插件,一键使用，内存加载，无需将EXE上传目标，无文件渗透
 	
 LadonGUI		辅助工具，含免杀、文本处理、加密解密、反弹Shell、子域名等
 LadonEXP		EXP生成器，一键生成Poc、EXP，快速扩展Ladon批量GetShell能力
 LadonStudy		学习模式，一键渗透，对Ladon不熟的人，也可快速实战GetShell
 ChatLadon		渗透机器人，也可当成学习模式，只要会聊天，就能让Ladon干活
+
+
+Ladon 10.10.2 20230402
+[+]clsLog	  清除崩溃日志、UsageLog日志、清除图标缓存、禁止UsageLog日志记录
+[u]默认禁止基于.net程序UsageLog日志记录(如各类工具、powershell等)防止蓝队或EDR通过日志审计
+[u]RunPS 	  无PowerShell.exe执行*.ps1脚本 新增内存绕过AMSI反病毒查杀接口
+[+]默认Bypass ETW 绕过部分杀软和EDR监控
+[+]HPreboot    	SNMP重启HP打印机 .net>=4.0
 
 Ladon 10.10 20230318
 ============================================================================
