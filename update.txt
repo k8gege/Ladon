@@ -25,7 +25,7 @@ ChatLadon		渗透机器人，也可当成学习模式，只要会聊天，就能
 =========================================================================
 
 
-Ladon 10.10.4  20230422
+Ladon 10.10.4  20230424
 [u]LadonGUI			文本处理，功能全改成中文(Win8及以上英文系统支持中文)
 [+]EXP-2022-36537	Zookeeper 未授权文件读取EXP (默认/WEB-INF/web.xml)
 [+]CVE-2022-36537	Server Backup Manager 未授权RCE漏洞检测 (Zookeeper)
@@ -39,7 +39,7 @@ Ladon 10.10.4  20230422
 [+]INI插件		   	支持参数处理，如INI里配置$ip$，读取tar.txt内容为http://192.168.1.8:8099，内容将处理成IP数据192.168.1.8，其他同理
 [+]TXT文件		   	新增tar.txt、target.txt一样，传入参数为原始内容，如提供的是IP，Ladon不会处理成url，除非INI里指定，或模块自行处理
 [+]TXT文件		   	修复读取url.txt host.txt 出现不完整问题，如http://backup.xxx.org 变成 http:ckup.xx.org 的Bug
-
+[u]fixbug			修复10.10.2-10.10.4  IIS权限无法执行的BUG
 
 =========================================
 Ladon 10.10.3 20230410
