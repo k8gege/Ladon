@@ -25,6 +25,24 @@ ChatLadon		渗透机器人，也可当成学习模式，只要会聊天，就能
 =========================================================================
 
 
+10.10.5 20230505
+[+]HikvisionScan 海康威视 视频监控 密码爆破
+[u]INI插件		支持isok、isvul字段，当结果出现对应特征字符串，回显ISVUL或ISOK
+[u]INI插件		支持$port$参数，超时还是改成30秒
+[+]CloseSMB		彻底禁用SMB服务-需管理员权限(重启生效)
+[+]DisService	彻底禁用指定服务-需管理员权限
+[+]StopService	停止指定服务-需管理员权限
+[+]OpenTCP		防火墙放行指定TCP端口-需管理员权限
+[+]OpenUDP		防火墙放行指定UDP端口-需管理员权限
+[+]CloseTCP		防火墙拦截指定TCP端口-需管理员权限
+[+]CloseUDP		防火墙拦截指定UDP端口-需管理员权限
+
+Ladon 10.10.4  for CobaltStrike
+[u]CS插件 	分离Ladon高效加载
+[+]HikvisionPoc		CVE-2017-7921 hikvision 海康威视摄像头配置文件泄露 漏洞检测
+[+]HikvisionDecode  CVE-2017-7921 hikvision 海康威视摄像头配置文件解密 提取密码
+[u]sshcmd 	CS版sshcmd更新SSH库支持高版本SSH
+
 Ladon 10.10.4  20230424
 [u]LadonGUI			文本处理，功能全改成中文(Win8及以上英文系统支持中文)
 [+]EXP-2022-36537	Zookeeper 未授权文件读取EXP (默认/WEB-INF/web.xml)
