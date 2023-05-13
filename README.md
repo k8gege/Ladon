@@ -1525,6 +1525,16 @@ Ladon url.txt HikvisionPoc
 Ladon HikvisionDecode configurationFile
 ```
 
+##### 225 Ladon测试专用CmdShell
+```Bash
+Ladon web 800 cmd
+```
+
+##### 226 连接测试专用CmdShell
+```Bash
+Ladon cmdshell http://192.168.50.2:888 cmd whoami
+浏览器访问 http://192.168.1.8:800/shell?cmd=whoami
+```
 
 =======================================================
 
