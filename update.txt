@@ -25,6 +25,13 @@ ChatLadon		渗透机器人，也可当成学习模式，只要会聊天，就能
 =========================================================================
 
 
+5.20
+[+]QueryAdminDomain 查看域管理员
+[+]QueryDomain	查看当前域、域时间
+LadonExp	payload出现$cmd$或$b64cmd$ 默认测试按钮 whoami
+增加Windows常用命令 QueryAdmin QueryProxy ActiveAdmin ActiveGuest等
+GUI  DLL添加用户 密码永不过期
+
 10.10.5 20230513
 [u]ExchangePoc	 	识别ProxyShell ISVUL更准确 
 [+]CS beacon连接测试CmdShell	Ladon cmdshell http://192.168.50.2:888 cmd whoami
