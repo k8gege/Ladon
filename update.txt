@@ -25,6 +25,14 @@ ChatLadon		渗透机器人，也可当成学习模式，只要会聊天，就能
 =========================================================================
 
 
+Ladon 10.10.6 20230528
+[+]PostShell				   Post提交CmdShell客户端，如CMD小马pwd=whoami执行命令，支持Post、Cookie、UserAgent、Referer等提交
+[+]MndpInfo/RouterOS/Mikrotik	Mndp协议广播探测同网段Mikrotik路由器信息 (35和40不支持)
+[u]GetInfo						移除GetInfo2，GetInfo已包含WMI获取的信息
+[u]EnumProcess/tasklist/ps		查看进程详细信息，3种写法均支持
+[u]EnumShare/ShareInfo			枚举局域网、同网段计算机共享资源
+[u]EnumMssql/MssqlInfo			MSSQL协议探测同网段SQL SERVER数据库信息
+
 5.20
 [+]QueryAdminDomain 查看域管理员
 [+]QueryDomain	查看当前域、域时间
