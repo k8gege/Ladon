@@ -1,4 +1,4 @@
-## Ladon 10.10.6 20230528
+## Ladon 10.10.6 20230601
 ![](https://k8gege.github.io/k8img/Ladon/Dragon.jpg)
 
 [![Author](https://img.shields.io/badge/Author-k8gege-blueviolet)](https://github.com/k8gege) 
@@ -98,8 +98,8 @@ Windows版本: .Net、Cobalt Strike、PowerShell<br>
 PS: Study方便本地测试使用，完整功能请使用CMD
 
 ### 版本
-Ladon 10.10.5 20230520<br>
-简明用法例子 228例<br>
+Ladon 10.10.6 20230601<br>
+简明用法例子 230例<br>
 
 ### 001 自定义线程扫描
 例子：扫描目标10.1.2段是否存在MS17010漏洞<br>
