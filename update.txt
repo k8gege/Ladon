@@ -25,8 +25,14 @@ ChatLadon		渗透机器人，也可当成学习模式，只要会聊天，就能
 =========================================================================
 
 
+
+20230603
+[u]LadonExp 					支持GET连接MS17010漏洞CmdShell执行命令
+[u]LadonExp						生成EXE可解密Base64、Hex  PostShell结果
+[u]PowerShell					生成EXE可解密Base64、Hex  PostShell结果
+
 Ladon 10.10.6 20230528
-[+]PostShell				   Post提交CmdShell客户端，如CMD小马pwd=whoami执行命令，支持Post、Cookie、UserAgent、Referer等提交
+[+]PostShell				    Post提交CmdShell客户端，如CMD小马pwd=whoami执行命令，支持Post、Cookie、UserAgent、Referer等提交
 [+]MndpInfo/RouterOS/Mikrotik	Mndp协议广播探测同网段Mikrotik路由器信息 (35和40不支持)
 [u]GetInfo						移除GetInfo2，GetInfo已包含WMI获取的信息
 [u]EnumProcess/tasklist/ps		查看进程详细信息，3种写法均支持
