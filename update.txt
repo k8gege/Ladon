@@ -25,11 +25,20 @@ ChatLadon		渗透机器人，也可当成学习模式，只要会聊天，就能
 =========================================================================
 
 
+Ladon 11  2023.6.18
+[+]RocketMQexp				Apache RocketMQ CVE-2023-33246 远程命令执行漏洞EXP (可Ladon渗透Web服务器获取回显)
+[+]BypassAV					Ladon一键免杀工具 PY XOR随机加密 (Main函数需Public）
+[u]InfoScan					修复异常退出Bug
+[+]EventLog/LoginLog		一键读取登陆成功日志4624  错误4625要是爆破日志会很大
+[u]Exp、GUI、Study、Chat	更新UI按钮背景
+
+[+]RunCmd/Cmd				执行Cmd命令/支持b64cmd	Ladon cmd whoami 或 Ladon b64cmd d2hvYW1p 
+[+]RunPS/PowerShell			执行PowerShell命令/脚本 Ladon powershell c $PSVersionTable
 
 20230603
 [u]LadonExp 					支持GET连接MS17010漏洞CmdShell执行命令
 [u]LadonExp						生成EXE可解密Base64、Hex  PostShell结果
-[u]PowerShell					生成EXE可解密Base64、Hex  PostShell结果
+[+]PostShell				    增加HEX加密传输HEX解密结果,Base64结果解密Bug修复
 
 Ladon 10.10.6 20230528
 [+]PostShell				    Post提交CmdShell客户端，如CMD小马pwd=whoami执行命令，支持Post、Cookie、UserAgent、Referer等提交
