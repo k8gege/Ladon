@@ -22,7 +22,61 @@ LadonGUI		辅助工具，含免杀、文本处理、加密解密、反弹Shell�
 LadonEXP		EXP生成器，一键生成Poc、EXP，快速扩展Ladon批量GetShell能力
 LadonStudy		学习模式，一键渗透，对Ladon不熟的人，也可快速实战GetShell
 ChatLadon		渗透机器人，也可当成学习模式，只要会聊天，就能让Ladon干活
+LadonShell		连接aspx一句话木马 WebShell内存加载Ladon后渗透 无文件落地
 =========================================================================
+
+
+Ladon 11.4 20230801
+[+]LadonGUI			反弹Shell生成器 新增JAVA反序列化漏洞 JNDI\ldap\rmi反弹Shell
+[+]LadonGUI			反弹Shell生成器 新增OpenSSL、Curl、Telnet、Ruby、Lua、Ncat、socat反弹Shell
+[+]LadonGUI			反弹Shell生成器 添加全路径Ldon反弹shell、Jndi注入Windows反弹shell
+[+]web				渗透专用Web服务器 Ldap	nc  支持多系统反弹shell
+[+]web				渗透专用Web服务器 Rmi	nc	支持多系统反弹shell
+[+]web				渗透专用Web服务器 Ldap	ver 探测系统版本、java版本、当前用户、目录
+[+]web				渗透专用Web服务器 Rmi	ver 探测系统版本、java版本、当前用户、目录
+[u]OnlinePC			修复noping扫描崩溃的Bug
+
+
+Ladon 11.3 2023.7.20
+[u]web				渗透专用Web服务器 支持无后缀文件下载 如busybox、nc等任意文件
+[+]web				渗透专用Web服务器 请求nc、exp、exploit、shell.class 记录IP到exp.txt
+[+]LadonGui			Netcat、NC反弹Shell 支持回显速度设置
+[+]IisInfo			增加IIS网站信息一键获取
+[u]LadonExp			执行whoami  System或Root权限 回显高亮
+[u]LadonExp			测试EXP时 勾选Save保存执行命令结果
+[u]PostShell		执行whoami  System或Root权限 回显高亮
+[u]PostShell		修复部分CFM WebShell结果回显乱码的问题
+[+]AddAdmin			API添加管理员(无视系统net、net1禁用)
+[+]AddUser			API添加用户(无视系统net、net1.exe禁用)
+[+]DelUser			API删除用户(无视系统net、net1.exe禁用)
+[+]web				渗透专用Web服务器 新增内网外网IP识别
+[+]web				渗透专用Web服务器 新增外网IP国家城市
+[u]CS插件			CobaltStrike插件Ladon支持mssqlcmd
+[u]Web				渗透专用Web服务器 JNDI注入Ldap、Rmi漏洞IP保存到isvul_ldap.txt和isvul_rmi.txt
+[u]Web				结果保护 isvul.txt isvul_ldap.txt isvul_rmi.txt 不管存不存在 访问都提示404
+[u]ClsLog			新增清除C:\Users\当前用户\AppData\Local\Temp 目录垃圾
+
+=========================================================================
+Ladon 11.2 2023.7.11
+[+]McpPotato		.NET>=4.0 Win11/2022提权至System  其它系统自测
+[u]GUI				加强版NC、Netcat监听客户端 连接速度优化 回显响应更快
+[u]Web				迷你Web服务器渗透保存的isvul.txt结果只保留IP(方便去重)
+[u]80天更新			超过编译日期80天，会提示文件损坏 请下最新版Ladon
+
+2023.7.5
+修复一些bug
+
+Ladon 11.1 2023.6.28
+[u]白名单启动	C:\Windows\Microsoft.NET\Framework\v4.0.30319\regasm.exe /U Ladon.exe whoami
+[u]修复t=50线程 或结尾http 有些模块报错的Bug 如Ladon noping 192.168.1.0/B XXXX t=50 http
+[u]web			修复PowerShell DownLoadFile下载不了Bug
+[u]web			修复非根目录文件，下载或访问不到的Bug
+[u]LadonGUI		安装有.net 4.8时，默认加载Ladon911  如cmddll只有911有 无4.8用不了
+[+]exe2hex		EXE转HEX，CMD命令写入文件
+[+]exe2b64		EXE转Base64，CMD命令写入文件
+[u]cmddll		仅保留911本地使用，无需在目标生成，减小体积 1K也是肉
+[+]ZimbraVer	Zimbra版本探测
+[+]SharpGPO     .NET>=4.0 否则报错  35可编译 但执行报错
 
 
 Ladon 11  2023.6.18
