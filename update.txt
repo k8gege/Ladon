@@ -5,7 +5,7 @@ Wiki: http://k8gege.org/Ladon
 
 
 Ladon简介:
-Ladon模块化网络渗透工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。10.10版本内置202个功能模块,外部模块18个,网络资产探测模块30个通过多种协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16个包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计23个含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
+Ladon模块化网络渗透工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。10.10版本内置202个功能模块,外部模块18个,网络资产探测模块30个通过多种协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16个包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计23个含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动 内网渗透。
 
 
 版本说明: 
@@ -26,6 +26,38 @@ LadonShell		连接aspx一句话木马 WebShell内存加载Ladon后渗透 无文�
 =========================================================================
 
 
+Ladon 11.6 20230911
+[+]MmcExec				Dcom远程执行命令之MMC20(域控或管理员权限、需目标关闭防火墙) 横向移动 内网渗透 支持BASE64命令
+[+]ShellExec			Dcom远程执行命令之ShellWindows(域控或管理员权限、需目标关闭防火墙) 横向移动 内网渗透 支持BASE64命令
+[+]ShellBrowserExec		Dcom远程执行命令之ShellBrowserWindow(域控或管理员权限、需目标关闭防火墙) 横向移动 内网渗透 支持BASE64命令
+[+]SharpSphere			.NET>=4.0 SharpSphere 使红队人员能够轻松地与 vCenter 管理的虚拟机的来宾操作系统进行交互 执行命令
+[+]noPac				.NET>=4.0 域渗透 域内提权CVE-2021-42287/CVE-2021-42278 横向移动 内网渗透
+[+]SharpGPOAbuse		.NET>=4.0 域渗透 组策略(GPO)横向移动 内网渗透 下发脚本
+[+]Rubeus     			.NET>=4.0 域渗透 Kerberos攻击比如TGT请求/ST请求/AS-REP Roasting/Kerberoasting/委派攻击/黄金票据/白银票据/钻石票据/蓝宝石票据等
+[u]LadonEXP				结果不含路径 也可自动解密
+[u]PostShell			结果不含路径 也可自动解密
+[u]web					AuthBasic认证监听 捕获密码 解密bug修复
+[u]Ladon.ps1			默认使用Ladon40版本,Win10/11是主流系统，Win7可自行转换Ladon35
+[u]Ladon.exe			默认使用Ladon48版本
+
+Ladon 11.5 20230812
+[u]LdapScan			域控密码爆破成功 回显域信息
+[u]OnlinePC 		超时8s
+[u]SmbInfo			超时8s
+[u]WhatCms			超时8s
+[u]SmbGhost			超时8s
+[u]MS17010			超时8s
+
+[+]LadonExp			CMD变量 $hexcmd$   $asciicmd$   $unicodecmd$ 使用对应编码加密命令
+[+]LadonExp			Unicdoe加密通信Shell	cmd=\u006e\u0065\u0074\u0020\u0075\u0073\u0065\u0072
+[+]LadonExp			Ascii码加密通信Shell	cmd=110,101,116,32,117,115,101,114
+[+]LadonExp			Hex加密通信Shell		cmd=6E65742075736572
+[+]PostShell		Unicdoe加密通信Shell	CMD值自动加密
+[+]PostShell		Ascii码加密通信Shell(超出ASCII值范围不可解密)
+[+]exe2hex			EXE转HEX，CMD命令Echo写入文件	支持指定长度、添加前缀
+[+]exe2b64			EXE转Base64，CMD命令写入文件	支持指定长度、添加前缀
+
+=========================================================================
 Ladon 11.4 20230801
 [+]LadonGUI			反弹Shell生成器 新增JAVA反序列化漏洞 JNDI\ldap\rmi反弹Shell
 [+]LadonGUI			反弹Shell生成器 新增OpenSSL、Curl、Telnet、Ruby、Lua、Ncat、socat反弹Shell
@@ -45,7 +77,7 @@ Ladon 11.3 2023.7.20
 [u]LadonExp			执行whoami  System或Root权限 回显高亮
 [u]LadonExp			测试EXP时 勾选Save保存执行命令结果
 [u]PostShell		执行whoami  System或Root权限 回显高亮
-[u]PostShell		修复部分CFM WebShell结果回显乱码的问题
+[u]PostShell		修复部分CFM WebShell结果回显乱码的问题 横向移动 内网渗透
 [+]AddAdmin			API添加管理员(无视系统net、net1禁用)
 [+]AddUser			API添加用户(无视系统net、net1.exe禁用)
 [+]DelUser			API删除用户(无视系统net、net1.exe禁用)
@@ -76,7 +108,7 @@ Ladon 11.1 2023.6.28
 [+]exe2b64		EXE转Base64，CMD命令写入文件
 [u]cmddll		仅保留911本地使用，无需在目标生成，减小体积 1K也是肉
 [+]ZimbraVer	Zimbra版本探测
-[+]SharpGPO     .NET>=4.0 否则报错  35可编译 但执行报错
+[+]SharpGPO     .NET>=4.0 域渗透 横向移动 内网渗透
 
 
 Ladon 11  2023.6.18
@@ -92,7 +124,7 @@ Ladon 11  2023.6.18
 20230603
 [u]LadonExp 					支持GET连接MS17010漏洞CmdShell执行命令
 [u]LadonExp						生成EXE可解密Base64、Hex  PostShell结果
-[+]PostShell				    增加HEX加密传输HEX解密结果,Base64结果解密Bug修复
+[+]PostShell				    增加HEX加密传输HEX解密结果,Base64结果解密Bug修复 横向移动 内网渗透
 
 Ladon 10.10.6 20230528
 [+]PostShell				    Post提交CmdShell客户端，如CMD小马pwd=whoami执行命令，支持Post、Cookie、UserAgent、Referer等提交
@@ -114,7 +146,7 @@ GUI  DLL添加用户 密码永不过期
 [+]CS beacon连接测试CmdShell	Ladon cmdshell http://192.168.50.2:888 cmd whoami
 [u]HikvisionScan
 [U]修复CS下portscan noping 指定端口 识别不到IP的bug
-[+]cmdshell		连接Ladon测试专用webshell
+[+]cmdshell		横向移动 内网渗透 连接Ladon测试专用webshell
 LadonExp		可选生成代码，方便修改poc
 LadonExp		服务器返回协议不规范或其他错误提示 如ServerProtocolViolation  只空对象无法确定原因
 [+]web			添加WebShell测试专用(Ladon web 800 cmd 访问http://192.168.1.8:800/shell?cmd=whoami)
@@ -139,7 +171,7 @@ Ladon 10.10.4  for CobaltStrike
 [u]CS插件 	分离Ladon高效加载
 [+]HikvisionPoc		CVE-2017-7921 hikvision 海康威视摄像头配置文件泄露 漏洞检测
 [+]HikvisionDecode  CVE-2017-7921 hikvision 海康威视摄像头配置文件解密 提取密码
-[u]sshcmd 	CS版sshcmd更新SSH库支持高版本SSH
+[u]sshcmd 	横向移动 内网渗透 CS版sshcmd更新SSH库支持高版本SSH
 
 Ladon 10.10.4  20230424
 [u]LadonGUI			文本处理，功能全改成中文(Win8及以上英文系统支持中文)
@@ -350,7 +382,7 @@ Ladon 10.5 CS版
 [+]CVE-2018-14847  Mikrotik RouterOS 6.29-6.42密码读取
 [u]WhatCMS 识别VMware系列
 [+]CVE-2022-40684 FortiGate防火墙未授权写SSH-KEY
-[+]MssqlCmd  SQL Server远程执行命令提权
+[+]MssqlCmd  横向移动 内网渗透 SQL Server远程执行命令提权
 
 Ladon 10.5
 [+]ZteScan	Zte路由器 Web默认口令检测  .net >= 4.5
@@ -374,7 +406,7 @@ LadonExp 20230108
 [+]错误返回头信息如401
 
 Ladon 10.3 2023.1.3
-[+]MssqlCmd  SQL Server远程执行命令提权 测试：SQL Server 2005 2012 2017 
+[+]MssqlCmd  横向移动 内网渗透 SQL Server远程执行命令提权 测试：SQL Server 2005 2012 2017 
 可远程、可本地提权 支持自定义端口 (不是所有的目标都是1433，默认可不填)
 功能: info、open_shell、close_shell、xp_cmdshell、ws_shell、r_shell、py_shell
 程序集: install_clr、uninstall_clr、clr_exec、clr_efspotato、clr_badpotato
@@ -437,7 +469,7 @@ Ladon 10.0 20221208
 Ladon  Study 20221201 让小白快速入门网络安全
 =============================================
 Ladon Study包含网络资产探测、漏洞检测、漏洞EXP、密码审计、
-信息收集、横向移动、密码读取、本地提权等144个功能。
+信息收集、横向移动 内网渗透、密码读取、本地提权等144个功能。
 使用超级简单，只需填写目标IP、URL、域名、IP段、TXT等，
 点击对应按钮一键操作。如下图，填好C段IP后，使用ICMP探测C段存活主机。
 
@@ -496,7 +528,7 @@ Ladon 9.2.7 20221115
 [u]HttpBasiScan	  支持Cisco RV340 VPN路由
 [u]DvrScan
 [u]PortScan 增加7080 9100端口 常见端口超时为5秒 其它8秒
-[u]Wmiexec2 支持Base64密码 解决双引号或特殊符号密码问题
+[u]Wmiexec2 横向移动 内网渗透 支持Base64密码 解决双引号或特殊符号密码问题
 [+]默认增加CPU信息 物理数 内核数 逻辑处理器数量
 
 =============================================
@@ -522,7 +554,7 @@ Ladon 9.2.6 20221112
 [u]GetIP	获取本机内网IP与外网IP(如查看是否VPN)
 [u]WPinfo   探测完后再显示插件信息，URL与结果完全对应
 
-[u]SshCmd  支持连接Kali 2022或高版本SSH，支持加载DLL更新
+[u]SshCmd  横向移动 内网渗透 支持连接Kali 2022或高版本SSH，支持加载DLL更新
 [u]SshScan 支持爆破Kali 2022或高版本SSH，支持加载DLL更新
 [u]SshScan 修复userpass.txt密码组多个空格不的密码的BUG
 
@@ -547,8 +579,8 @@ Split Line	   按指定行数分割，自动分割成对应几份，不足归最
 
 Ladon 9.2.4 20221024
 [u]DraytekPoc   修复35和48莫名Bug
-[u]WebShellCmd  PostShell OSinfo查看系统版本、gcc、python等(方便提权)
-[u]WebShellCmd  UAshell OSinfo查看系统版本、gcc、python等(方便提权)
+[u]WebShellCmd  横向移动 内网渗透 PostShell OSinfo查看系统版本、gcc、python等(方便提权)
+[u]WebShellCmd  横向移动 内网渗透 UAshell OSinfo查看系统版本、gcc、python等(方便提权)
 
 Ladon 9.2.3 20220928
 [+]vsFTPdPoc	CVE-2011-2523 vsftpd 2.3.4 笑脸后门漏洞检测
@@ -589,7 +621,7 @@ Ladon 9.2.1 2022.9.11
 [u]PortScan			超时5-8S，减少有时因超时漏端口的BUG
 [u]gethtml				支持https tls 1.3
 [u]wget/HttpDownLoad	支持https tls 1.3
-[u]WebShellCmd			WebShell横向移动
+[u]WebShellCmd			WebShell横向移动 内网渗透
 [u]SslInfo
 [u]WPinfo
 移除模块
@@ -619,7 +651,7 @@ LadonGUI 9.2.0 20220820
 Ladon 9.2.0 20220818
 [+]CVE-2022-27925	Zimbra mboximport ZIP目录穿越漏洞GetShell检测
 [+]EXP-2022-27925	Zimbra mboximport ZIP目录穿越漏洞GetShell EXP
-[+]WebShellCmd		新增JSP UserAgent明文WebShell & Base64 Shell	
+[+]WebShellCmd		横向移动 内网渗透 新增JSP UserAgent明文WebShell & Base64 Shell	
 [-]移除IsShiro	
 
 LadonGUI 9.2.0 20220815
@@ -789,7 +821,7 @@ Ladon 8.9 2021.9.14
 
 ==================================================================
 Ladon 8.8 2021.9.11
-[+]SmbExec NTLM-HASH非交互执行无回显(https://github.com/checkymander/Sharp-SMBExec)
+[+]SmbExec  横向移动 内网渗透 NTLM-HASH非交互执行无回显(https://github.com/checkymander/Sharp-SMBExec)
 [u]GetInfo  新增Vmware虚拟机信息
 [u]OsScan   新增识别Vigor Router路由器识别
 [u]新增Xen\VBOX\Hybrid\Parallels虚拟机识别
@@ -847,8 +879,8 @@ Ladon 8.2 2021.5.15
 [+] MssqlInfo		(1433)
 [+] ExchangeInfo	(443)
 [+] RdpInfo			(3389)
-[+] WmiExec			Base64cmd解决Cobalt Strike无法解析空格引号参数
-[+] WmiExec2		支持文件上传、Base64cmd解决CS解析空格引号的问题
+[+] WmiExec			横向移动 内网渗透 Base64cmd解决Cobalt Strike无法解析空格引号参数
+[+] WmiExec2		横向移动 内网渗透 支持文件上传、Base64cmd解决CS解析空格引号的问题
 [+] Ping			重新启用系统Ping检测存活主机(目标PS1版本检测不到)
 
 LadonGUI 8.2 2021.5.15
@@ -974,8 +1006,8 @@ GUI 2020.9.24
 [+] webser deb64/debase64(命令Base64结果解密)
 
 7.3.3 2020.9.20
-[+]ZeroLogon CVE-2020-1472域控提权(密码置空)
-[+]PortScan  5985端口(有时防火墙开启也能识别)
+[+]ZeroLogon 		域渗透 CVE-2020-1472域控提权(密码置空)
+[+]PortScan  		5985端口(有时防火墙开启也能识别)
 
 7.3.2 2020.9.9
 [u] WhatCMS更新86+
@@ -985,7 +1017,7 @@ GUI 2020.9.24
 
 7.3.0 2020.9.1
 [+] WinrmScan 5985端口密码爆破（支持System权限）
-[+] WinrmExec 远程执行命令无回显（支持System权限）
+[+] WinrmExec 横向移动 内网渗透 远程执行命令无回显（支持System权限）
 
 7.2.2 2020.8.15
 [u] whoami增加特权信息(如果你了解提权工具原理可查看特权)
@@ -1058,7 +1090,7 @@ GUI 2020.9.24
 [+] PowerCat TCP、UDP反弹SHELL
 [+] ReverseTcp MSF、NC反弹SHELL
 [+] recent  查看用户最近访问文件
-[+] sshexec 增加上传下载文件功能
+[+] sshexec 横向移动 内网渗透 增加上传下载文件功能
 
 6.6.3 20200618
 [+] webser 钩鱼攻击密码捕获(如Win登陆认证)
@@ -1073,9 +1105,9 @@ GUI 2020.9.24
 [u] CS插件版 EXE完整版
 
 6.6.2 20200606
-[+] SshScan & SshExec 无需额外DLL
+[+] SshScan & SshExec 横向移动 内网渗透 无需额外DLL
 6.6.1 20200604
-[u] psexec 加密传输命令/结果
+[u] psexec 横向移动 内网渗透 加密传输命令/结果
 [+] AllVer/AllVersion 获取已安装程序列表
 
 Ladon 6.6 SmbGhost 20200603
@@ -1086,15 +1118,15 @@ Ladon 6.6 SmbGhost 20200603
 Ladon 6.5 远程执行命令 20200530
 ===========================================
 [+] PSver/NetVer/NetVersion/PSversion  查看.NET & PowerShell版本
-[+] WebShellCmd支持7种脚本(php asp jsp aspx cfm py cfm) 3种类型(cd/ua/k8)
+[+] WebShellCmd 横向移动 内网渗透 支持7种脚本(php asp jsp aspx cfm py cfm) 3种类型(cd/ua/k8)
 [u] INI爆破密码 成功日志 新增BANNER（如操作系统、SSH等）
 [+] webser 迷你HTTP服务器(内网传输文件、浏览器漏洞测试、HTA、SCT远程加载等)
 [+] RunPS 无PowerShell.exe执行PowerShell脚本
 [+] Runas 模拟用户执行命令(用户权限会话切换)
-[+] sshexec非交互回显 (https://github.com/k8gege/K8tools)
-[+] psexec 交互式回显  (https://github.com/malcomvetter/CSExec)
-[+] WmiExec非交互回显  (https://github.com/nccgroup/WMIcmd)
-[+] AtExec 非交互回显  (https://github.com/0x7556/smbexec)
+[+] sshexec 横向移动 内网渗透 非交互回显  (https://github.com/k8gege/K8tools)
+[+] psexec  横向移动 内网渗透 交互式回显  (https://github.com/malcomvetter/CSExec)
+[+] WmiExec 横向移动 内网渗透 非交互回显  (https://github.com/nccgroup/WMIcmd)
+[+] AtExec  横向移动 内网渗透 非交互回显  (https://github.com/0x7556/smbexec)
 [+] GetIP 获取本机内网IP与外网IP
 
 
@@ -1108,14 +1140,14 @@ ID | 模块名称 | 功能说明 | 返回结果
 3 | BypassUac | 绕过UAC执行,支持Win7-Win10 | Ladon BypassUac c:\1.exe
 4 | EnableDotNet | 一键启用.net 3.5(2008系统默认未启用) | Ladon EnableDotNet
 5 | gethtml | 获取内网站点HTML源码 | Ladon gethtml http://192.168.1.1
-6 | AdiDnsDump | 域内机器信息获取(非域内请使用LdapScan探测) | IP、域名
+6 | AdiDnsDump | 域渗透 域内机器信息获取(非域内请使用LdapScan探测) | IP、域名
 7 | LdapScan | 不指定密码时，仅探测LDAP服务器 | IP是否LDAP服务器
 8 | FtpScan | 不指定密码时，仅探测FTP服务器 | IP是否FTP服务器
 
 
 Ladon 6.0 20191224
 ===========================================================================
-[+]LdapScan AD域密码爆破:基于Ldap协议爆破Windows密码（非Ldap服务器提示不可操作）
+[+]LdapScan 域渗透 AD域密码爆破:基于Ldap协议爆破Windows密码（非Ldap服务器提示不可操作）
 [+]GetCmdLine/CmdLine 获取进程命令行参数/可指定进程
 [+]GetInfo 获取渗透基础信息（当前IP、域信息、系统信息、软件信息、网络连接、补丁信息、用户等）
 [+]GetInfo2 包含GetInfo & Wmi获取信息
