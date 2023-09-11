@@ -279,7 +279,7 @@ Ladon host.txt Host2IP
 ##### 026 DNS查询域内机器、IP (条件域内，指定域控IP)
 ```Bash
 Ladon AdiDnsDump 192.168.1.8
-```Bash
+```
 
 ##### 027 查询域内机器、IP (条件域内)
 Ladon GetDomainIP
@@ -288,7 +288,7 @@ Ladon GetDomainIP
 ```Bash
 Ladon 192.168.1.8/24 PortScan
 Ladon 192.168.1.8 PortScan 80,445,3389
-```Bash
+```
 
 ##### 029 扫描C段WEB及识别CMS（86+Web指纹识别）
 ```Bash
@@ -299,7 +299,7 @@ Ladon 192.168.1.8/24 WhatCMS
 ```Bash
 Ladon 192.168.1.8/24 CiscoInfo
 Ladon http://192.168.1.8 CiscoInfo
-```Bash
+```
 
 ##### 031 枚举Mssql数据库主机 （数据库IP、机器名、SQL版本）
 ```Bash
@@ -356,11 +356,15 @@ Ladon 192.168.1.8/24 WmiHashScan
 ```
 
 ##### 041 22端口 SSH密码爆破(Linux)
+```Bash
 Ladon 192.168.1.8/24 SshScan
 Ladon 192.168.1.8:22 SshScan
+```
 
 ##### 042 1433端口 Mssql数据库密码爆破
+```Bash
 Ladon 192.168.1.8/24 MssqlScan
+```
 
 ##### 043 1521端口 Oracle数据库密码爆破
 ```Bash
