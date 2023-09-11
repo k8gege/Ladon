@@ -765,7 +765,9 @@ Ladon WinrmExec 192.168.1.8 5985 k8gege.org Administrator K8gege520 calc.exe
 ![image](http://k8gege.org/k8img/Ladon/Study/Lpe.PNG)
 
 ##### 108 whoami查看当前用户权限以及特权	
+```Bash
 Ladon whoami
+```
 
 ##### 109  6种白名单BypassUAC(8.0后)Win7-Win10  10.8版本移除 仅911保留
 用法: Ladon BypassUAC Method Base64Cmd
@@ -1259,7 +1261,7 @@ Ladon40 BypassUAC11 c:\1.exe
 ##### 185 GetPwd支持Navicat、TeamView、Xshell、SecureCRT密码读取
 ```Bash
 Ladon GetPwd
-```Bash
+```
 
 ##### 186 DraytekScan 密码审计Draytek弱口令检测
 ```Bash
