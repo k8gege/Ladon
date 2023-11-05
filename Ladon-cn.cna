@@ -1,10 +1,10 @@
-#Ladon 11.6 for Cobalt Strike
+#Ladon 11.9 for Cobalt Strike
 #author:	k8gege
 #blog:		http://k8gege.org/Ladon
 #github:	https://github.com/k8gege
 #teston:	CS 3.x & 4.0
 #moudle:	
-#update: 	20230801
+#update: 	20231105
 
 #一些模块不支持CS(确却的说是CS是不支持)，若需要请使用EXE全功能版。
 #不支持模块1: [NbtScan VncScan MysqlScan OracleScan SSHscan WinrmScan WebDir SubDomain]
@@ -15,7 +15,7 @@
 beacon_command_register(
 "Ladon", 
 "Ladon large network penetration scanner", 
-"\nUsing: Ladon help\nLadon is a multi-threaded plug-in comprehensive scanning artifact for large-scale network penetration, including port scanning, service identification, network assets, password explosion, high-risk vulnerability detection and one click getshell. It supports batch a / B / C segment scanning and cross network segment scanning, as well as URL, host and domain name list scanning. Version 11.6 has built-in 180 function modules and 18 external modules. Through a variety of protocols and methods, it can quickly obtain the IP, computer name, working group, shared resources, network card address, operating system version, website, subdomain name, middleware, open service, router, database and other information of the target network");
+"\nUsing: Ladon help\nLadon is a multi-threaded plug-in comprehensive scanning artifact for large-scale network penetration, including port scanning, service identification, network assets, password explosion, high-risk vulnerability detection and one click getshell. It supports batch a / B / C segment scanning and cross network segment scanning, as well as URL, host and domain name list scanning. Version 11.9 has built-in 180 function modules and 18 external modules. Through a variety of protocols and methods, it can quickly obtain the IP, computer name, working group, shared resources, network card address, operating system version, website, subdomain name, middleware, open service, router, database and other information of the target network");
 
 alias ladon {
 	if (-exists script_resource("Ladon.exe")) {
@@ -31,7 +31,7 @@ menubar("Ladon", "newtab", 1); popup newtab { item("&K8gege", { url_open("http:/
 alias Ladon {
 	if (-exists script_resource("Ladon.exe")) {
 	if ($2 eq "help"){
-	blog2($1, "Ladon 11.6");
+	blog2($1, "Ladon 11.9");
 	blog2($1, "Usage:");
 	#blog2($1, "Ladon 1");
 	#blog2($1, "Ladon ip");
@@ -68,7 +68,7 @@ alias Ladon {
 	 bexecute_assembly!($1, script_resource("res/Ladon40.dat"), $2.' '.$3.' '.$4.' '.$5.' '.$6.' '.$7.' '.$8);
 	 }else if (uc($2) eq "GETIP" || uc($2) eq "WHOAMI" || uc($2) eq "GETID" || uc($2) eq "GETINFO" || uc($2) eq "CMDLINE" || uc($2) eq "GETCMDLINE" || uc($2) eq "ENUMPROCESS" || uc($2) eq "Cmdline" || uc($2) eq "GetCmdline" || uc($2) eq "ALLVER"  || uc($2) eq "VER" || uc($2) eq "NETVER" || uc($2) eq "PSVER" || uc($2) eq "NETVERSION" || uc($2) eq "PSVERSION" || uc($2) eq "CHECKDOOR" || uc($2) eq "AUTORUN" || uc($2) eq "RECENT" || uc($2) eq "RDPLOG" || uc($2) eq "USBLOG" || uc($2) eq "QUERYADMIN" || uc($2) eq "GETPIPE" || uc($2) eq "QUERYPROXY"){
 	 bexecute_assembly!($1, script_resource("res/LadonInfo.dat"), $2.' '.$3.' '.$4.' '.$5.' '.$6.' '.$7.' '.$8);
-     }else if (uc($2) eq "ARPINFO" || uc($2) eq "SMBINFO" || uc($2) eq "NBTINFO" || uc($2) eq "WMIINFO" || uc($2) eq "WINRMINFO" || uc($2) eq "SNMPINFO" || uc($2) eq "RDPINFO" || uc($2) eq "CISCOINFO" || uc($2) eq "SSLINFO" || uc($2) eq "WPINFO" || uc($2) eq "T3INFO" || uc($2) eq "INFOSCAN" || uc($3) eq "ARPINFO" || uc($3) eq "SMBINFO" || uc($3) eq "NBTINFO" || uc($3) eq "WMIINFO" || uc($3) eq "WINRMINFO" || uc($3) eq "SNMPINFO" || uc($3) eq "RDPINFO" || uc($3) eq "CISCOINFO" || uc($3) eq "SSLINFO" || uc($3) eq "WPINFO" || uc($3) eq "T3INFO" || uc($3) eq "INFOSCAN" || uc($4) eq "ARPINFO" || uc($4) eq "SMBINFO" || uc($4) eq "NBTINFO" || uc($4) eq "WMIINFO" || uc($4) eq "WINRMINFO" || uc($4) eq "SNMPINFO" || uc($4) eq "RDPINFO" || uc($4) eq "CISCOINFO" || uc($4) eq "SSLINFO" || uc($4) eq "WPINFO" || uc($4) eq "T3INFO" || uc($4) eq "INFOSCAN"){
+     }else if (uc($2) eq "ARPINFO" || uc($2) eq "SMBINFO" || uc($2) eq "NBTINFO" || uc($2) eq "WMIINFO" || uc($2) eq "WINRMINFO" || uc($2) eq "SNMPINFO" || uc($2) eq "RDPINFO" || uc($2) eq "CISCOINFO" || uc($2) eq "SSLINFO" || uc($2) eq "WPINFO" || uc($2) eq "T3INFO" || uc($2) eq "HTTPINFO" || uc($2) eq "SMTPINFO" || uc($2) eq "INFOSCAN" || uc($3) eq "ARPINFO" || uc($3) eq "SMBINFO" || uc($3) eq "NBTINFO" || uc($3) eq "WMIINFO" || uc($3) eq "WINRMINFO" || uc($3) eq "SNMPINFO" || uc($3) eq "RDPINFO" || uc($3) eq "CISCOINFO" || uc($3) eq "SSLINFO" || uc($3) eq "WPINFO" || uc($3) eq "T3INFO" || uc($3) eq "HTTPINFO" || uc($3) eq "SMTPINFO" || uc($3) eq "INFOSCAN" || uc($4) eq "ARPINFO" || uc($4) eq "SMBINFO" || uc($4) eq "NBTINFO" || uc($4) eq "WMIINFO" || uc($4) eq "WINRMINFO" || uc($4) eq "SNMPINFO" || uc($4) eq "RDPINFO" || uc($4) eq "CISCOINFO" || uc($4) eq "SSLINFO" || uc($4) eq "WPINFO" || uc($4) eq "T3INFO" || uc($4) eq "HTTPINFO" || uc($4) eq "SMTPINFO" || uc($4) eq "INFOSCAN"){
 	 bexecute_assembly!($1, script_resource("res/LadonInfo.dat"), $2.' '.$3.' '.$4.' '.$5.' '.$6.' '.$7.' '.$8);
 	 }else if (uc($2) eq "ICMP" || uc($2) eq "PING" || uc($2) eq "ONLINEIP" || uc($2) eq "ONLINEPC" || uc($3) eq "ICMP" || uc($3) eq "PING" || uc($3) eq "ONLINEIP" || uc($3) eq "ONLINEPC" || uc($4) eq "ONLINEIP" || uc($4) eq "ONLINEPC" || uc($3) eq "ICMP" || uc($3) eq "PING"){
 	 bexecute_assembly!($1, script_resource("res/Ladon48.dat"), $2.' '.$3.' '.$4.' '.$5.' '.$6.' '.$7.' '.$8);
@@ -588,7 +588,7 @@ sub Runas {
 
 popup beacon_bottom {
 menu "神龙拉冬" {
-item("&Ladon 11.6", { url_open("https://k8gege.org/Ladon?cs"); });
+item("&Ladon 11.9", { url_open("https://k8gege.org/Ladon?cs"); });
 separator();
 separator();
 menu "1 网络资产收集" {
@@ -960,6 +960,28 @@ menu "2 系统信息探测" {
 	item "8 Exchange探测系统信息-443" {
 	$bid = $1;
 	$dialog = dialog("Ladon ExchangeInfo", %(tar => "",moudle => "ExchangeInfo",clrver => "35",bid => $bid), &LadonScan40);
+	dialog_description($dialog, "Target: IP or CIDR or URL or Host or Domain");
+	drow_text($dialog, "tar",  "Target:");
+	#drow_combobox($dialog, "moudle", "Moudle:", @("OnlinePC","OnlineIP","OSScan", "WebScan", "WhatCMS","CiscoScan","SameWeb","UrlScan","EnumMssql","EnumShare"));
+	#drow_combobox($dialog, "clrver", "Version", @("35", "40"));
+	drow_checkbox($dialog, 'type', 'noping');
+	dbutton_action($dialog, "Scan");
+	dialog_show($dialog);
+	}
+	item "9 Http/S探测系统信息-Web" {
+	$bid = $1;
+	$dialog = dialog("Ladon HttpInfo", %(tar => "",moudle => "HttpInfo",clrver => "35",bid => $bid), &LadonInfo);
+	dialog_description($dialog, "Target: IP or CIDR or URL or Host or Domain");
+	drow_text($dialog, "tar",  "Target:");
+	#drow_combobox($dialog, "moudle", "Moudle:", @("OnlinePC","OnlineIP","OSScan", "WebScan", "WhatCMS","CiscoScan","SameWeb","UrlScan","EnumMssql","EnumShare"));
+	#drow_combobox($dialog, "clrver", "Version", @("35", "40"));
+	drow_checkbox($dialog, 'type', 'noping');
+	dbutton_action($dialog, "Scan");
+	dialog_show($dialog);
+	}
+	item "10 Smtp探测系统信息-25/465/587" {
+	$bid = $1;
+	$dialog = dialog("Ladon SmtpInfo", %(tar => "",moudle => "SmtpInfo",clrver => "35",bid => $bid), &LadonInfo);
 	dialog_description($dialog, "Target: IP or CIDR or URL or Host or Domain");
 	drow_text($dialog, "tar",  "Target:");
 	#drow_combobox($dialog, "moudle", "Moudle:", @("OnlinePC","OnlineIP","OSScan", "WebScan", "WhatCMS","CiscoScan","SameWeb","UrlScan","EnumMssql","EnumShare"));

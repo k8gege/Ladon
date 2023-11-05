@@ -1,10 +1,6 @@
 Wiki: http://k8gege.org/Ladon
-[+]新增
-[-]移除
-[u]更新
 
-
-Ladon简介:
+简介:
 Ladon模块化网络渗透工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。10.10版本内置202个功能模块,外部模块18个,网络资产探测模块30个通过多种协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16个包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计23个含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动 内网渗透。
 
 
@@ -25,6 +21,38 @@ ChatLadon		渗透机器人，也可当成学习模式，只要会聊天，就能
 LadonShell		连接aspx一句话木马 WebShell内存加载Ladon后渗透 无文件落地
 =========================================================================
 
+
+
+Ladon 11.9  20231105
+[u]LadonStudy		支持bypassEDR
+[u]LadonShell		支持tls 1.2
+[u]RdpInfo 			优化RDP Ntlm探测系统信息
+[u]RdpLog			查看3389连接日志(IP、用户名、CertHash)
+[+]CVE-2023-46604	ActiveMQ CVE-2023-46604 RCE Exploit
+
+
+Ladon 11.8  20231018
+[u]InfoScan			新增SmtpInfo
+[+]SmtpInfo			新增Smtp Ntlm探测系统信息(25、465、587端口)
+[u]InfoScan			新增HttpInfo
+[+]HttpInfo			新增Http/Https Ntlm探测系统信息(SharePoint)
+
+
+Ladon 11.7 20231010
+[u]BadPotato		本地提权 支持Base64参数 解决Cobalt Strike或LadonShell下双引号等问题
+[u]EfsPotato		本地提权 支持Base64参数 解决Cobalt Strike或LadonShell下双引号等问题
+[u]GodPotato		本地提权 支持Base64参数 解决Cobalt Strike或LadonShell下双引号等问题
+[u]SweetPotato		本地提权 支持Base64参数 解决Cobalt Strike或LadonShell下双引号等问题
+[u]McpPotato		本地提权 支持Base64参数 解决Cobalt Strike或LadonShell下双引号等问题
+[+]clsLog			新增清理最近访问文件记录
+
+9.24
+[u] WmiExec2		横向移动 内网渗透 修复b64cmd参数Bug
+[u] WmiExec			横向移动 内网渗透 修复域用户连接Bug
+[+] AtExec			横向移动 内网渗透 Base64统一为Unicode(如whoami编码 dwBoAG8AYQBtAGkA )
+
+9.18
+[u]PostShell			hexupload支持任意文件上传-当前目录
 
 Ladon 11.6 20230911
 [+]MmcExec				Dcom远程执行命令之MMC20(域控或管理员权限、需目标关闭防火墙) 横向移动 内网渗透 支持BASE64命令
@@ -832,7 +860,7 @@ Ladon 8.8 2021.9.11
 
 ==================================================================
 Ladon 8.7 Debug 2021.8.14
-[+]UsbLog USB使用记录查看(USB名称、USB标记、路径信息)
+[+]UsbLog USB使用记录查看USB日志(USB名称、USB标记、路径信息)
 
 Ladon 8.6 2021.7.5
 [+]PrintNightmare (CVE-2021-1675 | CVE-2021-34527)打印机漏洞提权EXP 
@@ -1089,7 +1117,7 @@ GUI 2020.9.24
 [+] WmiScan 记录RCP不可用正确密码
 [+] PowerCat TCP、UDP反弹SHELL
 [+] ReverseTcp MSF、NC反弹SHELL
-[+] recent  查看用户最近访问文件
+[+] recent  查看用户最近访问文件 最近操作文件日志
 [+] sshexec 横向移动 内网渗透 增加上传下载文件功能
 
 6.6.3 20200618
