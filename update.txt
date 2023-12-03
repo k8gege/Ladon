@@ -21,8 +21,15 @@ ChatLadon		渗透机器人，也可当成学习模式，只要会聊天，就能
 LadonShell		连接aspx一句话木马 WebShell内存加载Ladon后渗透 无文件落地
 =========================================================================
 
+Ladon 12.0  20231201
+[+]DomainLog	DomainUserIP 远程查询 域用户、IP
+[u]LoginLog		4624成功日志 域用户、域名、登陆IP 
+/all			导出全部日志 原始数据
+LoginLog 用户名 
+LoginLog 用户名 记录数
 
 
+==========================================================
 Ladon 11.9  20231105
 [u]LadonStudy		支持bypassEDR
 [u]LadonShell		支持tls 1.2
