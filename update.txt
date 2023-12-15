@@ -21,6 +21,22 @@ ChatLadon		渗透机器人，也可当成学习模式，只要会聊天，就能
 LadonShell		连接aspx一句话木马 WebShell内存加载Ladon后渗透 无文件落地
 =========================================================================
 
+
+12.15
+[+]OracleCmd2	Oracle数据库远程提权工具2 官方驱动>=net 4.8 大小4.9M不内置
+
+Ladon 12.2  12.14
+[+]OracleCmd	Oracle数据库远程提权工具 3种方法一键提权 
+				支持Windows/Linux/MacOS等服务器操作系统
+				支持高版本Oracle 12G、11G、12G及之前版本
+[+]FindAD		PVEFindADUser可用于查找活动目录用户登陆的位置、枚举域用户
+
+Ladon 12.1  12.08
+[+]LotusAdmin	检测用户是否Lotus管理员
+[+]HtaSer		Hta服务器(不限后缀,如访问doc执行hta)
+[+]ConfVer		ConfluenceVer探测Confluence版本
+
+
 Ladon 12.0  20231201
 [+]DomainLog	DomainUserIP 远程查询 域用户、IP
 [u]LoginLog		4624成功日志 域用户、域名、登陆IP 
