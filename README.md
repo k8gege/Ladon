@@ -1,4 +1,4 @@
-## Ladon 12.2 20231215
+## Ladon 12.2 20231215 Oracle数据库一键提权
 ![](https://k8gege.github.io/k8img/Ladon/Dragon.jpg)
 
 [![Author](https://img.shields.io/badge/Author-k8gege-blueviolet)](https://github.com/k8gege) 
