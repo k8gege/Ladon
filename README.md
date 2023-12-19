@@ -101,7 +101,7 @@ PS: Study方便本地学习使用，完整功能请使用CMD
 ### BypassEDR扫描
 
 默认扫描速度很快，有些WAF或EDR防御很强<br>
-设置几线程都有可能20分钟左右就扫不动了<br>
+设置几线程都有可能20分钟左右就不能扫了<br>
 bypassEDR模拟人工访问，绕过速度检测策略<br>
 
 扫描速度较慢，追求速度的愣头青不要使用<br>
@@ -114,15 +114,27 @@ Ladon 10.1.2.8/24 MS17010 bypassEDR
 
 ### 001 自定义线程扫描
 例子：扫描目标10.1.2段是否存在MS17010漏洞<br>
-单线程：Ladon 10.1.2.8/24 MS17010 t=1<br>
-80线程：Ladon noping 10.1.2.8/24 MS17010 t=80<br>
+单线程：
+```Bash
+Ladon 10.1.2.8/24 MS17010 t=1
+```
+
+80线程：
+```Bash
+Ladon noping 10.1.2.8/24 MS17010 t=80
+```
 
 高强度防护下扫描线程设置低一些，F单线程<br>
-单线程：Ladon 10.1.2.8/24 MS17010 f=1
+```Bash
+Ladon 10.1.2.8/24 MS17010 f=1
+```
 
 ### 002 Socks5代理扫描
 例子：使用8线程扫描目标10.1.2段是否存在MS17010漏洞<br>
+```Bash
 Ladon noping 10.1.2.8/24 MS17010 t=8<br>
+```
+
 详见：http://k8gege.org/Ladon/proxy.html
 
 PS：代理工具不支持Socks5，所以必须加noping参数扫描<br> 
@@ -161,6 +173,7 @@ TXT格式
 ##### 004 ICMP批量扫描C段列表存活主机
 ```Bash
 Ladon ip24.txt ICMP
+Ladon ipc.txt ICMP
 ```
 
 ##### 005 ICMP批量扫描B段列表存活主机
@@ -199,6 +212,7 @@ Ladon noping 192.168.1.8 WhatCMS   扫描IP
 Ladon noping 192.168.1.8/24 WhatCMS   扫描C段
 ```
 
+
 ##### 010 批量检测DrayTek路由器版本、漏洞、弱口令
 ```Bash
 Ladon url.txt DraytekPoc
@@ -221,6 +235,8 @@ Ladon 192.168.1.8/24 ICMP
 ```Bash
 Ladon 192.168.1.8/24 Ping
 ```
+
+如果你认为ping命令通才是存活，可使用这条命令批量
 
 ##### 014 多协议探测存活主机 （IP、机器名、MAC/域名、制造商/系统版本）
 ```Bash
@@ -391,6 +407,9 @@ Ladon 192.168.1.8/24 MssqlScan
 ```Bash
 Ladon 192.168.1.8/24 OracleScan
 ```
+Oracle数据库比较特殊，只爆ORCL库会错过很多权限<br>
+详见：http://k8gege.org/Ladon/OracleScan.html<br>
+
 
 ##### 044 3306端口 Mysql数据库密码爆破
 ```Bash
