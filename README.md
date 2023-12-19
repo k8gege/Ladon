@@ -32,7 +32,7 @@ Ladon可在安装有.net 2.0及以上版本Win系统中使用(Win7后系统自�
 Ladon.ps1完美兼容Win7-Win11/2022 PowerShell，不看版本远程加载无文件渗透
 
 #### 全平台LadonGo支持Linux、Mac、Arm、MIPS
-全平台：Linux、MacOS、Windows等OS<br>
+全平台：Linux、MacOS、Windows、路由器、网络设备等OS系统<br>
 https://github.com/k8gege/LadonGo
 
 ### 奇葩条件
@@ -70,24 +70,25 @@ Exp生成器可一键生成Poc<br>
 7  支持指定URL扫描<br>
 8  支持批量IP扫描(ip.txt)<br>
 9  支持批量C段扫描(ip24.txt)<br>
-10 支持批量B段扫描(ip16.txt)<br>
-11 支持批量URL扫描(url.txt)<br>
-12 支持批量域名扫描(domain.txt)<br>
-13 支持批量机器名扫描(host.txt)<br>
-14 支持批量国家段扫描(cidr.txt)<br>
-15 支持批量字符串列表(str.txt)<br>
-16 支持主机帐密列表(check.txt)<br>
-17 支持用户密码列表(userpass.txt)<br>
-18 支持指定范围C段扫描<br>
-19 支持参数加载自定义DLL（仅限C#）<br>
-20 支持参数加载自定义EXE（仅限C#）<br>
-21 支持参数加载自定义INI配置文件<br>
-22 支持参数加载自定义PowerShell<br>
-23 支持自定义程序(系统命令或第三方程序即任意语言开发的程序或脚本)<br>
-24 插件(支持多种语言C#/Delphi/Golang/Python/VC/PowerShell)<br>
-25 支持Cobalt Strike(beacon命令行下扫描目标内网或跳板扫描外网目标)<br>
-26 支持CIDR格式IP扫描,如100.64.0.0/10，192.168.1.1/20等<br>
-27 INI配置支持自定义程序密码爆破<br>
+10 支持批量C段扫描(ipc.txt)<br>
+11 支持批量B段扫描(ip16.txt)<br>
+12 支持批量URL扫描(url.txt)<br>
+13 支持批量域名扫描(domain.txt)<br>
+14 支持批量机器名扫描(host.txt)<br>
+15 支持批量国家段扫描(cidr.txt)<br>
+16 支持批量字符串列表(str.txt)<br>
+17 支持主机帐密列表(check.txt)<br>
+18 支持用户密码列表(userpass.txt)<br>
+19 支持指定范围C段扫描<br>
+20 支持参数加载自定义DLL（仅限C#）<br>
+21 支持参数加载自定义EXE（仅限C#）<br>
+22 支持参数加载自定义INI配置文件<br>
+23 支持参数加载自定义PowerShell<br>
+24 支持自定义程序(系统命令或第三方程序即任意语言开发的程序或脚本)<br>
+25 插件(支持多种语言C#/Delphi/Golang/Python/VC/PowerShell)<br>
+26 支持Cobalt Strike(beacon命令行下扫描目标内网或跳板扫描外网目标)<br>
+27 支持CIDR格式IP扫描,如100.64.0.0/10，192.168.1.1/20等<br>
+28 INI配置支持自定义程序密码爆破<br>
 
 ### 简明使用教程
 
@@ -95,20 +96,40 @@ Ladon 简明使用教程 完整文档: http://k8gege.org/Ladon <br>
 支持Cmd、Cobalt Strike、PowerShell等内存加载<br>
 Windows版本: .Net、Cobalt Strike、PowerShell<br>
 全系统版本：GO(全平台)、Python(理论上全平台)<br>
-PS: Study方便本地测试使用，完整功能请使用CMD
+PS: Study方便本地学习使用，完整功能请使用CMD
+
+### BypassEDR扫描
+
+默认扫描速度很快，有些WAF或EDR防御很强<br>
+设置几线程都有可能20分钟左右就扫不动了<br>
+bypassEDR模拟人工访问，绕过速度检测策略<br>
+
+扫描速度较慢，追求速度的愣头青不要使用<br>
+```Bash
+Ladon 10.1.2.8/24 MS17010 bypassEDR
+```
+
+密码爆破相关模块暂不支持bypassEDR参数
+
 
 ### 001 自定义线程扫描
 例子：扫描目标10.1.2段是否存在MS17010漏洞<br>
 单线程：Ladon 10.1.2.8/24 MS17010 t=1<br>
 80线程：Ladon noping 10.1.2.8/24 MS17010 t=80<br>
 
-高强度防护下扫描线程设置低一些，单线程或F单线程最佳<br>
+高强度防护下扫描线程设置低一些，F单线程<br>
 单线程：Ladon 10.1.2.8/24 MS17010 f=1
 
 ### 002 Socks5代理扫描
-例子：扫描目标10.1.2段是否存在MS17010漏洞（必须加noping）<br>
-Ladon noping 10.1.2.8/24 MS17010<br>
+例子：使用8线程扫描目标10.1.2段是否存在MS17010漏洞<br>
+Ladon noping 10.1.2.8/24 MS17010 t=8<br>
 详见：http://k8gege.org/Ladon/proxy.html
+
+PS：代理工具不支持Socks5，所以必须加noping参数扫描<br> 
+不管是Frp还是其它同类工具，最主要是Proxifier等工具不支持ICMP协议<br>
+因为Ladon默认先用ICMP探测存活后，才使用对应模块测试<br>
+所以代理环境下得禁ping扫描，系统ping使用的就是ICMP协议
+
 
 ### 003 网段扫描/批量扫描
 CIDR格式：不只是/24/16/8(所有)
