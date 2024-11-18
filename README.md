@@ -33,7 +33,7 @@ https://k8gege.org/Download/Ladon911.rar
 
 Ladon可在安装有.net 2.0及以上版本Win系统中使用(Win7后系统自带.net)<br>
 如Cmd、PowerShell、远控Cmd、WebShell等，以及Cobalt Strike内存加载使用<br>
-Ladon.ps1完美兼容Win7-Win11/2022 PowerShell，不看版本远程加载无文件渗透
+Ladon.ps1完美兼容Win7-Win11/2025 PowerShell，不看版本远程加载无文件渗透
 
 #### 全平台LadonGo支持Linux、Mac、Arm、MIPS
 全平台：Linux、MacOS、Windows、路由器、网络设备等OS系统<br>
