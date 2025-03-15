@@ -430,7 +430,7 @@ Ladon 192.168.1.8/24 MysqlScan
 
 ##### 045 7001端口 Weblogic后台密码爆破
 ```Bash
-Ladon http://192.168.1.8:7001/console WeblogicScan<br>
+Ladon http://192.168.1.8:7001/console WeblogicScan
 Ladon 192.168.1.8/24 WeblogicScan
 ```
 
@@ -454,16 +454,6 @@ Ladon http://192.168.1.8:8080/manage TomcatScan
 ```Bash
 Ladon http://192.168.1.8/login HttpBasicScan
 Ladon ip.txt 401Scan
-```
-
-##### 050 445端口 Impacket SMB密码爆破(Windowns)
-```Bash
-Ladon 192.168.1.8/24 SmbScan.ini
-```
-
-##### 051 445端口 IPC密码爆破(Windowns)
-```Bash
-Ladon 192.168.1.8/24 IpcScan.ini
 ```
 
 ##### 052 139端口Netbios协议Windows密码爆破
@@ -543,7 +533,7 @@ Ladon 192.168.1.8/24 TomcatExp
 ```Bash
 Ladon CmdDll x86 calc
 Ladon CmdDll x64 calc
-Ladon CmdDll b64x86 YwBhAGwAYwA=<br>
+Ladon CmdDll b64x86 YwBhAGwAYwA=
 Ladon CmdDll b64x64 YwBhAGwAYwA=
 ```
 
@@ -712,7 +702,7 @@ Ladon PSversion
 
 ##### 092 运行时版本&编译环境 	
 ```Bash
-Ladon Ver<br>
+Ladon Ver
 Ladon Version
 ```
 
@@ -782,7 +772,7 @@ Ladon SshExec 192.168.1.8 22 k8gege k8gege520 whoami
 ```
 
 ##### 103 JspShell远程执行命令（非交互式）9.3.0移除
-Usage：Ladon JspShell type url pwd cmd<br>
+Usage：Ladon JspShell type url pwd cmd
 ```Bash
 Ladon JspShell ua http://192.168.1.8/shell.jsp Ladon whoami
 ```
@@ -1938,9 +1928,9 @@ powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon OnlinePC
 powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon PortScan '22,80,135,445'
 ```	
 
-#### Cobalt Strike  Ladon.ps1
+### Cobalt Strike  Ladon.ps1
 
-CS Beacon命令 探测存活主机
+CS Beacon 探测存活主机
 ```bash
 shell powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon ICMP
 shell powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon NbtInfo
@@ -1948,13 +1938,12 @@ shell powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon SmbInfo
 shell powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon LdapInfo
 ```
 
-CS Beacon命令 自定义端口扫描
+CS Beacon 自定义端口扫描
 ```bash
 shell powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon PortScan '22,80,135,445'
 ```
 
-CS Beacon命令 MS17010漏洞探测
-#### Cobalt Strike
+CS Beacon MS17010漏洞探测
 ```bash
 shell powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon 192.168.1.1/24 ms17010
 ```
