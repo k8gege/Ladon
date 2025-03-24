@@ -505,7 +505,7 @@ Ladon 192.168.1.8/24 ActivemqPoc
 Ladon 192.168.1.8/24 TomcatPoc
 ```
 
-##### 061 Struts2漏洞检测(S2-005/S2-009/S2-013/S2-016/S2-019/S2-032/DevMode)
+##### 061 Struts2漏洞检测(S2-005/S2-009/S2-013/S2-016/S2-019/S2-032/DevMode/S2-045/S2-037)
 ```Bash
 Ladon 192.168.1.8/24 Struts2Poc
 ```
@@ -515,6 +515,13 @@ Ladon 192.168.1.8/24 Struts2Poc
 Ladon 192.168.1.8 DraytekPoc
 Ladon 192.168.1.8/24 DraytekPoc
 ```
+
+##### FortiGate CVE-2024-55591 未授权RCE漏洞检测
+```Bash
+Ladon 192.168.1.8/24 CVE-2024-55591
+```
+
+
 
 ### 漏洞利用/Exploit
 ![image](http://k8gege.org/k8img/Ladon/Study/exp.PNG)
@@ -1895,6 +1902,25 @@ Ladon OracleCmd 192.168.1.8 1521 orcl admin 123456 m1 whoami
 Ladon OracleCmd 192.168.1.8 1521 orcl admin 123456 m2 whoami
 Ladon OracleCmd 192.168.1.8 1521 orcl admin 123456 m3 whoami
 ```
+
+##### BuildCS 动态编译c#代码文件
+```Bash	
+Ladon BuildCS exe.cs exe
+Ladon BuildCS dll.cs dll
+Ladon BuildCS exe.cs dat
+```
+
+##### 修改文件时间 指定文件时间
+Usage: Ladon UpdateFileTime <file_path> <timestamp>
+```Bash
+Ladon UpdateFileTime E:\Ladon911\Ladon.exe "2024-09-11 09:11:00"
+```
+
+##### 修改文件时间 复制文件时间
+```Bash
+Ladon CopyFileTime E:\Ladon911\LadonExp.exe E:\Ladon911\Ladon.exe
+```
+
 
 ## PowerShell版本 Ladon.ps1
 
